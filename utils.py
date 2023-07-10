@@ -208,19 +208,13 @@ def file_selector():
         ColorPrint.print(f'输入有误！{e1},请重试！')
         return file_selector()
     
-def set_sl():
-        """
-        生成一个列表[A-ZZ]
-        @return: [A-ZZ]
-        """
-        sr = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-        sr = list(sr)
-        sl = []
-        for i in sr:
-            sl.append(i)
-        for i in sr:
-            for j in sr:
-                k = i + j
-                sl.append(k)
-        # print(len(sl))
-        return sl
+def set_az():
+    """
+    生成一个列表[A-ZZ]
+    @return: [A-ZZ]
+    """
+    sr = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    sl = [char for char in sr]
+    sl += [char1 + char2 for char1 in sr for char2 in sr]
+    # print(len(sl))
+    return sl
