@@ -6,6 +6,7 @@ import pandas as pd
 from openpyxl import load_workbook
 from openpyxl.styles import Font, PatternFill, numbers
 from tqdm import tqdm
+from typing import List, Union
 from utils import *
 
 
@@ -95,15 +96,15 @@ def set_gap_sheet(gap: Gap):
     """
     _values = input_selector('请分别输入【系统表名 品牌表名】')
     dev_ws_name,uat_ws_name = _values[:2]
-    do_loger(f'🟡开始生成Gap_sheet🟡')
+    # do_loger(f'🟡开始生成Gap_sheet🟡')
     dev_ws = gap.wb[dev_ws_name]
     uat_ws = gap.wb[uat_ws_name]
     wb = dev_ws.parent
     gap_ws = wb.create_sheet('set_gap')
-    sr = set_sl()
+    sr = set_az()
     max_col = min(dev_ws.max_column, uat_ws.max_column)
     max_row = max(dev_ws.max_row, uat_ws.max_row)
-    do_loger(f'🚀最大列{max_col}\n🚀最大行{max_row}')
+    # do_loger(f'🚀最大列{max_col}\n🚀最大行{max_row}')
     for gap_dev_col in tqdm(range(1, max_col * 3, 3),desc='处理进度'):
         gap_uat_col = gap_dev_col + 1
         gap_col = gap_dev_col + 2
@@ -196,51 +197,60 @@ def set_gap_sheet(gap: Gap):
 
 @auto_save
 def get_data_by_row_title(gap: Gap):
-    """在这之前！你需要将品牌表头第1行，改成TS对应的mapping值！！这很重要
-    Mapping from sheet title data
-    匹配两个表头，将能匹配上的，数据传入另一个表头下方
-    @param ws_name:品牌
-    @param ws_name2:TS表头的表（注意不是TS表，你可以新建一个表）
-    """
     ColorPrint.print("""
 在这之前！你需要将品牌表头第2行，改成TS对应的mapping值！！这很重要
 Mapping from sheet title data
 匹配两个表头，将能匹配上的，数据传入另一个表头下方
 @param ws_name:品牌sheetName
-@param ws_name2:TS表头的表（注意不是TS表，你可以新建一个表）
-    """,color='random')
-    _values = input_selector('请分别输入【品牌表名 品牌（TS表头）表名】')
-    ws_name,ws_name2 = _values[:2]
-    print(f'🟡开始匹配表头🟡{ws_name}-{ws_name2}')
-    ws = gap.wb[ws_name]
-    ws2 = gap.wb[ws_name2]
-    _keys = []
-    keys = []
-    _keys2 = []
-    keys2 = []
-    # print(ws.max_column)
-    for i in range(1, ws.max_column+1):
-        key = ws.cell(row=2, column=i)#这里的row是读取品牌表的第row行
-        #保存表头，和标头的值
-        _keys.append(key)
-        keys.append(key.value)
-    for j in range(1, ws2.max_column+1):
-        key = ws2.cell(row=1, column=j)
-        _keys2.append(key)
-        keys2.append(key.value)
-    ws2.insert_rows(2)#插入1空行
-    for c in tqdm(keys2,desc='匹配进度'):
+@param _is_reference: 1/0 (是/否开启全部匹配)
+传参方式 品牌表名 1/0
+    """, color='random')
+    _values = input_selector('请分别输入【品牌表名  ？】')
+    ws_name,_is_reference = _values[:2]
+    _is_reference = int(_is_reference)
+    if _is_reference:
+        print('开启！')
+    else:
+        print('未开启')
+        
+    print(f'🟡开始匹配表头🟡{ws_name}->{ws_name}1')
+    brand_sheet = gap.wb[ws_name]
+    brand_max_row = brand_sheet.max_row
+    system_sheet = gap.wb['system']
+    #创建新表
+    wb = brand_sheet.parent
+    ts_sheet = wb.create_sheet(f'{ws_name}1')
+    # 获取品牌表第二行数据
+    brand_title = [cell.value for cell in brand_sheet[2]]
+    # 获取系统表头字段
+    system_title = [cell.value for cell in system_sheet[1]]
+    for _title in tqdm(system_title, desc='匹配进度'):
         time.sleep(0.01)
-        if c in keys:
-            n1 = keys.index(c)  # 欲遍历的字段，在匹配字段列表中的索引
-            v_cell = _keys[n1]  # 根据索引取出sheet中单元格cell对象
-            n0 = keys2.index(c)
-            v0_cell = _keys2[n0]
-            # print(f'原始表格中的对应数据  {v0_cell.coordinate}')
-            to_ws2 = ws2.cell(row=v0_cell.row + 1, column=v0_cell.column)
-            to_ws2.value = f'={ws.title}!{v_cell.coordinate}'
-            # print(ws[key3.coordinate].value, key3.coordinate)
-    print('✨表头匹配完成✨')
+        index_system = system_title.index(_title)# Bxx,Axx的数据 eg:A1
+        ts_cell = ts_sheet.cell(row=1, column=index_system + 1)
+        ts_cell.value = f'={system_sheet.title}!{ts_cell.coordinate}'
+        
+        if _title in brand_title:# 如果系统表头在品牌第二行
+            index_brand = brand_title.index(_title)#索引-品牌
+            if not _is_reference:
+                _row = 2
+                brand_cell = brand_sheet.cell(row=_row, column=index_brand + 1)#品牌第二行数据cell对象,kais
+                # print(brand_cell.coordinate,brand_max_row)
+                ts_cell_2 = ts_sheet.cell(row=_row, column=index_system + 1)
+                ts_cell_2.value = f'={brand_sheet.title}!{brand_cell.coordinate}'
+                print('执行高级代码')
+            else:
+                for _row in range(2,brand_max_row+1):
+                    brand_cell = brand_sheet.cell(row=_row, column=index_brand + 1)#品牌第row行数据cell对象,kais
+                    # print(brand_cell.coordinate,brand_max_row)
+                    ts_cell_2 = ts_sheet.cell(row=_row, column=index_system + 1)
+                    ts_cell_2.value = f'={brand_sheet.title}!{brand_cell.coordinate}'
+                    print('执行垃圾代码')
+        else:# 如果系统表头NOT 在品牌第二行
+            ts_cell_2 = ts_sheet.cell(row=2, column=index_system + 1)
+            ts_cell_2.value = '/'
+    print('✨匹配完成✨')
+
 
 @auto_save
 def contrast_sheets(gap: Gap):
@@ -281,64 +291,34 @@ def contrast_sheets(gap: Gap):
         if pid.value not in t_data:
             wp[f'{column_2}{py}'].fill = fill
 
-def set_gap_sheet1(gap: Gap):
-    """生产Gap表
-    Args:
-        gap (Gap): _传入一个gap实例对象_
-    """
+
+def set_gap_by_vlookup(gap: Gap):
     _values = input_selector('请分别输入【系统表名 品牌表名】')
-    dev_ws_name, uat_ws_name = _values[:2]
+    dev_ws_name,uat_ws_name = _values[:2]
     do_loger(f'🟡开始生成Gap_sheet🟡')
-    dev_df = pd.DataFrame(gap.wb[dev_ws_name].values)
-    uat_df = pd.DataFrame(gap.wb[uat_ws_name].values)
-    max_col = min(dev_df.shape[1], uat_df.shape[1])
-    max_row = max(dev_df.shape[0], uat_df.shape[0])
-    gap_df = pd.DataFrame(index=range(1, max_row + 1), columns=range(1, max_col * 3 + 1))
-    gap_ws_name = 'set_gap'
+    dev_ws = gap.wb[dev_ws_name]
+    uat_ws = gap.wb[uat_ws_name]
+    wb = dev_ws.parent
+    gap_ws = wb.create_sheet('set_gap')
     sr = set_sl()
-    for col_index in range(max_col):
-        gap_dev_col = col_index * 3 + 1
-        gap_uat_col = gap_dev_col + 1
-        gap_col = gap_dev_col + 2
-        sheet_title = dev_df.iloc[0, col_index]
-        for irow in range(1, max_row + 1):
-            dev_value = dev_df.iloc[irow, col_index]
-            uat_value = uat_df.iloc[irow, col_index]
-            if pd.isnull(uat_value):
-                gap_df.iloc[irow - 1, gap_col - 1] = None
-                gap_df.iloc[irow - 1, gap_col - 1] = None
-                gap_df.iloc[irow - 1, gap_col - 1] = None
-            else:
-                if not pd.api.types.is_number(dev_value):
-                    gap_df.iloc[irow - 1, gap_col - 1] = f'=EXACT("{dev_value}","{uat_value}")'
-                    if dev_value != uat_value:
-                        gap_df.iloc[irow - 1, gap_col - 1] = f'=EXACT("{dev_value}","{uat_value}")'
-                else:
-                    dev_value = float(dev_value)
-                    uat_value = float(uat_value)
-                    if uat_value != 0:
-                        gap_df.iloc[irow - 1, gap_col - 1] = (uat_value - dev_value) / dev_value
-                    else:
-                        gap_df.iloc[irow - 1, gap_col - 1] = (uat_value - dev_value) / uat_value
-    gap_df.columns = pd.MultiIndex.from_tuples([(f'{dev_ws_name} - 系统', col) for col in dev_df.columns] + [(f'{uat_ws_name} - 品牌', col) for col in uat_df.columns] + [('Gap', col) for col in range(1, max_col + 1)])
-    gap_df = gap_df.astype(object)
-    gap_ws = pd.ExcelWriter('path/to/output/file.xlsx', engine='xlsxwriter')
-    gap_df.to_excel(gap_ws, sheet_name=gap_ws_name, index=False)
-    gap_ws.save()
-    print('🎁Gap_Sheet生成成功🎁')
+    max_col = min(dev_ws.max_column, uat_ws.max_column)
+    max_row = max(dev_ws.max_row, uat_ws.max_row)
+    
+    pass
+
 
 get_row_data_comment.__name__='提取标题批注'
 get_data_by_row_title.__name__='快速引用品牌列数据'
 contrast_sheets.__name__='对比两列数据并标记'
 set_gap_sheet.__name__='生成GapSheet[openpyxl]'
-set_gap_sheet1.__name__='生成GapSheet[pandas]'
+# set_gap_sheet1.__name__='生成GapSheet[pandas]'
 
 fundict = {
     '1':get_row_data_comment,
     '2':get_data_by_row_title,
     '3':contrast_sheets,
     '4':set_gap_sheet,
-    '5':set_gap_sheet1,
+    # '5':set_gap_sheet1,
 }
 
 def function_list(obj: Gap):
@@ -358,7 +338,7 @@ def function_list(obj: Gap):
         try:
             return fundict[x](obj)
         except Exception as e:
-            print('error:', e)
+            print('error-[也许你应该传入表名+（空格），再回车]:', e)
             exit(1)
 
 if __name__ == '__main__':
