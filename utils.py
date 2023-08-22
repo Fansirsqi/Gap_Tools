@@ -1,15 +1,6 @@
-from datetime import datetime, timedelta
-import json
 import os
-from time import sleep
 import glob
-import zipfile
-from tqdm import tqdm
 import platform
-import subprocess
-import concurrent.futures
-from concurrent.futures import ThreadPoolExecutor
-import time
 import os
 import random
 
@@ -46,65 +37,7 @@ class ColorPrint:
             text = ' '.join(map(str, args))
         print(text, end=end)
 
-def trans_str(_str):
-        result = str(_str).replace('(','').replace(')','').replace(',','').replace("'",'').replace('"','').replace(r'\n', '\n').replace(r'\t', '\t').replace(r'\r', '\r')
-        sleep(0.02)
-        return result
 
-class Log:
-    """日志打印模块，包含了一个输入获取模块，保持控制台字体一致
-
-    Returns:
-        (Any): _description_
-    """
-    font_yellow = '\033[1;33m'# 黄色
-    font_red = '\033[1;31m' # 红色
-    font_blue = '\033[1;34m' # 蓝色
-    font_gray = '\033[1;30m' # 灰色
-    font_green = '\033[1;32m' # 绿色
-    font_purple = '\033[1;35m' # 紫色
-    font_cyan = '\033[1;36m' # 青色
-    font_white = '\033[1;37m' # 白色
-    
-    bg_red = '\033[41m' # 红色 白字
-    bg_green = '\033[42m' # 绿色 深灰字
-    bg_yellow = '\033[43m' # 黄色 灰字
-    bg_blue = '\033[44m' # 蓝色 白字
-    bg_purple = '\033[45m' #紫色 白字
-    bg_cyan = '\033[46m' # 青色 深灰字
-    bg_gray = '\033[47m' # 灰色 深灰字
-    reset = '\033[0m'
-    
-    @staticmethod
-    def warning(*context):
-        """打印黄色警告"""
-        context = trans_str(context)
-        print(f'{Log.font_yellow}⚠️  [WARNING] |\n{context} {Log.reset}') 
-    @staticmethod
-    def error(*context):
-        """打印红色错误警告"""
-        context = trans_str(context)
-        print(f'{Log.font_red}🔴 [ERROR]   |\n{context} {Log.reset}')
-    @staticmethod
-    def info(*context):
-        """打印蓝色信息"""
-        context = trans_str(context)
-        print(f'{Log.font_blue}🔵 [INFO]    |\n{context} {Log.reset}')
-    @staticmethod
-    def success(*context):
-        """打印绿色信息"""
-        context = trans_str(context)
-        print(f'{Log.font_green}🟢 [SUCCESS] |\n{context} {Log.reset}')
-    @staticmethod
-    def debug(*context):
-        """打印灰色信息"""
-        context = trans_str(context)
-        print(f'{Log.font_gray}⚙️  [DEBUG]   |\n{context} {Log.reset}')
-    @staticmethod
-    def input(context):
-        """获取输入信息"""
-        data = input(f'{Log.font_white}✍️  [INPUT]   |\n{context} {Log.reset}')
-        return data
 
 class DotDict(dict):
     """将字典数据转换成类的形式，数据可以通过.xx的形式访问

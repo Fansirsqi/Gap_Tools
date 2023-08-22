@@ -1,0 +1,678 @@
+18:29:27.367407: 🟡开始生成Gap_sheet🟡
+18:29:27.370412: 🚀最大列18
+🚀最大行31
+18:29:27.381405: 🚀当前遍历列数A,表头->日期
+18:29:27.381405: 	🚀当前遍历行数1, dev:日期 type:<class 'str'>, uat:日期 type:<class 'str'>
+18:29:27.383406: 2023-08-01 00:00:00是日期格式
+18:29:27.383406: 	🚀当前遍历行数2, dev:2023-08-01 00:00:00 type:<class 'datetime.datetime'>, uat:2023-08-01 type:<class 'str'>
+18:29:27.384407: 2023-08-02 00:00:00是日期格式
+18:29:27.385970: 	🚀当前遍历行数3, dev:2023-08-02 00:00:00 type:<class 'datetime.datetime'>, uat:2023-08-02 type:<class 'str'>
+18:29:27.386990: 2023-08-03 00:00:00是日期格式
+18:29:27.387988: 	🚀当前遍历行数4, dev:2023-08-03 00:00:00 type:<class 'datetime.datetime'>, uat:2023-08-03 type:<class 'str'>
+18:29:27.388989: 2023-08-04 00:00:00是日期格式
+18:29:27.388989: 	🚀当前遍历行数5, dev:2023-08-04 00:00:00 type:<class 'datetime.datetime'>, uat:2023-08-04 type:<class 'str'>
+18:29:27.390990: 2023-08-05 00:00:00是日期格式
+18:29:27.390990: 	🚀当前遍历行数6, dev:2023-08-05 00:00:00 type:<class 'datetime.datetime'>, uat:2023-08-05 type:<class 'str'>
+18:29:27.391987: 2023-08-06 00:00:00是日期格式
+18:29:27.392987: 	🚀当前遍历行数7, dev:2023-08-06 00:00:00 type:<class 'datetime.datetime'>, uat:2023-08-06 type:<class 'str'>
+18:29:27.394987: 2023-08-07 00:00:00是日期格式
+18:29:27.395987: 	🚀当前遍历行数8, dev:2023-08-07 00:00:00 type:<class 'datetime.datetime'>, uat:2023-08-07 type:<class 'str'>
+18:29:27.396988: 2023-08-08 00:00:00是日期格式
+18:29:27.397989: 	🚀当前遍历行数9, dev:2023-08-08 00:00:00 type:<class 'datetime.datetime'>, uat:2023-08-08 type:<class 'str'>
+18:29:27.399997: 2023-08-09 00:00:00是日期格式
+18:29:27.400997: 	🚀当前遍历行数10, dev:2023-08-09 00:00:00 type:<class 'datetime.datetime'>, uat:2023-08-09 type:<class 'str'>
+18:29:27.401994: 2023-08-10 00:00:00是日期格式
+18:29:27.403991: 	🚀当前遍历行数11, dev:2023-08-10 00:00:00 type:<class 'datetime.datetime'>, uat:2023-08-10 type:<class 'str'>
+18:29:27.405989: 2023-08-11 00:00:00是日期格式
+18:29:27.406990: 	🚀当前遍历行数12, dev:2023-08-11 00:00:00 type:<class 'datetime.datetime'>, uat:2023-08-11 type:<class 'str'>
+18:29:27.407988: 2023-08-12 00:00:00是日期格式
+18:29:27.407988: 	🚀当前遍历行数13, dev:2023-08-12 00:00:00 type:<class 'datetime.datetime'>, uat:2023-08-12 type:<class 'str'>
+18:29:27.408989: 2023-08-13 00:00:00是日期格式
+18:29:27.409994: 	🚀当前遍历行数14, dev:2023-08-13 00:00:00 type:<class 'datetime.datetime'>, uat:2023-08-13 type:<class 'str'>
+18:29:27.411994: 2023-08-14 00:00:00是日期格式
+18:29:27.412994: 	🚀当前遍历行数15, dev:2023-08-14 00:00:00 type:<class 'datetime.datetime'>, uat:2023-08-14 type:<class 'str'>
+18:29:27.413990: 2023-08-15 00:00:00是日期格式
+18:29:27.413990: 	🚀当前遍历行数16, dev:2023-08-15 00:00:00 type:<class 'datetime.datetime'>, uat:2023-08-15 type:<class 'str'>
+18:29:27.415986: 2023-08-01 00:00:00是日期格式
+18:29:27.415986: 	🚀当前遍历行数17, dev:2023-08-01 00:00:00 type:<class 'datetime.datetime'>, uat:2023-08-01 type:<class 'str'>
+18:29:27.417994: 2023-08-02 00:00:00是日期格式
+18:29:27.419992: 	🚀当前遍历行数18, dev:2023-08-02 00:00:00 type:<class 'datetime.datetime'>, uat:2023-08-02 type:<class 'str'>
+18:29:27.420988: 2023-08-03 00:00:00是日期格式
+18:29:27.421988: 	🚀当前遍历行数19, dev:2023-08-03 00:00:00 type:<class 'datetime.datetime'>, uat:2023-08-03 type:<class 'str'>
+18:29:27.422994: 2023-08-04 00:00:00是日期格式
+18:29:27.423989: 	🚀当前遍历行数20, dev:2023-08-04 00:00:00 type:<class 'datetime.datetime'>, uat:2023-08-04 type:<class 'str'>
+18:29:27.424987: 2023-08-05 00:00:00是日期格式
+18:29:27.425987: 	🚀当前遍历行数21, dev:2023-08-05 00:00:00 type:<class 'datetime.datetime'>, uat:2023-08-05 type:<class 'str'>
+18:29:27.427990: 2023-08-06 00:00:00是日期格式
+18:29:27.428995: 	🚀当前遍历行数22, dev:2023-08-06 00:00:00 type:<class 'datetime.datetime'>, uat:2023-08-06 type:<class 'str'>
+18:29:27.429988: 2023-08-07 00:00:00是日期格式
+18:29:27.429988: 	🚀当前遍历行数23, dev:2023-08-07 00:00:00 type:<class 'datetime.datetime'>, uat:2023-08-07 type:<class 'str'>
+18:29:27.431986: 2023-08-08 00:00:00是日期格式
+18:29:27.431986: 	🚀当前遍历行数24, dev:2023-08-08 00:00:00 type:<class 'datetime.datetime'>, uat:2023-08-08 type:<class 'str'>
+18:29:27.432987: 2023-08-09 00:00:00是日期格式
+18:29:27.433990: 	🚀当前遍历行数25, dev:2023-08-09 00:00:00 type:<class 'datetime.datetime'>, uat:2023-08-09 type:<class 'str'>
+18:29:27.434987: 2023-08-10 00:00:00是日期格式
+18:29:27.435986: 	🚀当前遍历行数26, dev:2023-08-10 00:00:00 type:<class 'datetime.datetime'>, uat:2023-08-10 type:<class 'str'>
+18:29:27.436989: 2023-08-11 00:00:00是日期格式
+18:29:27.436989: 	🚀当前遍历行数27, dev:2023-08-11 00:00:00 type:<class 'datetime.datetime'>, uat:2023-08-11 type:<class 'str'>
+18:29:27.438988: 2023-08-12 00:00:00是日期格式
+18:29:27.438988: 	🚀当前遍历行数28, dev:2023-08-12 00:00:00 type:<class 'datetime.datetime'>, uat:2023-08-12 type:<class 'str'>
+18:29:27.439988: 2023-08-13 00:00:00是日期格式
+18:29:27.440990: 	🚀当前遍历行数29, dev:2023-08-13 00:00:00 type:<class 'datetime.datetime'>, uat:2023-08-13 type:<class 'str'>
+18:29:27.441989: 2023-08-14 00:00:00是日期格式
+18:29:27.441989: 	🚀当前遍历行数30, dev:2023-08-14 00:00:00 type:<class 'datetime.datetime'>, uat:2023-08-14 type:<class 'str'>
+18:29:27.443996: 2023-08-15 00:00:00是日期格式
+18:29:27.443996: 	🚀当前遍历行数31, dev:2023-08-15 00:00:00 type:<class 'datetime.datetime'>, uat:2023-08-15 type:<class 'str'>
+18:29:27.445993: 🚀当前遍历列数B,表头->事业部
+18:29:27.446992: 	🚀当前遍历行数1, dev:事业部 type:<class 'str'>, uat:事业部 type:<class 'str'>
+18:29:27.475986: 🚀当前遍历列数C,表头->品牌名称
+18:29:27.476990: 	🚀当前遍历行数1, dev:品牌名称 type:<class 'str'>, uat:品牌名称 type:<class 'str'>
+18:29:27.478991: 	🚀当前遍历行数2, dev:ARMANI type:<class 'str'>, uat:GA type:<class 'str'>
+18:29:27.480993: 	🚀当前遍历行数3, dev:ARMANI type:<class 'str'>, uat:GA type:<class 'str'>
+18:29:27.481987: 	🚀当前遍历行数4, dev:ARMANI type:<class 'str'>, uat:GA type:<class 'str'>
+18:29:27.482989: 	🚀当前遍历行数5, dev:ARMANI type:<class 'str'>, uat:GA type:<class 'str'>
+18:29:27.483992: 	🚀当前遍历行数6, dev:ARMANI type:<class 'str'>, uat:GA type:<class 'str'>
+18:29:27.485992: 	🚀当前遍历行数7, dev:ARMANI type:<class 'str'>, uat:GA type:<class 'str'>
+18:29:27.486990: 	🚀当前遍历行数8, dev:ARMANI type:<class 'str'>, uat:GA type:<class 'str'>
+18:29:27.488993: 	🚀当前遍历行数9, dev:ARMANI type:<class 'str'>, uat:GA type:<class 'str'>
+18:29:27.489991: 	🚀当前遍历行数10, dev:ARMANI type:<class 'str'>, uat:GA type:<class 'str'>
+18:29:27.490998: 	🚀当前遍历行数11, dev:ARMANI type:<class 'str'>, uat:GA type:<class 'str'>
+18:29:27.492997: 	🚀当前遍历行数12, dev:ARMANI type:<class 'str'>, uat:GA type:<class 'str'>
+18:29:27.494995: 	🚀当前遍历行数13, dev:ARMANI type:<class 'str'>, uat:GA type:<class 'str'>
+18:29:27.499998: 	🚀当前遍历行数14, dev:ARMANI type:<class 'str'>, uat:GA type:<class 'str'>
+18:29:27.501990: 	🚀当前遍历行数15, dev:ARMANI type:<class 'str'>, uat:GA type:<class 'str'>
+18:29:27.502992: 	🚀当前遍历行数16, dev:ARMANI type:<class 'str'>, uat:GA type:<class 'str'>
+18:29:27.504989: 	🚀当前遍历行数17, dev:PRADA type:<class 'str'>, uat:PRADA type:<class 'str'>
+18:29:27.505990: 	🚀当前遍历行数18, dev:PRADA type:<class 'str'>, uat:PRADA type:<class 'str'>
+18:29:27.506988: 	🚀当前遍历行数19, dev:PRADA type:<class 'str'>, uat:PRADA type:<class 'str'>
+18:29:27.507989: 	🚀当前遍历行数20, dev:PRADA type:<class 'str'>, uat:PRADA type:<class 'str'>
+18:29:27.508989: 	🚀当前遍历行数21, dev:PRADA type:<class 'str'>, uat:PRADA type:<class 'str'>
+18:29:27.510990: 	🚀当前遍历行数22, dev:PRADA type:<class 'str'>, uat:PRADA type:<class 'str'>
+18:29:27.511991: 	🚀当前遍历行数23, dev:PRADA type:<class 'str'>, uat:PRADA type:<class 'str'>
+18:29:27.513989: 	🚀当前遍历行数24, dev:PRADA type:<class 'str'>, uat:PRADA type:<class 'str'>
+18:29:27.514992: 	🚀当前遍历行数25, dev:PRADA type:<class 'str'>, uat:PRADA type:<class 'str'>
+18:29:27.515986: 	🚀当前遍历行数26, dev:PRADA type:<class 'str'>, uat:PRADA type:<class 'str'>
+18:29:27.516989: 	🚀当前遍历行数27, dev:PRADA type:<class 'str'>, uat:PRADA type:<class 'str'>
+18:29:27.517988: 	🚀当前遍历行数28, dev:PRADA type:<class 'str'>, uat:PRADA type:<class 'str'>
+18:29:27.518986: 	🚀当前遍历行数29, dev:PRADA type:<class 'str'>, uat:PRADA type:<class 'str'>
+18:29:27.520992: 	🚀当前遍历行数30, dev:PRADA type:<class 'str'>, uat:PRADA type:<class 'str'>
+18:29:27.521988: 	🚀当前遍历行数31, dev:PRADA type:<class 'str'>, uat:PRADA type:<class 'str'>
+18:29:27.522987: 🚀当前遍历列数D,表头->BET%
+18:29:27.523989: 	🚀当前遍历行数1, dev:BET% type:<class 'str'>, uat:CET% type:<class 'str'>
+18:29:27.551984: 🚀当前遍历列数E,表头->Spending
+18:29:27.552985: 	🚀当前遍历行数1, dev:Spending type:<class 'str'>, uat:Spending type:<class 'str'>
+18:29:27.553987: 	🚀当前遍历行数2, dev:178692.4 type:<class 'float'>, uat:178692.0 type:<class 'float'>
+18:29:27.554985: 	🚀当前遍历行数3, dev:131689.4 type:<class 'float'>, uat:131689.0 type:<class 'float'>
+18:29:27.556986: 	🚀当前遍历行数4, dev:168764.7 type:<class 'float'>, uat:168765.0 type:<class 'float'>
+18:29:27.557989: 	🚀当前遍历行数5, dev:145845.3 type:<class 'float'>, uat:145845.0 type:<class 'float'>
+18:29:27.559987: 	🚀当前遍历行数6, dev:150679.7 type:<class 'float'>, uat:150680.0 type:<class 'float'>
+18:29:27.560989: 	🚀当前遍历行数7, dev:194239.1 type:<class 'float'>, uat:194239.0 type:<class 'float'>
+18:29:27.562988: 	🚀当前遍历行数8, dev:184831.1 type:<class 'float'>, uat:184831.0 type:<class 'float'>
+18:29:27.563988: 	🚀当前遍历行数9, dev:198182.0 type:<class 'float'>, uat:198182.0 type:<class 'float'>
+18:29:27.564985: 	🚀当前遍历行数10, dev:256410.7 type:<class 'float'>, uat:256411.0 type:<class 'float'>
+18:29:27.565990: 	🚀当前遍历行数11, dev:217735.3 type:<class 'float'>, uat:217735.0 type:<class 'float'>
+18:29:27.566985: 	🚀当前遍历行数12, dev:300252.6 type:<class 'float'>, uat:300253.0 type:<class 'float'>
+18:29:27.567985: 	🚀当前遍历行数13, dev:386812.1 type:<class 'float'>, uat:386812.0 type:<class 'float'>
+18:29:27.568987: 	🚀当前遍历行数14, dev:383424.7 type:<class 'float'>, uat:383425.0 type:<class 'float'>
+18:29:27.569988: 	🚀当前遍历行数15, dev:413602.7 type:<class 'float'>, uat:413603.0 type:<class 'float'>
+18:29:27.570989: 	🚀当前遍历行数16, dev:669120.2 type:<class 'float'>, uat:669120.0 type:<class 'float'>
+18:29:27.571988: 	🚀当前遍历行数17, dev:28919.8 type:<class 'float'>, uat:28920.0 type:<class 'float'>
+18:29:27.574993: 	🚀当前遍历行数18, dev:29881.5 type:<class 'float'>, uat:29881.0 type:<class 'float'>
+18:29:27.575987: 	🚀当前遍历行数19, dev:36095.7 type:<class 'float'>, uat:36096.0 type:<class 'float'>
+18:29:27.576995: 	🚀当前遍历行数20, dev:72077.1 type:<class 'float'>, uat:72077.0 type:<class 'float'>
+18:29:27.577987: 	🚀当前遍历行数21, dev:64563.9 type:<class 'float'>, uat:64564.0 type:<class 'float'>
+18:29:27.578988: 	🚀当前遍历行数22, dev:57141.2 type:<class 'float'>, uat:57141.0 type:<class 'float'>
+18:29:27.579986: 	🚀当前遍历行数23, dev:51986.1 type:<class 'float'>, uat:51986.0 type:<class 'float'>
+18:29:27.580986: 	🚀当前遍历行数24, dev:70148.3 type:<class 'float'>, uat:70148.0 type:<class 'float'>
+18:29:27.582985: 	🚀当前遍历行数25, dev:67764.9 type:<class 'float'>, uat:67765.0 type:<class 'float'>
+18:29:27.583987: 	🚀当前遍历行数26, dev:236367.8 type:<class 'float'>, uat:236368.0 type:<class 'float'>
+18:29:27.584987: 	🚀当前遍历行数27, dev:273547.2 type:<class 'float'>, uat:273547.0 type:<class 'float'>
+18:29:27.585988: 	🚀当前遍历行数28, dev:194539.9 type:<class 'float'>, uat:194540.0 type:<class 'float'>
+18:29:27.586987: 	🚀当前遍历行数29, dev:134189.8 type:<class 'float'>, uat:134190.0 type:<class 'float'>
+18:29:27.587989: 	🚀当前遍历行数30, dev:260154.4 type:<class 'float'>, uat:260154.0 type:<class 'float'>
+18:29:27.588990: 	🚀当前遍历行数31, dev:298844.0 type:<class 'float'>, uat:298844.0 type:<class 'float'>
+18:29:27.590990: 🚀当前遍历列数F,表头->Spending Evol%
+18:29:27.591987: 	🚀当前遍历行数1, dev:Spending Evol% type:<class 'str'>, uat:Spending Evol% type:<class 'str'>
+18:29:27.613983: 🚀当前遍历列数G,表头->Media ROI
+18:29:27.616982: 	🚀当前遍历行数1, dev:Media ROI type:<class 'str'>, uat:Media ROI type:<class 'str'>
+18:29:27.619986: 	🚀当前遍历行数2, dev:1.6 type:<class 'float'>, uat:1.6 type:<class 'float'>
+18:29:27.620987: 	🚀当前遍历行数3, dev:1.4 type:<class 'float'>, uat:1.4 type:<class 'float'>
+18:29:27.621986: 	🚀当前遍历行数4, dev:1.4 type:<class 'float'>, uat:1.4 type:<class 'float'>
+18:29:27.623985: 	🚀当前遍历行数5, dev:1.3 type:<class 'float'>, uat:1.3 type:<class 'float'>
+18:29:27.624987: 	🚀当前遍历行数6, dev:1.2 type:<class 'float'>, uat:1.2 type:<class 'float'>
+18:29:27.626992: 	🚀当前遍历行数7, dev:1.2 type:<class 'float'>, uat:1.2 type:<class 'float'>
+18:29:27.627988: 	🚀当前遍历行数8, dev:1.1 type:<class 'float'>, uat:1.1 type:<class 'float'>
+18:29:27.628988: 	🚀当前遍历行数9, dev:1.1 type:<class 'float'>, uat:1.1 type:<class 'float'>
+18:29:27.629986: 	🚀当前遍历行数10, dev:1.2 type:<class 'float'>, uat:1.2 type:<class 'float'>
+18:29:27.630990: 	🚀当前遍历行数11, dev:1.2 type:<class 'float'>, uat:1.2 type:<class 'float'>
+18:29:27.631990: 	🚀当前遍历行数12, dev:1.3 type:<class 'float'>, uat:1.3 type:<class 'float'>
+18:29:27.632990: 	🚀当前遍历行数13, dev:1.5 type:<class 'float'>, uat:1.5 type:<class 'float'>
+18:29:27.634990: 	🚀当前遍历行数14, dev:1.5 type:<class 'float'>, uat:1.5 type:<class 'float'>
+18:29:27.635987: 	🚀当前遍历行数15, dev:1.3 type:<class 'float'>, uat:1.3 type:<class 'float'>
+18:29:27.637992: 	🚀当前遍历行数16, dev:1.3 type:<class 'float'>, uat:1.3 type:<class 'float'>
+18:29:27.638991: 	🚀当前遍历行数17, dev:1.7 type:<class 'float'>, uat:1.7 type:<class 'float'>
+18:29:27.639986: 	🚀当前遍历行数18, dev:2.1 type:<class 'float'>, uat:2.1 type:<class 'float'>
+18:29:27.641985: 	🚀当前遍历行数19, dev:1.8 type:<class 'float'>, uat:1.8 type:<class 'float'>
+18:29:27.642987: 	🚀当前遍历行数20, dev:2.2 type:<class 'float'>, uat:2.2 type:<class 'float'>
+18:29:27.643998: 	🚀当前遍历行数21, dev:1.7 type:<class 'float'>, uat:1.7 type:<class 'float'>
+18:29:27.644995: 	🚀当前遍历行数22, dev:1.7 type:<class 'float'>, uat:1.7 type:<class 'float'>
+18:29:27.646991: 	🚀当前遍历行数23, dev:2.1 type:<class 'float'>, uat:2.1 type:<class 'float'>
+18:29:27.647986: 	🚀当前遍历行数24, dev:1.9 type:<class 'float'>, uat:1.9 type:<class 'float'>
+18:29:27.648985: 	🚀当前遍历行数25, dev:2.0 type:<class 'float'>, uat:2.0 type:<class 'float'>
+18:29:27.649989: 	🚀当前遍历行数26, dev:1.8 type:<class 'float'>, uat:1.8 type:<class 'float'>
+18:29:27.650991: 	🚀当前遍历行数27, dev:1.6 type:<class 'float'>, uat:1.7 type:<class 'float'>
+18:29:27.651991: 	🚀当前遍历行数28, dev:1.7 type:<class 'float'>, uat:1.7 type:<class 'float'>
+18:29:27.652986: 	🚀当前遍历行数29, dev:1.7 type:<class 'float'>, uat:1.7 type:<class 'float'>
+18:29:27.654986: 	🚀当前遍历行数30, dev:1.7 type:<class 'float'>, uat:1.7 type:<class 'float'>
+18:29:27.655986: 	🚀当前遍历行数31, dev:1.9 type:<class 'float'>, uat:1.9 type:<class 'float'>
+18:29:27.656986: 🚀当前遍历列数H,表头->Media ROI Evol%
+18:29:27.656986: 	🚀当前遍历行数1, dev:Media ROI Evol% type:<class 'str'>, uat:Media ROI Evol% type:<class 'str'>
+18:29:27.679983: 🚀当前遍历列数I,表头->CVR
+18:29:27.679983: 	🚀当前遍历行数1, dev:CVR type:<class 'str'>, uat:CVR type:<class 'str'>
+18:29:27.681989: 	🚀当前遍历行数2, dev:0.024 type:<class 'float'>, uat:0.0239 type:<class 'float'>
+18:29:27.683985: 	🚀当前遍历行数3, dev:0.013000000000000001 type:<class 'float'>, uat:0.0132 type:<class 'float'>
+18:29:27.684989: 	🚀当前遍历行数4, dev:0.011000000000000001 type:<class 'float'>, uat:0.011000000000000001 type:<class 'float'>
+18:29:27.685988: 	🚀当前遍历行数5, dev:0.006 type:<class 'float'>, uat:0.0058 type:<class 'float'>
+18:29:27.686989: 	🚀当前遍历行数6, dev:0.008 type:<class 'float'>, uat:0.0077 type:<class 'float'>
+18:29:27.687987: 	🚀当前遍历行数7, dev:0.008 type:<class 'float'>, uat:0.0084 type:<class 'float'>
+18:29:27.689988: 	🚀当前遍历行数8, dev:0.005 type:<class 'float'>, uat:0.0045000000000000005 type:<class 'float'>
+18:29:27.690986: 	🚀当前遍历行数9, dev:0.006 type:<class 'float'>, uat:0.005600000000000001 type:<class 'float'>
+18:29:27.692985: 	🚀当前遍历行数10, dev:0.006999999999999999 type:<class 'float'>, uat:0.0072 type:<class 'float'>
+18:29:27.693989: 	🚀当前遍历行数11, dev:0.008 type:<class 'float'>, uat:0.0077 type:<class 'float'>
+18:29:27.694986: 	🚀当前遍历行数12, dev:0.006999999999999999 type:<class 'float'>, uat:0.0067 type:<class 'float'>
+18:29:27.695985: 	🚀当前遍历行数13, dev:0.005 type:<class 'float'>, uat:0.005 type:<class 'float'>
+18:29:27.696985: 	🚀当前遍历行数14, dev:0.005 type:<class 'float'>, uat:0.0049 type:<class 'float'>
+18:29:27.698987: 	🚀当前遍历行数15, dev:0.009000000000000001 type:<class 'float'>, uat:0.009000000000000001 type:<class 'float'>
+18:29:27.699987: 	🚀当前遍历行数16, dev:0.009000000000000001 type:<class 'float'>, uat:0.0086 type:<class 'float'>
+18:29:27.700990: 	🚀当前遍历行数17, dev:0.006999999999999999 type:<class 'float'>, uat:0.006999999999999999 type:<class 'float'>
+18:29:27.701990: 	🚀当前遍历行数18, dev:0.009000000000000001 type:<class 'float'>, uat:0.009000000000000001 type:<class 'float'>
+18:29:27.702989: 	🚀当前遍历行数19, dev:0.006 type:<class 'float'>, uat:0.005699999999999999 type:<class 'float'>
+18:29:27.703987: 	🚀当前遍历行数20, dev:0.011000000000000001 type:<class 'float'>, uat:0.0106 type:<class 'float'>
+18:29:27.705986: 	🚀当前遍历行数21, dev:0.008 type:<class 'float'>, uat:0.008 type:<class 'float'>
+18:29:27.706987: 	🚀当前遍历行数22, dev:0.006999999999999999 type:<class 'float'>, uat:0.006999999999999999 type:<class 'float'>
+18:29:27.707988: 	🚀当前遍历行数23, dev:0.008 type:<class 'float'>, uat:0.0077 type:<class 'float'>
+18:29:27.708986: 	🚀当前遍历行数24, dev:0.008 type:<class 'float'>, uat:0.0077 type:<class 'float'>
+18:29:27.710986: 	🚀当前遍历行数25, dev:0.011000000000000001 type:<class 'float'>, uat:0.011399999999999999 type:<class 'float'>
+18:29:27.711985: 	🚀当前遍历行数26, dev:0.009000000000000001 type:<class 'float'>, uat:0.0092 type:<class 'float'>
+18:29:27.712986: 	🚀当前遍历行数27, dev:0.01 type:<class 'float'>, uat:0.0095 type:<class 'float'>
+18:29:27.714986: 	🚀当前遍历行数28, dev:0.006999999999999999 type:<class 'float'>, uat:0.0072 type:<class 'float'>
+18:29:27.716988: 	🚀当前遍历行数29, dev:0.008 type:<class 'float'>, uat:0.008 type:<class 'float'>
+18:29:27.717987: 	🚀当前遍历行数30, dev:0.008 type:<class 'float'>, uat:0.0078000000000000005 type:<class 'float'>
+18:29:27.718985: 	🚀当前遍历行数31, dev:0.01 type:<class 'float'>, uat:0.01 type:<class 'float'>
+18:29:27.719985: 🚀当前遍历列数J,表头->CVR Evol%
+18:29:27.719985: 	🚀当前遍历行数1, dev:CVR Evol% type:<class 'str'>, uat:CVR Evol% type:<class 'str'>
+18:29:27.741982: 🚀当前遍历列数K,表头->ATV
+18:29:27.744982: 	🚀当前遍历行数1, dev:ATV type:<class 'str'>, uat:ATV type:<class 'str'>
+18:29:27.747986: 	🚀当前遍历行数2, dev:383.0 type:<class 'float'>, uat:383.0 type:<class 'float'>
+18:29:27.748989: 	🚀当前遍历行数3, dev:430.0 type:<class 'float'>, uat:430.0 type:<class 'float'>
+18:29:27.749988: 	🚀当前遍历行数4, dev:469.0 type:<class 'float'>, uat:469.0 type:<class 'float'>
+18:29:27.751990: 	🚀当前遍历行数5, dev:472.0 type:<class 'float'>, uat:472.0 type:<class 'float'>
+18:29:27.752989: 	🚀当前遍历行数6, dev:476.0 type:<class 'float'>, uat:476.0 type:<class 'float'>
+18:29:27.754986: 	🚀当前遍历行数7, dev:466.0 type:<class 'float'>, uat:466.0 type:<class 'float'>
+18:29:27.755986: 	🚀当前遍历行数8, dev:558.0 type:<class 'float'>, uat:558.0 type:<class 'float'>
+18:29:27.756987: 	🚀当前遍历行数9, dev:610.0 type:<class 'float'>, uat:610.0 type:<class 'float'>
+18:29:27.757988: 	🚀当前遍历行数10, dev:690.0 type:<class 'float'>, uat:690.0 type:<class 'float'>
+18:29:27.758986: 	🚀当前遍历行数11, dev:658.0 type:<class 'float'>, uat:658.0 type:<class 'float'>
+18:29:27.759989: 	🚀当前遍历行数12, dev:700.0 type:<class 'float'>, uat:700.0 type:<class 'float'>
+18:29:27.760986: 	🚀当前遍历行数13, dev:682.0 type:<class 'float'>, uat:682.0 type:<class 'float'>
+18:29:27.762992: 	🚀当前遍历行数14, dev:689.0 type:<class 'float'>, uat:689.0 type:<class 'float'>
+18:29:27.764991: 	🚀当前遍历行数15, dev:696.0 type:<class 'float'>, uat:696.0 type:<class 'float'>
+18:29:27.766989: 	🚀当前遍历行数16, dev:677.0 type:<class 'float'>, uat:677.0 type:<class 'float'>
+18:29:27.767987: 	🚀当前遍历行数17, dev:1046.0 type:<class 'float'>, uat:1046.0 type:<class 'float'>
+18:29:27.768986: 	🚀当前遍历行数18, dev:1158.0 type:<class 'float'>, uat:1158.0 type:<class 'float'>
+18:29:27.769988: 	🚀当前遍历行数19, dev:1216.0 type:<class 'float'>, uat:1216.0 type:<class 'float'>
+18:29:27.770986: 	🚀当前遍历行数20, dev:993.0 type:<class 'float'>, uat:993.0 type:<class 'float'>
+18:29:27.771988: 	🚀当前遍历行数21, dev:1280.0 type:<class 'float'>, uat:1280.0 type:<class 'float'>
+18:29:27.772987: 	🚀当前遍历行数22, dev:1307.0 type:<class 'float'>, uat:1307.0 type:<class 'float'>
+18:29:27.773988: 	🚀当前遍历行数23, dev:1298.0 type:<class 'float'>, uat:1298.0 type:<class 'float'>
+18:29:27.775992: 	🚀当前遍历行数24, dev:1405.0 type:<class 'float'>, uat:1405.0 type:<class 'float'>
+18:29:27.776992: 	🚀当前遍历行数25, dev:1332.0 type:<class 'float'>, uat:1332.0 type:<class 'float'>
+18:29:27.779006: 	🚀当前遍历行数26, dev:1382.0 type:<class 'float'>, uat:1382.0 type:<class 'float'>
+18:29:27.780997: 	🚀当前遍历行数27, dev:1360.0 type:<class 'float'>, uat:1360.0 type:<class 'float'>
+18:29:27.781994: 	🚀当前遍历行数28, dev:1435.0 type:<class 'float'>, uat:1435.0 type:<class 'float'>
+18:29:27.782989: 	🚀当前遍历行数29, dev:1383.0 type:<class 'float'>, uat:1383.0 type:<class 'float'>
+18:29:27.783987: 	🚀当前遍历行数30, dev:1450.0 type:<class 'float'>, uat:1450.0 type:<class 'float'>
+18:29:27.784991: 	🚀当前遍历行数31, dev:1424.0 type:<class 'float'>, uat:1424.0 type:<class 'float'>
+18:29:27.785991: 🚀当前遍历列数L,表头->ATV Evol%
+18:29:27.786991: 	🚀当前遍历行数1, dev:ATV Evol% type:<class 'str'>, uat:ATV Evol% type:<class 'str'>
+18:29:27.816626: 🚀当前遍历列数M,表头->CPM
+18:29:27.817627: 	🚀当前遍历行数1, dev:CPM type:<class 'str'>, uat:CPM type:<class 'str'>
+18:29:27.819627: 	🚀当前遍历行数2, dev:68.0 type:<class 'float'>, uat:68.0 type:<class 'float'>
+18:29:27.821630: 	🚀当前遍历行数3, dev:82.0 type:<class 'float'>, uat:82.0 type:<class 'float'>
+18:29:27.822633: 	🚀当前遍历行数4, dev:74.0 type:<class 'float'>, uat:74.0 type:<class 'float'>
+18:29:27.823633: 	🚀当前遍历行数5, dev:72.0 type:<class 'float'>, uat:72.0 type:<class 'float'>
+18:29:27.825636: 	🚀当前遍历行数6, dev:104.0 type:<class 'float'>, uat:104.0 type:<class 'float'>
+18:29:27.827635: 	🚀当前遍历行数7, dev:82.0 type:<class 'float'>, uat:82.0 type:<class 'float'>
+18:29:27.828632: 	🚀当前遍历行数8, dev:77.0 type:<class 'float'>, uat:77.0 type:<class 'float'>
+18:29:27.830632: 	🚀当前遍历行数9, dev:83.0 type:<class 'float'>, uat:83.0 type:<class 'float'>
+18:29:27.831635: 	🚀当前遍历行数10, dev:95.0 type:<class 'float'>, uat:95.0 type:<class 'float'>
+18:29:27.832638: 	🚀当前遍历行数11, dev:100.0 type:<class 'float'>, uat:100.0 type:<class 'float'>
+18:29:27.833635: 	🚀当前遍历行数12, dev:81.0 type:<class 'float'>, uat:81.0 type:<class 'float'>
+18:29:27.835628: 	🚀当前遍历行数13, dev:67.0 type:<class 'float'>, uat:67.0 type:<class 'float'>
+18:29:27.836632: 	🚀当前遍历行数14, dev:87.0 type:<class 'float'>, uat:87.0 type:<class 'float'>
+18:29:27.837630: 	🚀当前遍历行数15, dev:100.0 type:<class 'float'>, uat:100.0 type:<class 'float'>
+18:29:27.838632: 	🚀当前遍历行数16, dev:100.0 type:<class 'float'>, uat:100.0 type:<class 'float'>
+18:29:27.840630: 	🚀当前遍历行数17, dev:146.0 type:<class 'float'>, uat:146.0 type:<class 'float'>
+18:29:27.841632: 	🚀当前遍历行数18, dev:195.0 type:<class 'float'>, uat:195.0 type:<class 'float'>
+18:29:27.842631: 	🚀当前遍历行数19, dev:139.0 type:<class 'float'>, uat:139.0 type:<class 'float'>
+18:29:27.844630: 	🚀当前遍历行数20, dev:149.0 type:<class 'float'>, uat:149.0 type:<class 'float'>
+18:29:27.845629: 	🚀当前遍历行数21, dev:141.0 type:<class 'float'>, uat:141.0 type:<class 'float'>
+18:29:27.846630: 	🚀当前遍历行数22, dev:138.0 type:<class 'float'>, uat:138.0 type:<class 'float'>
+18:29:27.847630: 	🚀当前遍历行数23, dev:116.0 type:<class 'float'>, uat:116.0 type:<class 'float'>
+18:29:27.848633: 	🚀当前遍历行数24, dev:113.0 type:<class 'float'>, uat:113.0 type:<class 'float'>
+18:29:27.849630: 	🚀当前遍历行数25, dev:154.0 type:<class 'float'>, uat:154.0 type:<class 'float'>
+18:29:27.850629: 	🚀当前遍历行数26, dev:94.0 type:<class 'float'>, uat:94.0 type:<class 'float'>
+18:29:27.852630: 	🚀当前遍历行数27, dev:95.0 type:<class 'float'>, uat:95.0 type:<class 'float'>
+18:29:27.853629: 	🚀当前遍历行数28, dev:103.0 type:<class 'float'>, uat:103.0 type:<class 'float'>
+18:29:27.854631: 	🚀当前遍历行数29, dev:130.0 type:<class 'float'>, uat:130.0 type:<class 'float'>
+18:29:27.855631: 	🚀当前遍历行数30, dev:100.0 type:<class 'float'>, uat:100.0 type:<class 'float'>
+18:29:27.860640: 	🚀当前遍历行数31, dev:104.0 type:<class 'float'>, uat:104.0 type:<class 'float'>
+18:29:27.861634: 🚀当前遍历列数N,表头->CPM Evol%
+18:29:27.862637: 	🚀当前遍历行数1, dev:CPM Evol% type:<class 'str'>, uat:CPM Evol% type:<class 'str'>
+18:29:27.886624: 🚀当前遍历列数O,表头->CPC
+18:29:27.886624: 	🚀当前遍历行数1, dev:CPC type:<class 'str'>, uat:CPC type:<class 'str'>
+18:29:27.888630: 	🚀当前遍历行数2, dev:6.0 type:<class 'float'>, uat:6.0 type:<class 'float'>
+18:29:27.890629: 	🚀当前遍历行数3, dev:4.2 type:<class 'float'>, uat:4.2 type:<class 'float'>
+18:29:27.891632: 	🚀当前遍历行数4, dev:3.4 type:<class 'float'>, uat:3.4 type:<class 'float'>
+18:29:27.892633: 	🚀当前遍历行数5, dev:2.2 type:<class 'float'>, uat:2.2 type:<class 'float'>
+18:29:27.894637: 	🚀当前遍历行数6, dev:3.1 type:<class 'float'>, uat:3.1 type:<class 'float'>
+18:29:27.895636: 	🚀当前遍历行数7, dev:3.3 type:<class 'float'>, uat:3.3 type:<class 'float'>
+18:29:27.896631: 	🚀当前遍历行数8, dev:2.3 type:<class 'float'>, uat:2.3 type:<class 'float'>
+18:29:27.897631: 	🚀当前遍历行数9, dev:3.1 type:<class 'float'>, uat:3.1 type:<class 'float'>
+18:29:27.898635: 	🚀当前遍历行数10, dev:4.0 type:<class 'float'>, uat:4.0 type:<class 'float'>
+18:29:27.899634: 	🚀当前遍历行数11, dev:3.6 type:<class 'float'>, uat:3.6 type:<class 'float'>
+18:29:27.901632: 	🚀当前遍历行数12, dev:2.8 type:<class 'float'>, uat:2.8 type:<class 'float'>
+18:29:27.902629: 	🚀当前遍历行数13, dev:1.8 type:<class 'float'>, uat:1.8 type:<class 'float'>
+18:29:27.903630: 	🚀当前遍历行数14, dev:2.0 type:<class 'float'>, uat:2.0 type:<class 'float'>
+18:29:27.905632: 	🚀当前遍历行数15, dev:3.7 type:<class 'float'>, uat:3.7 type:<class 'float'>
+18:29:27.906634: 	🚀当前遍历行数16, dev:3.7 type:<class 'float'>, uat:3.7 type:<class 'float'>
+18:29:27.907629: 	🚀当前遍历行数17, dev:4.8 type:<class 'float'>, uat:4.8 type:<class 'float'>
+18:29:27.908630: 	🚀当前遍历行数18, dev:5.5 type:<class 'float'>, uat:5.5 type:<class 'float'>
+18:29:27.910631: 	🚀当前遍历行数19, dev:4.2 type:<class 'float'>, uat:4.2 type:<class 'float'>
+18:29:27.911633: 	🚀当前遍历行数20, dev:5.3 type:<class 'float'>, uat:5.3 type:<class 'float'>
+18:29:27.912636: 	🚀当前遍历行数21, dev:6.5 type:<class 'float'>, uat:6.5 type:<class 'float'>
+18:29:27.913631: 	🚀当前遍历行数22, dev:6.1 type:<class 'float'>, uat:6.1 type:<class 'float'>
+18:29:27.915630: 	🚀当前遍历行数23, dev:5.5 type:<class 'float'>, uat:5.5 type:<class 'float'>
+18:29:27.916628: 	🚀当前遍历行数24, dev:6.3 type:<class 'float'>, uat:6.3 type:<class 'float'>
+18:29:27.917629: 	🚀当前遍历行数25, dev:7.6 type:<class 'float'>, uat:7.6 type:<class 'float'>
+18:29:27.918630: 	🚀当前遍历行数26, dev:7.6 type:<class 'float'>, uat:7.6 type:<class 'float'>
+18:29:27.919634: 	🚀当前遍历行数27, dev:8.0 type:<class 'float'>, uat:8.0 type:<class 'float'>
+18:29:27.920630: 	🚀当前遍历行数28, dev:6.5 type:<class 'float'>, uat:6.5 type:<class 'float'>
+18:29:27.921633: 	🚀当前遍历行数29, dev:6.7 type:<class 'float'>, uat:6.6 type:<class 'float'>
+18:29:27.923632: 	🚀当前遍历行数30, dev:6.8 type:<class 'float'>, uat:6.8 type:<class 'float'>
+18:29:27.924628: 	🚀当前遍历行数31, dev:7.9 type:<class 'float'>, uat:7.9 type:<class 'float'>
+18:29:27.925629: 🚀当前遍历列数P,表头->CPC Evol%
+18:29:27.926632: 	🚀当前遍历行数1, dev:CPC Evol% type:<class 'str'>, uat:CPC Evol% type:<class 'str'>
+18:29:27.956624: 🚀当前遍历列数Q,表头->CTR
+18:29:27.957627: 	🚀当前遍历行数1, dev:CTR type:<class 'str'>, uat:CTR type:<class 'str'>
+18:29:27.959628: 	🚀当前遍历行数2, dev:0.011000000000000001 type:<class 'float'>, uat:0.011000000000000001 type:<class 'float'>
+18:29:27.961630: 	🚀当前遍历行数3, dev:0.02 type:<class 'float'>, uat:0.02 type:<class 'float'>
+18:29:27.963640: 	🚀当前遍历行数4, dev:0.022000000000000002 type:<class 'float'>, uat:0.022000000000000002 type:<class 'float'>
+18:29:27.964635: 	🚀当前遍历行数5, dev:0.032 type:<class 'float'>, uat:0.032 type:<class 'float'>
+18:29:27.966631: 	🚀当前遍历行数6, dev:0.033 type:<class 'float'>, uat:0.033 type:<class 'float'>
+18:29:27.970635: 	🚀当前遍历行数7, dev:0.025 type:<class 'float'>, uat:0.025 type:<class 'float'>
+18:29:27.971635: 	🚀当前遍历行数8, dev:0.033 type:<class 'float'>, uat:0.033 type:<class 'float'>
+18:29:27.973632: 	🚀当前遍历行数9, dev:0.027000000000000003 type:<class 'float'>, uat:0.027000000000000003 type:<class 'float'>
+18:29:27.974633: 	🚀当前遍历行数10, dev:0.024 type:<class 'float'>, uat:0.024 type:<class 'float'>
+18:29:27.975633: 	🚀当前遍历行数11, dev:0.027999999999999997 type:<class 'float'>, uat:0.027999999999999997 type:<class 'float'>
+18:29:27.976634: 	🚀当前遍历行数12, dev:0.028999999999999998 type:<class 'float'>, uat:0.028999999999999998 type:<class 'float'>
+18:29:27.978634: 	🚀当前遍历行数13, dev:0.037000000000000005 type:<class 'float'>, uat:0.037000000000000005 type:<class 'float'>
+18:29:27.979634: 	🚀当前遍历行数14, dev:0.044000000000000004 type:<class 'float'>, uat:0.044000000000000004 type:<class 'float'>
+18:29:27.980633: 	🚀当前遍历行数15, dev:0.027000000000000003 type:<class 'float'>, uat:0.027000000000000003 type:<class 'float'>
+18:29:27.981634: 	🚀当前遍历行数16, dev:0.027000000000000003 type:<class 'float'>, uat:0.027000000000000003 type:<class 'float'>
+18:29:27.984633: 	🚀当前遍历行数17, dev:0.03 type:<class 'float'>, uat:0.03 type:<class 'float'>
+18:29:27.986638: 	🚀当前遍历行数18, dev:0.036000000000000004 type:<class 'float'>, uat:0.036000000000000004 type:<class 'float'>
+18:29:27.988632: 	🚀当前遍历行数19, dev:0.033 type:<class 'float'>, uat:0.033 type:<class 'float'>
+18:29:27.989644: 	🚀当前遍历行数20, dev:0.027999999999999997 type:<class 'float'>, uat:0.027999999999999997 type:<class 'float'>
+18:29:27.991645: 	🚀当前遍历行数21, dev:0.022000000000000002 type:<class 'float'>, uat:0.022000000000000002 type:<class 'float'>
+18:29:27.993635: 	🚀当前遍历行数22, dev:0.023 type:<class 'float'>, uat:0.023 type:<class 'float'>
+18:29:27.994641: 	🚀当前遍历行数23, dev:0.021 type:<class 'float'>, uat:0.021 type:<class 'float'>
+18:29:27.995635: 	🚀当前遍历行数24, dev:0.018000000000000002 type:<class 'float'>, uat:0.018000000000000002 type:<class 'float'>
+18:29:27.997635: 	🚀当前遍历行数25, dev:0.02 type:<class 'float'>, uat:0.02 type:<class 'float'>
+18:29:27.999631: 	🚀当前遍历行数26, dev:0.012 type:<class 'float'>, uat:0.012 type:<class 'float'>
+18:29:28.000637: 	🚀当前遍历行数27, dev:0.012 type:<class 'float'>, uat:0.012 type:<class 'float'>
+18:29:28.001633: 	🚀当前遍历行数28, dev:0.016 type:<class 'float'>, uat:0.016 type:<class 'float'>
+18:29:28.002638: 	🚀当前遍历行数29, dev:0.02 type:<class 'float'>, uat:0.02 type:<class 'float'>
+18:29:28.004638: 	🚀当前遍历行数30, dev:0.015 type:<class 'float'>, uat:0.015 type:<class 'float'>
+18:29:28.005632: 	🚀当前遍历行数31, dev:0.013000000000000001 type:<class 'float'>, uat:0.013000000000000001 type:<class 'float'>
+18:29:28.006634: 🚀当前遍历列数R,表头->CTR Evol%
+18:29:28.007631: 	🚀当前遍历行数1, dev:CTR Evol% type:<class 'str'>, uat:CTR Evol% type:<class 'str'>
+18:42:41.524597: 🟡开始生成Gap_sheet🟡
+18:42:41.526605: 🚀最大列18
+🚀最大行31
+18:42:41.538595: 🚀当前遍历列数A,表头->日期
+18:42:41.539600: 	🚀当前遍历行数1, dev:日期 type:<class 'str'>, uat:日期 type:<class 'str'>
+18:42:41.541599: 2023-08-01 00:00:00是日期格式
+18:42:41.542591: 	🚀当前遍历行数2, dev:2023-08-01 00:00:00 type:<class 'datetime.datetime'>, uat:2023-08-01 type:<class 'str'>
+18:42:41.543594: 2023-08-02 00:00:00是日期格式
+18:42:41.544594: 	🚀当前遍历行数3, dev:2023-08-02 00:00:00 type:<class 'datetime.datetime'>, uat:2023-08-02 type:<class 'str'>
+18:42:41.545600: 2023-08-03 00:00:00是日期格式
+18:42:41.547600: 	🚀当前遍历行数4, dev:2023-08-03 00:00:00 type:<class 'datetime.datetime'>, uat:2023-08-03 type:<class 'str'>
+18:42:41.549594: 2023-08-04 00:00:00是日期格式
+18:42:41.549594: 	🚀当前遍历行数5, dev:2023-08-04 00:00:00 type:<class 'datetime.datetime'>, uat:2023-08-04 type:<class 'str'>
+18:42:41.551593: 2023-08-05 00:00:00是日期格式
+18:42:41.551593: 	🚀当前遍历行数6, dev:2023-08-05 00:00:00 type:<class 'datetime.datetime'>, uat:2023-08-05 type:<class 'str'>
+18:42:41.553597: 2023-08-06 00:00:00是日期格式
+18:42:41.554602: 	🚀当前遍历行数7, dev:2023-08-06 00:00:00 type:<class 'datetime.datetime'>, uat:2023-08-06 type:<class 'str'>
+18:42:41.555596: 2023-08-07 00:00:00是日期格式
+18:42:41.556604: 	🚀当前遍历行数8, dev:2023-08-07 00:00:00 type:<class 'datetime.datetime'>, uat:2023-08-07 type:<class 'str'>
+18:42:41.557597: 2023-08-08 00:00:00是日期格式
+18:42:41.557597: 	🚀当前遍历行数9, dev:2023-08-08 00:00:00 type:<class 'datetime.datetime'>, uat:2023-08-08 type:<class 'str'>
+18:42:41.559597: 2023-08-09 00:00:00是日期格式
+18:42:41.559597: 	🚀当前遍历行数10, dev:2023-08-09 00:00:00 type:<class 'datetime.datetime'>, uat:2023-08-09 type:<class 'str'>
+18:42:41.561594: 2023-08-10 00:00:00是日期格式
+18:42:41.561594: 	🚀当前遍历行数11, dev:2023-08-10 00:00:00 type:<class 'datetime.datetime'>, uat:2023-08-10 type:<class 'str'>
+18:42:41.562593: 2023-08-11 00:00:00是日期格式
+18:42:41.563593: 	🚀当前遍历行数12, dev:2023-08-11 00:00:00 type:<class 'datetime.datetime'>, uat:2023-08-11 type:<class 'str'>
+18:42:41.564601: 2023-08-12 00:00:00是日期格式
+18:42:41.564601: 	🚀当前遍历行数13, dev:2023-08-12 00:00:00 type:<class 'datetime.datetime'>, uat:2023-08-12 type:<class 'str'>
+18:42:41.566597: 2023-08-13 00:00:00是日期格式
+18:42:41.566597: 	🚀当前遍历行数14, dev:2023-08-13 00:00:00 type:<class 'datetime.datetime'>, uat:2023-08-13 type:<class 'str'>
+18:42:41.567594: 2023-08-14 00:00:00是日期格式
+18:42:41.568597: 	🚀当前遍历行数15, dev:2023-08-14 00:00:00 type:<class 'datetime.datetime'>, uat:2023-08-14 type:<class 'str'>
+18:42:41.570602: 2023-08-15 00:00:00是日期格式
+18:42:41.570602: 	🚀当前遍历行数16, dev:2023-08-15 00:00:00 type:<class 'datetime.datetime'>, uat:2023-08-15 type:<class 'str'>
+18:42:41.572595: 2023-08-01 00:00:00是日期格式
+18:42:41.573595: 	🚀当前遍历行数17, dev:2023-08-01 00:00:00 type:<class 'datetime.datetime'>, uat:2023-08-01 type:<class 'str'>
+18:42:41.574596: 2023-08-02 00:00:00是日期格式
+18:42:41.575593: 	🚀当前遍历行数18, dev:2023-08-02 00:00:00 type:<class 'datetime.datetime'>, uat:2023-08-02 type:<class 'str'>
+18:42:41.576599: 2023-08-03 00:00:00是日期格式
+18:42:41.576599: 	🚀当前遍历行数19, dev:2023-08-03 00:00:00 type:<class 'datetime.datetime'>, uat:2023-08-03 type:<class 'str'>
+18:42:41.578597: 2023-08-04 00:00:00是日期格式
+18:42:41.578597: 	🚀当前遍历行数20, dev:2023-08-04 00:00:00 type:<class 'datetime.datetime'>, uat:2023-08-04 type:<class 'str'>
+18:42:41.580607: 2023-08-05 00:00:00是日期格式
+18:42:41.580607: 	🚀当前遍历行数21, dev:2023-08-05 00:00:00 type:<class 'datetime.datetime'>, uat:2023-08-05 type:<class 'str'>
+18:42:41.582595: 2023-08-06 00:00:00是日期格式
+18:42:41.583598: 	🚀当前遍历行数22, dev:2023-08-06 00:00:00 type:<class 'datetime.datetime'>, uat:2023-08-06 type:<class 'str'>
+18:42:41.585596: 2023-08-07 00:00:00是日期格式
+18:42:41.586594: 	🚀当前遍历行数23, dev:2023-08-07 00:00:00 type:<class 'datetime.datetime'>, uat:2023-08-07 type:<class 'str'>
+18:42:41.588599: 2023-08-08 00:00:00是日期格式
+18:42:41.589598: 	🚀当前遍历行数24, dev:2023-08-08 00:00:00 type:<class 'datetime.datetime'>, uat:2023-08-08 type:<class 'str'>
+18:42:41.590598: 2023-08-09 00:00:00是日期格式
+18:42:41.591594: 	🚀当前遍历行数25, dev:2023-08-09 00:00:00 type:<class 'datetime.datetime'>, uat:2023-08-09 type:<class 'str'>
+18:42:41.592595: 2023-08-10 00:00:00是日期格式
+18:42:41.593593: 	🚀当前遍历行数26, dev:2023-08-10 00:00:00 type:<class 'datetime.datetime'>, uat:2023-08-10 type:<class 'str'>
+18:42:41.594593: 2023-08-11 00:00:00是日期格式
+18:42:41.594593: 	🚀当前遍历行数27, dev:2023-08-11 00:00:00 type:<class 'datetime.datetime'>, uat:2023-08-11 type:<class 'str'>
+18:42:41.595596: 2023-08-12 00:00:00是日期格式
+18:42:41.596594: 	🚀当前遍历行数28, dev:2023-08-12 00:00:00 type:<class 'datetime.datetime'>, uat:2023-08-12 type:<class 'str'>
+18:42:41.597594: 2023-08-13 00:00:00是日期格式
+18:42:41.598594: 	🚀当前遍历行数29, dev:2023-08-13 00:00:00 type:<class 'datetime.datetime'>, uat:2023-08-13 type:<class 'str'>
+18:42:41.599594: 2023-08-14 00:00:00是日期格式
+18:42:41.600596: 	🚀当前遍历行数30, dev:2023-08-14 00:00:00 type:<class 'datetime.datetime'>, uat:2023-08-14 type:<class 'str'>
+18:42:41.601599: 2023-08-15 00:00:00是日期格式
+18:42:41.602598: 	🚀当前遍历行数31, dev:2023-08-15 00:00:00 type:<class 'datetime.datetime'>, uat:2023-08-15 type:<class 'str'>
+18:42:41.604600: 🚀当前遍历列数B,表头->事业部
+18:42:41.604600: 	🚀当前遍历行数1, dev:事业部 type:<class 'str'>, uat:事业部 type:<class 'str'>
+18:42:41.630591: 🚀当前遍历列数C,表头->品牌名称
+18:42:41.631593: 	🚀当前遍历行数1, dev:品牌名称 type:<class 'str'>, uat:品牌名称 type:<class 'str'>
+18:42:41.635591: 	🚀当前遍历行数2, dev:ARMANI type:<class 'str'>, uat:GA type:<class 'str'>
+18:42:41.638593: 	🚀当前遍历行数3, dev:ARMANI type:<class 'str'>, uat:GA type:<class 'str'>
+18:42:41.639596: 	🚀当前遍历行数4, dev:ARMANI type:<class 'str'>, uat:GA type:<class 'str'>
+18:42:41.641593: 	🚀当前遍历行数5, dev:ARMANI type:<class 'str'>, uat:GA type:<class 'str'>
+18:42:41.642596: 	🚀当前遍历行数6, dev:ARMANI type:<class 'str'>, uat:GA type:<class 'str'>
+18:42:41.643598: 	🚀当前遍历行数7, dev:ARMANI type:<class 'str'>, uat:GA type:<class 'str'>
+18:42:41.644594: 	🚀当前遍历行数8, dev:ARMANI type:<class 'str'>, uat:GA type:<class 'str'>
+18:42:41.645594: 	🚀当前遍历行数9, dev:ARMANI type:<class 'str'>, uat:GA type:<class 'str'>
+18:42:41.649597: 	🚀当前遍历行数10, dev:ARMANI type:<class 'str'>, uat:GA type:<class 'str'>
+18:42:41.651595: 	🚀当前遍历行数11, dev:ARMANI type:<class 'str'>, uat:GA type:<class 'str'>
+18:42:41.652598: 	🚀当前遍历行数12, dev:ARMANI type:<class 'str'>, uat:GA type:<class 'str'>
+18:42:41.654600: 	🚀当前遍历行数13, dev:ARMANI type:<class 'str'>, uat:GA type:<class 'str'>
+18:42:41.655599: 	🚀当前遍历行数14, dev:ARMANI type:<class 'str'>, uat:GA type:<class 'str'>
+18:42:41.656598: 	🚀当前遍历行数15, dev:ARMANI type:<class 'str'>, uat:GA type:<class 'str'>
+18:42:41.657599: 	🚀当前遍历行数16, dev:ARMANI type:<class 'str'>, uat:GA type:<class 'str'>
+18:42:41.659597: 	🚀当前遍历行数17, dev:PRADA type:<class 'str'>, uat:PRADA type:<class 'str'>
+18:42:41.660595: 	🚀当前遍历行数18, dev:PRADA type:<class 'str'>, uat:PRADA type:<class 'str'>
+18:42:41.661596: 	🚀当前遍历行数19, dev:PRADA type:<class 'str'>, uat:PRADA type:<class 'str'>
+18:42:41.663597: 	🚀当前遍历行数20, dev:PRADA type:<class 'str'>, uat:PRADA type:<class 'str'>
+18:42:41.664598: 	🚀当前遍历行数21, dev:PRADA type:<class 'str'>, uat:PRADA type:<class 'str'>
+18:42:41.665594: 	🚀当前遍历行数22, dev:PRADA type:<class 'str'>, uat:PRADA type:<class 'str'>
+18:42:41.666594: 	🚀当前遍历行数23, dev:PRADA type:<class 'str'>, uat:PRADA type:<class 'str'>
+18:42:41.668594: 	🚀当前遍历行数24, dev:PRADA type:<class 'str'>, uat:PRADA type:<class 'str'>
+18:42:41.669594: 	🚀当前遍历行数25, dev:PRADA type:<class 'str'>, uat:PRADA type:<class 'str'>
+18:42:41.670596: 	🚀当前遍历行数26, dev:PRADA type:<class 'str'>, uat:PRADA type:<class 'str'>
+18:42:41.671596: 	🚀当前遍历行数27, dev:PRADA type:<class 'str'>, uat:PRADA type:<class 'str'>
+18:42:41.672594: 	🚀当前遍历行数28, dev:PRADA type:<class 'str'>, uat:PRADA type:<class 'str'>
+18:42:41.673597: 	🚀当前遍历行数29, dev:PRADA type:<class 'str'>, uat:PRADA type:<class 'str'>
+18:42:41.674595: 	🚀当前遍历行数30, dev:PRADA type:<class 'str'>, uat:PRADA type:<class 'str'>
+18:42:41.676595: 	🚀当前遍历行数31, dev:PRADA type:<class 'str'>, uat:PRADA type:<class 'str'>
+18:42:41.677595: 🚀当前遍历列数D,表头->BET%
+18:42:41.677595: 	🚀当前遍历行数1, dev:BET% type:<class 'str'>, uat:CET% type:<class 'str'>
+18:42:41.701588: 🚀当前遍历列数E,表头->Spending
+18:42:41.702590: 	🚀当前遍历行数1, dev:Spending type:<class 'str'>, uat:Spending type:<class 'str'>
+18:42:41.704597: 	🚀当前遍历行数2, dev:178692.4 type:<class 'float'>, uat:178692.0 type:<class 'float'>
+18:42:41.706600: 	🚀当前遍历行数3, dev:131689.4 type:<class 'float'>, uat:131689.0 type:<class 'float'>
+18:42:41.707595: 	🚀当前遍历行数4, dev:168764.7 type:<class 'float'>, uat:168765.0 type:<class 'float'>
+18:42:41.708595: 	🚀当前遍历行数5, dev:145845.3 type:<class 'float'>, uat:145845.0 type:<class 'float'>
+18:42:41.709594: 	🚀当前遍历行数6, dev:150679.7 type:<class 'float'>, uat:150680.0 type:<class 'float'>
+18:42:41.711595: 	🚀当前遍历行数7, dev:194239.1 type:<class 'float'>, uat:194239.0 type:<class 'float'>
+18:42:41.712595: 	🚀当前遍历行数8, dev:184831.1 type:<class 'float'>, uat:184831.0 type:<class 'float'>
+18:42:41.713595: 	🚀当前遍历行数9, dev:198182.0 type:<class 'float'>, uat:198182.0 type:<class 'float'>
+18:42:41.714594: 	🚀当前遍历行数10, dev:256410.7 type:<class 'float'>, uat:256411.0 type:<class 'float'>
+18:42:41.716595: 	🚀当前遍历行数11, dev:217735.3 type:<class 'float'>, uat:217735.0 type:<class 'float'>
+18:42:41.717595: 	🚀当前遍历行数12, dev:300252.6 type:<class 'float'>, uat:300253.0 type:<class 'float'>
+18:42:41.718594: 	🚀当前遍历行数13, dev:386812.1 type:<class 'float'>, uat:386812.0 type:<class 'float'>
+18:42:41.719595: 	🚀当前遍历行数14, dev:383424.7 type:<class 'float'>, uat:383425.0 type:<class 'float'>
+18:42:41.721599: 	🚀当前遍历行数15, dev:413602.7 type:<class 'float'>, uat:413603.0 type:<class 'float'>
+18:42:41.722597: 	🚀当前遍历行数16, dev:669120.2 type:<class 'float'>, uat:669120.0 type:<class 'float'>
+18:42:41.723596: 	🚀当前遍历行数17, dev:28919.8 type:<class 'float'>, uat:28920.0 type:<class 'float'>
+18:42:41.724595: 	🚀当前遍历行数18, dev:29881.5 type:<class 'float'>, uat:29881.0 type:<class 'float'>
+18:42:41.725596: 	🚀当前遍历行数19, dev:36095.7 type:<class 'float'>, uat:36096.0 type:<class 'float'>
+18:42:41.726597: 	🚀当前遍历行数20, dev:72077.1 type:<class 'float'>, uat:72077.0 type:<class 'float'>
+18:42:41.727594: 	🚀当前遍历行数21, dev:64563.9 type:<class 'float'>, uat:64564.0 type:<class 'float'>
+18:42:41.729596: 	🚀当前遍历行数22, dev:57141.2 type:<class 'float'>, uat:57141.0 type:<class 'float'>
+18:42:41.730591: 	🚀当前遍历行数23, dev:51986.1 type:<class 'float'>, uat:51986.0 type:<class 'float'>
+18:42:41.732594: 	🚀当前遍历行数24, dev:70148.3 type:<class 'float'>, uat:70148.0 type:<class 'float'>
+18:42:41.733595: 	🚀当前遍历行数25, dev:67764.9 type:<class 'float'>, uat:67765.0 type:<class 'float'>
+18:42:41.734595: 	🚀当前遍历行数26, dev:236367.8 type:<class 'float'>, uat:236368.0 type:<class 'float'>
+18:42:41.735595: 	🚀当前遍历行数27, dev:273547.2 type:<class 'float'>, uat:273547.0 type:<class 'float'>
+18:42:41.736594: 	🚀当前遍历行数28, dev:194539.9 type:<class 'float'>, uat:194540.0 type:<class 'float'>
+18:42:41.737596: 	🚀当前遍历行数29, dev:134189.8 type:<class 'float'>, uat:134190.0 type:<class 'float'>
+18:42:41.739593: 	🚀当前遍历行数30, dev:260154.4 type:<class 'float'>, uat:260154.0 type:<class 'float'>
+18:42:41.740596: 	🚀当前遍历行数31, dev:298844.0 type:<class 'float'>, uat:298844.0 type:<class 'float'>
+18:42:41.741596: 🚀当前遍历列数F,表头->Spending Evol%
+18:42:41.741596: 	🚀当前遍历行数1, dev:Spending Evol% type:<class 'str'>, uat:Spending Evol% type:<class 'str'>
+18:42:41.763590: 🚀当前遍历列数G,表头->Media ROI
+18:42:41.766591: 	🚀当前遍历行数1, dev:Media ROI type:<class 'str'>, uat:Media ROI type:<class 'str'>
+18:42:41.768592: 	🚀当前遍历行数2, dev:1.6 type:<class 'float'>, uat:1.6 type:<class 'float'>
+18:42:41.769596: 	🚀当前遍历行数3, dev:1.4 type:<class 'float'>, uat:1.4 type:<class 'float'>
+18:42:41.771594: 	🚀当前遍历行数4, dev:1.4 type:<class 'float'>, uat:1.4 type:<class 'float'>
+18:42:41.773601: 	🚀当前遍历行数5, dev:1.3 type:<class 'float'>, uat:1.3 type:<class 'float'>
+18:42:41.774597: 	🚀当前遍历行数6, dev:1.2 type:<class 'float'>, uat:1.2 type:<class 'float'>
+18:42:41.776595: 	🚀当前遍历行数7, dev:1.2 type:<class 'float'>, uat:1.2 type:<class 'float'>
+18:42:41.778592: 	🚀当前遍历行数8, dev:1.1 type:<class 'float'>, uat:1.1 type:<class 'float'>
+18:42:41.779592: 	🚀当前遍历行数9, dev:1.1 type:<class 'float'>, uat:1.1 type:<class 'float'>
+18:42:41.780596: 	🚀当前遍历行数10, dev:1.2 type:<class 'float'>, uat:1.2 type:<class 'float'>
+18:42:41.781594: 	🚀当前遍历行数11, dev:1.2 type:<class 'float'>, uat:1.2 type:<class 'float'>
+18:42:41.782595: 	🚀当前遍历行数12, dev:1.3 type:<class 'float'>, uat:1.3 type:<class 'float'>
+18:42:41.783593: 	🚀当前遍历行数13, dev:1.5 type:<class 'float'>, uat:1.5 type:<class 'float'>
+18:42:41.784594: 	🚀当前遍历行数14, dev:1.5 type:<class 'float'>, uat:1.5 type:<class 'float'>
+18:42:41.785593: 	🚀当前遍历行数15, dev:1.3 type:<class 'float'>, uat:1.3 type:<class 'float'>
+18:42:41.787602: 	🚀当前遍历行数16, dev:1.3 type:<class 'float'>, uat:1.3 type:<class 'float'>
+18:42:41.789064: 	🚀当前遍历行数17, dev:1.7 type:<class 'float'>, uat:1.7 type:<class 'float'>
+18:42:41.790594: 	🚀当前遍历行数18, dev:2.1 type:<class 'float'>, uat:2.1 type:<class 'float'>
+18:42:41.791593: 	🚀当前遍历行数19, dev:1.8 type:<class 'float'>, uat:1.8 type:<class 'float'>
+18:42:41.792595: 	🚀当前遍历行数20, dev:2.2 type:<class 'float'>, uat:2.2 type:<class 'float'>
+18:42:41.793595: 	🚀当前遍历行数21, dev:1.7 type:<class 'float'>, uat:1.7 type:<class 'float'>
+18:42:41.794592: 	🚀当前遍历行数22, dev:1.7 type:<class 'float'>, uat:1.7 type:<class 'float'>
+18:42:41.795592: 	🚀当前遍历行数23, dev:2.1 type:<class 'float'>, uat:2.1 type:<class 'float'>
+18:42:41.796593: 	🚀当前遍历行数24, dev:1.9 type:<class 'float'>, uat:1.9 type:<class 'float'>
+18:42:41.797593: 	🚀当前遍历行数25, dev:2.0 type:<class 'float'>, uat:2.0 type:<class 'float'>
+18:42:41.798594: 	🚀当前遍历行数26, dev:1.8 type:<class 'float'>, uat:1.8 type:<class 'float'>
+18:42:41.799594: 	🚀当前遍历行数27, dev:1.6 type:<class 'float'>, uat:1.7 type:<class 'float'>
+18:42:41.800593: 	🚀当前遍历行数28, dev:1.7 type:<class 'float'>, uat:1.7 type:<class 'float'>
+18:42:41.801593: 	🚀当前遍历行数29, dev:1.7 type:<class 'float'>, uat:1.7 type:<class 'float'>
+18:42:41.802594: 	🚀当前遍历行数30, dev:1.7 type:<class 'float'>, uat:1.7 type:<class 'float'>
+18:42:41.804597: 	🚀当前遍历行数31, dev:1.9 type:<class 'float'>, uat:1.9 type:<class 'float'>
+18:42:41.805597: 🚀当前遍历列数H,表头->Media ROI Evol%
+18:42:41.806595: 	🚀当前遍历行数1, dev:Media ROI Evol% type:<class 'str'>, uat:Media ROI Evol% type:<class 'str'>
+18:42:41.829591: 🚀当前遍历列数I,表头->CVR
+18:42:41.829591: 	🚀当前遍历行数1, dev:CVR type:<class 'str'>, uat:CVR type:<class 'str'>
+18:42:41.831594: 	🚀当前遍历行数2, dev:0.024 type:<class 'float'>, uat:0.0239 type:<class 'float'>
+18:42:41.833592: 	🚀当前遍历行数3, dev:0.013000000000000001 type:<class 'float'>, uat:0.0132 type:<class 'float'>
+18:42:41.834594: 	🚀当前遍历行数4, dev:0.011000000000000001 type:<class 'float'>, uat:0.011000000000000001 type:<class 'float'>
+18:42:41.836594: 	🚀当前遍历行数5, dev:0.006 type:<class 'float'>, uat:0.0058 type:<class 'float'>
+18:42:41.838594: 	🚀当前遍历行数6, dev:0.008 type:<class 'float'>, uat:0.0077 type:<class 'float'>
+18:42:41.839593: 	🚀当前遍历行数7, dev:0.008 type:<class 'float'>, uat:0.0084 type:<class 'float'>
+18:42:41.840592: 	🚀当前遍历行数8, dev:0.005 type:<class 'float'>, uat:0.0045000000000000005 type:<class 'float'>
+18:42:41.842594: 	🚀当前遍历行数9, dev:0.006 type:<class 'float'>, uat:0.005600000000000001 type:<class 'float'>
+18:42:41.843599: 	🚀当前遍历行数10, dev:0.006999999999999999 type:<class 'float'>, uat:0.0072 type:<class 'float'>
+18:42:41.844594: 	🚀当前遍历行数11, dev:0.008 type:<class 'float'>, uat:0.0077 type:<class 'float'>
+18:42:41.845593: 	🚀当前遍历行数12, dev:0.006999999999999999 type:<class 'float'>, uat:0.0067 type:<class 'float'>
+18:42:41.846594: 	🚀当前遍历行数13, dev:0.005 type:<class 'float'>, uat:0.005 type:<class 'float'>
+18:42:41.847594: 	🚀当前遍历行数14, dev:0.005 type:<class 'float'>, uat:0.0049 type:<class 'float'>
+18:42:41.848593: 	🚀当前遍历行数15, dev:0.009000000000000001 type:<class 'float'>, uat:0.009000000000000001 type:<class 'float'>
+18:42:41.849594: 	🚀当前遍历行数16, dev:0.009000000000000001 type:<class 'float'>, uat:0.0086 type:<class 'float'>
+18:42:41.851592: 	🚀当前遍历行数17, dev:0.006999999999999999 type:<class 'float'>, uat:0.006999999999999999 type:<class 'float'>
+18:42:41.852592: 	🚀当前遍历行数18, dev:0.009000000000000001 type:<class 'float'>, uat:0.009000000000000001 type:<class 'float'>
+18:42:41.853596: 	🚀当前遍历行数19, dev:0.006 type:<class 'float'>, uat:0.005699999999999999 type:<class 'float'>
+18:42:41.854597: 	🚀当前遍历行数20, dev:0.011000000000000001 type:<class 'float'>, uat:0.0106 type:<class 'float'>
+18:42:41.855594: 	🚀当前遍历行数21, dev:0.008 type:<class 'float'>, uat:0.008 type:<class 'float'>
+18:42:41.856594: 	🚀当前遍历行数22, dev:0.006999999999999999 type:<class 'float'>, uat:0.006999999999999999 type:<class 'float'>
+18:42:41.857592: 	🚀当前遍历行数23, dev:0.008 type:<class 'float'>, uat:0.0077 type:<class 'float'>
+18:42:41.858594: 	🚀当前遍历行数24, dev:0.008 type:<class 'float'>, uat:0.0077 type:<class 'float'>
+18:42:41.859593: 	🚀当前遍历行数25, dev:0.011000000000000001 type:<class 'float'>, uat:0.011399999999999999 type:<class 'float'>
+18:42:41.861593: 	🚀当前遍历行数26, dev:0.009000000000000001 type:<class 'float'>, uat:0.0092 type:<class 'float'>
+18:42:41.862593: 	🚀当前遍历行数27, dev:0.01 type:<class 'float'>, uat:0.0095 type:<class 'float'>
+18:42:41.863594: 	🚀当前遍历行数28, dev:0.006999999999999999 type:<class 'float'>, uat:0.0072 type:<class 'float'>
+18:42:41.864592: 	🚀当前遍历行数29, dev:0.008 type:<class 'float'>, uat:0.008 type:<class 'float'>
+18:42:41.865592: 	🚀当前遍历行数30, dev:0.008 type:<class 'float'>, uat:0.0078000000000000005 type:<class 'float'>
+18:42:41.866592: 	🚀当前遍历行数31, dev:0.01 type:<class 'float'>, uat:0.01 type:<class 'float'>
+18:42:41.867593: 🚀当前遍历列数J,表头->CVR Evol%
+18:42:41.871592: 	🚀当前遍历行数1, dev:CVR Evol% type:<class 'str'>, uat:CVR Evol% type:<class 'str'>
+18:42:41.895591: 🚀当前遍历列数K,表头->ATV
+18:42:41.896594: 	🚀当前遍历行数1, dev:ATV type:<class 'str'>, uat:ATV type:<class 'str'>
+18:42:41.897594: 	🚀当前遍历行数2, dev:383.0 type:<class 'float'>, uat:383.0 type:<class 'float'>
+18:42:41.898591: 	🚀当前遍历行数3, dev:430.0 type:<class 'float'>, uat:430.0 type:<class 'float'>
+18:42:41.900597: 	🚀当前遍历行数4, dev:469.0 type:<class 'float'>, uat:469.0 type:<class 'float'>
+18:42:41.901593: 	🚀当前遍历行数5, dev:472.0 type:<class 'float'>, uat:472.0 type:<class 'float'>
+18:42:41.903597: 	🚀当前遍历行数6, dev:476.0 type:<class 'float'>, uat:476.0 type:<class 'float'>
+18:42:41.904600: 	🚀当前遍历行数7, dev:466.0 type:<class 'float'>, uat:466.0 type:<class 'float'>
+18:42:41.906596: 	🚀当前遍历行数8, dev:558.0 type:<class 'float'>, uat:558.0 type:<class 'float'>
+18:42:41.907596: 	🚀当前遍历行数9, dev:610.0 type:<class 'float'>, uat:610.0 type:<class 'float'>
+18:42:41.908597: 	🚀当前遍历行数10, dev:690.0 type:<class 'float'>, uat:690.0 type:<class 'float'>
+18:42:41.909595: 	🚀当前遍历行数11, dev:658.0 type:<class 'float'>, uat:658.0 type:<class 'float'>
+18:42:41.910595: 	🚀当前遍历行数12, dev:700.0 type:<class 'float'>, uat:700.0 type:<class 'float'>
+18:42:41.912594: 	🚀当前遍历行数13, dev:682.0 type:<class 'float'>, uat:682.0 type:<class 'float'>
+18:42:41.913594: 	🚀当前遍历行数14, dev:689.0 type:<class 'float'>, uat:689.0 type:<class 'float'>
+18:42:41.914594: 	🚀当前遍历行数15, dev:696.0 type:<class 'float'>, uat:696.0 type:<class 'float'>
+18:42:41.915595: 	🚀当前遍历行数16, dev:677.0 type:<class 'float'>, uat:677.0 type:<class 'float'>
+18:42:41.918595: 	🚀当前遍历行数17, dev:1046.0 type:<class 'float'>, uat:1046.0 type:<class 'float'>
+18:42:41.920598: 	🚀当前遍历行数18, dev:1158.0 type:<class 'float'>, uat:1158.0 type:<class 'float'>
+18:42:41.922593: 	🚀当前遍历行数19, dev:1216.0 type:<class 'float'>, uat:1216.0 type:<class 'float'>
+18:42:41.923592: 	🚀当前遍历行数20, dev:993.0 type:<class 'float'>, uat:993.0 type:<class 'float'>
+18:42:41.924594: 	🚀当前遍历行数21, dev:1280.0 type:<class 'float'>, uat:1280.0 type:<class 'float'>
+18:42:41.925594: 	🚀当前遍历行数22, dev:1307.0 type:<class 'float'>, uat:1307.0 type:<class 'float'>
+18:42:41.926593: 	🚀当前遍历行数23, dev:1298.0 type:<class 'float'>, uat:1298.0 type:<class 'float'>
+18:42:41.927593: 	🚀当前遍历行数24, dev:1405.0 type:<class 'float'>, uat:1405.0 type:<class 'float'>
+18:42:41.928592: 	🚀当前遍历行数25, dev:1332.0 type:<class 'float'>, uat:1332.0 type:<class 'float'>
+18:42:41.929596: 	🚀当前遍历行数26, dev:1382.0 type:<class 'float'>, uat:1382.0 type:<class 'float'>
+18:42:41.930598: 	🚀当前遍历行数27, dev:1360.0 type:<class 'float'>, uat:1360.0 type:<class 'float'>
+18:42:41.932595: 	🚀当前遍历行数28, dev:1435.0 type:<class 'float'>, uat:1435.0 type:<class 'float'>
+18:42:41.933597: 	🚀当前遍历行数29, dev:1383.0 type:<class 'float'>, uat:1383.0 type:<class 'float'>
+18:42:41.934593: 	🚀当前遍历行数30, dev:1450.0 type:<class 'float'>, uat:1450.0 type:<class 'float'>
+18:42:41.935596: 	🚀当前遍历行数31, dev:1424.0 type:<class 'float'>, uat:1424.0 type:<class 'float'>
+18:42:41.936597: 🚀当前遍历列数L,表头->ATV Evol%
+18:42:41.936597: 	🚀当前遍历行数1, dev:ATV Evol% type:<class 'str'>, uat:ATV Evol% type:<class 'str'>
+18:42:41.958589: 🚀当前遍历列数M,表头->CPM
+18:42:41.959589: 	🚀当前遍历行数1, dev:CPM type:<class 'str'>, uat:CPM type:<class 'str'>
+18:42:41.961593: 	🚀当前遍历行数2, dev:68.0 type:<class 'float'>, uat:68.0 type:<class 'float'>
+18:42:41.961593: 	🚀当前遍历行数3, dev:82.0 type:<class 'float'>, uat:82.0 type:<class 'float'>
+18:42:41.963593: 	🚀当前遍历行数4, dev:74.0 type:<class 'float'>, uat:74.0 type:<class 'float'>
+18:42:41.964597: 	🚀当前遍历行数5, dev:72.0 type:<class 'float'>, uat:72.0 type:<class 'float'>
+18:42:41.965599: 	🚀当前遍历行数6, dev:104.0 type:<class 'float'>, uat:104.0 type:<class 'float'>
+18:42:41.967594: 	🚀当前遍历行数7, dev:82.0 type:<class 'float'>, uat:82.0 type:<class 'float'>
+18:42:41.968595: 	🚀当前遍历行数8, dev:77.0 type:<class 'float'>, uat:77.0 type:<class 'float'>
+18:42:41.969595: 	🚀当前遍历行数9, dev:83.0 type:<class 'float'>, uat:83.0 type:<class 'float'>
+18:42:41.970599: 	🚀当前遍历行数10, dev:95.0 type:<class 'float'>, uat:95.0 type:<class 'float'>
+18:42:41.971599: 	🚀当前遍历行数11, dev:100.0 type:<class 'float'>, uat:100.0 type:<class 'float'>
+18:42:41.973595: 	🚀当前遍历行数12, dev:81.0 type:<class 'float'>, uat:81.0 type:<class 'float'>
+18:42:41.974593: 	🚀当前遍历行数13, dev:67.0 type:<class 'float'>, uat:67.0 type:<class 'float'>
+18:42:41.975596: 	🚀当前遍历行数14, dev:87.0 type:<class 'float'>, uat:87.0 type:<class 'float'>
+18:42:41.976593: 	🚀当前遍历行数15, dev:100.0 type:<class 'float'>, uat:100.0 type:<class 'float'>
+18:42:41.977593: 	🚀当前遍历行数16, dev:100.0 type:<class 'float'>, uat:100.0 type:<class 'float'>
+18:42:41.978594: 	🚀当前遍历行数17, dev:146.0 type:<class 'float'>, uat:146.0 type:<class 'float'>
+18:42:41.979594: 	🚀当前遍历行数18, dev:195.0 type:<class 'float'>, uat:195.0 type:<class 'float'>
+18:42:41.982594: 	🚀当前遍历行数19, dev:139.0 type:<class 'float'>, uat:139.0 type:<class 'float'>
+18:42:41.983596: 	🚀当前遍历行数20, dev:149.0 type:<class 'float'>, uat:149.0 type:<class 'float'>
+18:42:41.984592: 	🚀当前遍历行数21, dev:141.0 type:<class 'float'>, uat:141.0 type:<class 'float'>
+18:42:41.985593: 	🚀当前遍历行数22, dev:138.0 type:<class 'float'>, uat:138.0 type:<class 'float'>
+18:42:41.986598: 	🚀当前遍历行数23, dev:116.0 type:<class 'float'>, uat:116.0 type:<class 'float'>
+18:42:41.987596: 	🚀当前遍历行数24, dev:113.0 type:<class 'float'>, uat:113.0 type:<class 'float'>
+18:42:41.988594: 	🚀当前遍历行数25, dev:154.0 type:<class 'float'>, uat:154.0 type:<class 'float'>
+18:42:41.989593: 	🚀当前遍历行数26, dev:94.0 type:<class 'float'>, uat:94.0 type:<class 'float'>
+18:42:41.990593: 	🚀当前遍历行数27, dev:95.0 type:<class 'float'>, uat:95.0 type:<class 'float'>
+18:42:41.991595: 	🚀当前遍历行数28, dev:103.0 type:<class 'float'>, uat:103.0 type:<class 'float'>
+18:42:41.992594: 	🚀当前遍历行数29, dev:130.0 type:<class 'float'>, uat:130.0 type:<class 'float'>
+18:42:41.993596: 	🚀当前遍历行数30, dev:100.0 type:<class 'float'>, uat:100.0 type:<class 'float'>
+18:42:41.994595: 	🚀当前遍历行数31, dev:104.0 type:<class 'float'>, uat:104.0 type:<class 'float'>
+18:42:41.995594: 🚀当前遍历列数N,表头->CPM Evol%
+18:42:41.996598: 	🚀当前遍历行数1, dev:CPM Evol% type:<class 'str'>, uat:CPM Evol% type:<class 'str'>
+18:42:42.018589: 🚀当前遍历列数O,表头->CPC
+18:42:42.018589: 	🚀当前遍历行数1, dev:CPC type:<class 'str'>, uat:CPC type:<class 'str'>
+18:42:42.020595: 	🚀当前遍历行数2, dev:6.0 type:<class 'float'>, uat:6.0 type:<class 'float'>
+18:42:42.021594: 	🚀当前遍历行数3, dev:4.2 type:<class 'float'>, uat:4.2 type:<class 'float'>
+18:42:42.022597: 	🚀当前遍历行数4, dev:3.4 type:<class 'float'>, uat:3.4 type:<class 'float'>
+18:42:42.024593: 	🚀当前遍历行数5, dev:2.2 type:<class 'float'>, uat:2.2 type:<class 'float'>
+18:42:42.025593: 	🚀当前遍历行数6, dev:3.1 type:<class 'float'>, uat:3.1 type:<class 'float'>
+18:42:42.026594: 	🚀当前遍历行数7, dev:3.3 type:<class 'float'>, uat:3.3 type:<class 'float'>
+18:42:42.027598: 	🚀当前遍历行数8, dev:2.3 type:<class 'float'>, uat:2.3 type:<class 'float'>
+18:42:42.028595: 	🚀当前遍历行数9, dev:3.1 type:<class 'float'>, uat:3.1 type:<class 'float'>
+18:42:42.029593: 	🚀当前遍历行数10, dev:4.0 type:<class 'float'>, uat:4.0 type:<class 'float'>
+18:42:42.030594: 	🚀当前遍历行数11, dev:3.6 type:<class 'float'>, uat:3.6 type:<class 'float'>
+18:42:42.031594: 	🚀当前遍历行数12, dev:2.8 type:<class 'float'>, uat:2.8 type:<class 'float'>
+18:42:42.032593: 	🚀当前遍历行数13, dev:1.8 type:<class 'float'>, uat:1.8 type:<class 'float'>
+18:42:42.033593: 	🚀当前遍历行数14, dev:2.0 type:<class 'float'>, uat:2.0 type:<class 'float'>
+18:42:42.034593: 	🚀当前遍历行数15, dev:3.7 type:<class 'float'>, uat:3.7 type:<class 'float'>
+18:42:42.036594: 	🚀当前遍历行数16, dev:3.7 type:<class 'float'>, uat:3.7 type:<class 'float'>
+18:42:42.037599: 	🚀当前遍历行数17, dev:4.8 type:<class 'float'>, uat:4.8 type:<class 'float'>
+18:42:42.039593: 	🚀当前遍历行数18, dev:5.5 type:<class 'float'>, uat:5.5 type:<class 'float'>
+18:42:42.040594: 	🚀当前遍历行数19, dev:4.2 type:<class 'float'>, uat:4.2 type:<class 'float'>
+18:42:42.041593: 	🚀当前遍历行数20, dev:5.3 type:<class 'float'>, uat:5.3 type:<class 'float'>
+18:42:42.042596: 	🚀当前遍历行数21, dev:6.5 type:<class 'float'>, uat:6.5 type:<class 'float'>
+18:42:42.043593: 	🚀当前遍历行数22, dev:6.1 type:<class 'float'>, uat:6.1 type:<class 'float'>
+18:42:42.044593: 	🚀当前遍历行数23, dev:5.5 type:<class 'float'>, uat:5.5 type:<class 'float'>
+18:42:42.045592: 	🚀当前遍历行数24, dev:6.3 type:<class 'float'>, uat:6.3 type:<class 'float'>
+18:42:42.046592: 	🚀当前遍历行数25, dev:7.6 type:<class 'float'>, uat:7.6 type:<class 'float'>
+18:42:42.047596: 	🚀当前遍历行数26, dev:7.6 type:<class 'float'>, uat:7.6 type:<class 'float'>
+18:42:42.049593: 	🚀当前遍历行数27, dev:8.0 type:<class 'float'>, uat:8.0 type:<class 'float'>
+18:42:42.050593: 	🚀当前遍历行数28, dev:6.5 type:<class 'float'>, uat:6.5 type:<class 'float'>
+18:42:42.051594: 	🚀当前遍历行数29, dev:6.7 type:<class 'float'>, uat:6.6 type:<class 'float'>
+18:42:42.052595: 	🚀当前遍历行数30, dev:6.8 type:<class 'float'>, uat:6.8 type:<class 'float'>
+18:42:42.053595: 	🚀当前遍历行数31, dev:7.9 type:<class 'float'>, uat:7.9 type:<class 'float'>
+18:42:42.054595: 🚀当前遍历列数P,表头->CPC Evol%
+18:42:42.055594: 	🚀当前遍历行数1, dev:CPC Evol% type:<class 'str'>, uat:CPC Evol% type:<class 'str'>
+18:42:42.077589: 🚀当前遍历列数Q,表头->CTR
+18:42:42.077589: 	🚀当前遍历行数1, dev:CTR type:<class 'str'>, uat:CTR type:<class 'str'>
+18:42:42.079596: 	🚀当前遍历行数2, dev:0.011000000000000001 type:<class 'float'>, uat:0.011000000000000001 type:<class 'float'>
+18:42:42.080597: 	🚀当前遍历行数3, dev:0.02 type:<class 'float'>, uat:0.02 type:<class 'float'>
+18:42:42.082594: 	🚀当前遍历行数4, dev:0.022000000000000002 type:<class 'float'>, uat:0.022000000000000002 type:<class 'float'>
+18:42:42.083594: 	🚀当前遍历行数5, dev:0.032 type:<class 'float'>, uat:0.032 type:<class 'float'>
+18:42:42.084595: 	🚀当前遍历行数6, dev:0.033 type:<class 'float'>, uat:0.033 type:<class 'float'>
+18:42:42.086595: 	🚀当前遍历行数7, dev:0.025 type:<class 'float'>, uat:0.025 type:<class 'float'>
+18:42:42.087595: 	🚀当前遍历行数8, dev:0.033 type:<class 'float'>, uat:0.033 type:<class 'float'>
+18:42:42.091596: 	🚀当前遍历行数9, dev:0.027000000000000003 type:<class 'float'>, uat:0.027000000000000003 type:<class 'float'>
+18:42:42.092593: 	🚀当前遍历行数10, dev:0.024 type:<class 'float'>, uat:0.024 type:<class 'float'>
+18:42:42.093593: 	🚀当前遍历行数11, dev:0.027999999999999997 type:<class 'float'>, uat:0.027999999999999997 type:<class 'float'>
+18:42:42.094593: 	🚀当前遍历行数12, dev:0.028999999999999998 type:<class 'float'>, uat:0.028999999999999998 type:<class 'float'>
+18:42:42.096594: 	🚀当前遍历行数13, dev:0.037000000000000005 type:<class 'float'>, uat:0.037000000000000005 type:<class 'float'>
+18:42:42.097595: 	🚀当前遍历行数14, dev:0.044000000000000004 type:<class 'float'>, uat:0.044000000000000004 type:<class 'float'>
+18:42:42.098593: 	🚀当前遍历行数15, dev:0.027000000000000003 type:<class 'float'>, uat:0.027000000000000003 type:<class 'float'>
+18:42:42.099594: 	🚀当前遍历行数16, dev:0.027000000000000003 type:<class 'float'>, uat:0.027000000000000003 type:<class 'float'>
+18:42:42.100594: 	🚀当前遍历行数17, dev:0.03 type:<class 'float'>, uat:0.03 type:<class 'float'>
+18:42:42.101595: 	🚀当前遍历行数18, dev:0.036000000000000004 type:<class 'float'>, uat:0.036000000000000004 type:<class 'float'>
+18:42:42.102596: 	🚀当前遍历行数19, dev:0.033 type:<class 'float'>, uat:0.033 type:<class 'float'>
+18:42:42.103602: 	🚀当前遍历行数20, dev:0.027999999999999997 type:<class 'float'>, uat:0.027999999999999997 type:<class 'float'>
+18:42:42.105595: 	🚀当前遍历行数21, dev:0.022000000000000002 type:<class 'float'>, uat:0.022000000000000002 type:<class 'float'>
+18:42:42.106595: 	🚀当前遍历行数22, dev:0.023 type:<class 'float'>, uat:0.023 type:<class 'float'>
+18:42:42.107600: 	🚀当前遍历行数23, dev:0.021 type:<class 'float'>, uat:0.021 type:<class 'float'>
+18:42:42.109595: 	🚀当前遍历行数24, dev:0.018000000000000002 type:<class 'float'>, uat:0.018000000000000002 type:<class 'float'>
+18:42:42.110598: 	🚀当前遍历行数25, dev:0.02 type:<class 'float'>, uat:0.02 type:<class 'float'>
+18:42:42.112593: 	🚀当前遍历行数26, dev:0.012 type:<class 'float'>, uat:0.012 type:<class 'float'>
+18:42:42.113599: 	🚀当前遍历行数27, dev:0.012 type:<class 'float'>, uat:0.012 type:<class 'float'>
+18:42:42.115606: 	🚀当前遍历行数28, dev:0.016 type:<class 'float'>, uat:0.016 type:<class 'float'>
+18:42:42.116597: 	🚀当前遍历行数29, dev:0.02 type:<class 'float'>, uat:0.02 type:<class 'float'>
+18:42:42.118596: 	🚀当前遍历行数30, dev:0.015 type:<class 'float'>, uat:0.015 type:<class 'float'>
+18:42:42.119595: 	🚀当前遍历行数31, dev:0.013000000000000001 type:<class 'float'>, uat:0.013000000000000001 type:<class 'float'>
+18:42:42.121601: 🚀当前遍历列数R,表头->CTR Evol%
+18:42:42.122597: 	🚀当前遍历行数1, dev:CTR Evol% type:<class 'str'>, uat:CTR Evol% type:<class 'str'>
