@@ -6,7 +6,7 @@ import re
 from log import *
 import pandas as pd
 from openpyxl import load_workbook
-from openpyxl.styles import Font, PatternFill, numbers,NamedStyle
+from openpyxl.styles import Font, PatternFill, numbers, NamedStyle
 from collections import defaultdict
 from Sheetstyle import *
 from utils import *
@@ -36,7 +36,7 @@ class Gap:
 
 
 def parse_value(value_str):
-    if isinstance(value_str, (datetime,)):
+    if isinstance(value_str, (datetime, )):
         logging.debug(f'{value_str}是日期格式')
         do_logger(f'{value_str}是日期格式')
         return value_str
@@ -60,6 +60,7 @@ def parse_value(value_str):
 
 
 def auto_save(func):
+
     def saver(*args, **kwargs):
         data = func(*args, **kwargs)
         try:
@@ -69,6 +70,7 @@ def auto_save(func):
         except IOError as e:
             print(f'🔴保存失败🔴==>{e}')
         return data
+
     return saver
 
 
@@ -96,12 +98,10 @@ def get_row_data_comment(gap: Gap, row_num: int, max_column_name: str):
         coordinate = f'{pointer_column}{row_num}'
         field = ws[coordinate].value
         if isinstance(field, str) and field != '日期':
-            field_comment = str(ws[coordinate].comment).replace('Comment: ', '').replace(' by Author',
-                                                                                         '').replace(' ', '')
+            field_comment = str(ws[coordinate].comment).replace('Comment: ', '').replace(' by Author', '').replace(' ', '')
             ws[f'{pointer_column}{row_num + 1}'].value = field_comment
             comments = field_comment.split('\n')
-            comment_dict = {comment.split('：')[0]: comment.split(
-                '：').pop() for comment in comments}
+            comment_dict = {comment.split('：')[0]: comment.split('：').pop() for comment in comments}
             data.update({field: comment_dict})
     if check_send != 1:
         print(f'🍀开始处理：{ws.title}AA-->ZZ列🍀')
@@ -112,13 +112,10 @@ def get_row_data_comment(gap: Gap, row_num: int, max_column_name: str):
                     break
                 coordinate = f'{pointer_column}{row_num}'
                 field = ws[coordinate].value
-                field_comment = str(ws[coordinate].comment).replace('Comment: ', '').replace(' by Author',
-                                                                                             '').replace(' ',
-                                                                                                         '')
+                field_comment = str(ws[coordinate].comment).replace('Comment: ', '').replace(' by Author', '').replace(' ', '')
                 ws[f'{pointer_column}{row_num + 1}'].value = field_comment
                 comments = field_comment.split('\n')
-                comment_dict = {comment.split('：')[0]: comment.split(
-                    '：').pop() for comment in comments}
+                comment_dict = {comment.split('：')[0]: comment.split('：').pop() for comment in comments}
                 data.update({field: comment_dict})
     print('🟢处理完成🟢')
     return data
@@ -138,14 +135,20 @@ def set_gap_sheet(gap: Gap):
     wb = dev_ws.parent
     gap_ws = wb.create_sheet('set_gap')
     sr = set_az()
+    new_rule = True  # 新对数规则
+    secend_check = True  # 第二次检查
     max_col = min(dev_ws.max_column, uat_ws.max_column)
     max_row = max(dev_ws.max_row, uat_ws.max_row)
     do_logger(f'🚀最大列{max_col}\n🚀最大行{max_row}')
     for gap_dev_col in track(range(1, max_col * 3, 3), description='处理进度'):
+        if gap_dev_col == 1 and secend_check:  # 如果当前列号=1,就新增一行
+            # 新增一行空白行
+            gap_ws.insert_rows(1)
+            secend_check = False
         gap_uat_col = gap_dev_col + 1
         gap_col = gap_dev_col + 2
         col_index = gap_dev_col // 3
-        sheet_title = dev_ws[sr[col_index]+'1'].value
+        sheet_title = dev_ws[sr[col_index] + '1'].value
         do_logger(f'🚀当前遍历列数{sr[col_index]},表头->{sheet_title}')
         for irow in range(1, max_row + 1):
             # do_logger(f'🚀当前遍历行数{irow}')
@@ -162,113 +165,127 @@ def set_gap_sheet(gap: Gap):
             dev_value = dev_ws[f'{sr[col_index]}{irow}'].value  # 纳入计算的值
             uat_value = uat_ws[f'{sr[col_index]}{irow}'].value  # 纳入计算的值
 
-            # 先判断对比表，如果对比表没有值，就直接不计算Gap,但是前两个单元格仍旧引用数据
-            if uat_value is None:  # 品牌字段为空
-                # 当对比品牌数据为空时，不进行Gap，将三列单元格全部置灰
-                gap_ws[gap_gap_cell.coordinate] = None
-                gap_ws[gap_gap_cell.coordinate].fill = PatternFill(
-                    start_color='BFBFBF', end_color='BFBFBF', fill_type='solid')
-                gap_ws[gap_dev_cell.coordinate].fill = PatternFill(
-                    start_color='BFBFBF', end_color='BFBFBF', fill_type='solid')
-                gap_ws[gap_uat_cell.coordinate].fill = PatternFill(
-                    start_color='BFBFBF', end_color='BFBFBF', fill_type='solid')
-            else:  # 品牌字段非空
-                dev_value = parse_value(dev_value)
-                uat_value = parse_value(uat_value)
-                do_logger(
-                    f"\t🚀当前遍历行数{irow}, dev:{dev_value} type:{type(dev_value)}, uat:{uat_value} type:{type(uat_value)}")
-                if not isinstance(uat_value, (int, float,)):  # 处理字符串字段
-                    if isinstance(dev_value, (datetime)) or isinstance(uat_value, (datetime,)):
-                        gap_dev_cell.style = datetime_style # 添加检测单元格日期格式并且设置格式
-                        gap_uat_cell.style = datetime_style
-                    # 非计算字段采用特殊公式标记成False,此行是为了写入表格，但是颜色需要单独处理
-                    gap_ws[gap_gap_cell.coordinate] = f'=EXACT("{dev_value}","{uat_value}")'
-                    # 处理颜色
-                    if dev_value != uat_value:  # 标记False 为红色
-                        gap_ws[gap_gap_cell.coordinate].fill = PatternFill(
-                            start_color='FF7C80', end_color='FF7C80', fill_type='solid')
-                    else:  # True
-                        # 548235-font C6E0B4-bg
-                        # gap_ws[gap_gap_cell.coordinate].fill = PatternFill(start_color='C6E0B4',end_color='C6E0B4', fill_type='solid')
-                        pass
-                else:  # 省下的都是可计算值
-                    dev_value = float(dev_value)
-                    uat_value = float(uat_value)
-                    # 处理能计算的字段
-                    if isinstance(dev_ws[f'{sr[col_index]}{irow}'].value, (int, float)) and uat_value != 0:
-                        # 当品牌值不为零，且不等于TS值
-                        gap_ws[gap_gap_cell.coordinate] = f'=IF({dev_value}=0,IF({uat_value}=0,0,IF({dev_value}>{uat_value},({uat_value}-{dev_value})/{dev_value},({uat_value}-{dev_value})/{uat_value})),IF({uat_value}=0,0,IF({dev_value}>{uat_value},({uat_value}-{dev_value})/{dev_value},({uat_value}-{dev_value})/{uat_value})))'
-                        # 设置单元格格式
-                        gap_ws[gap_gap_cell.coordinate].number_format = numbers.FORMAT_PERCENTAGE_00
-                        # 根据计算结果-设背景颜色
-                        try:
-                            result = (uat_value - dev_value) / dev_value if dev_value != 0 else (0 if uat_value == 0 else (
-                                (uat_value - dev_value) / dev_value if dev_value > uat_value else (uat_value - dev_value) / uat_value)) if uat_value != 0 else 0
-                            # result = (float(dev_value) - float(uat_value)) / float(uat_value)
-                        except ZeroDivisionError:
-                            result = 0.0  # 或者其他你认为合适的默认值
-                        if result < -0.005:  # 小于使用黄色
-                            gap_ws[gap_gap_cell.coordinate].fill = PatternFill(
-                                start_color='FFCC00', end_color='FFCC00', fill_type='solid')
-                        elif result > 0.005:  # 大于使用红色
-                            gap_ws[gap_gap_cell.coordinate].fill = PatternFill(
-                                start_color='FF7C80', end_color='FF7C80', fill_type='solid')
-                    else:  # 品牌值=0，
-                        gap_ws[gap_gap_cell.coordinate] = f'=IF({dev_value}=0,IF({uat_value}=0,0,IF({dev_value}>{uat_value},({uat_value}-{dev_value})/{dev_value},({uat_value}-{dev_value})/{uat_value})),IF({uat_value}=0,0,IF({dev_value}>{uat_value},({uat_value}-{dev_value})/{dev_value},({uat_value}-{dev_value})/{uat_value})))'
-                        # 设置单元格格式
-                        gap_ws[gap_gap_cell.coordinate].number_format = numbers.FORMAT_PERCENTAGE_00
-                        try:
-                            result = (uat_value - dev_value) / dev_value if dev_value != 0 else (0 if uat_value == 0 else (
-                                (uat_value - dev_value) / dev_value if dev_value > uat_value else (uat_value - dev_value) / uat_value)) if uat_value != 0 else 0
-                            # result = (float(dev_value) - float(uat_value)) / float(uat_value)
-                        except ZeroDivisionError:
-                            result = 0.0  # 或者其他你认为合适的默认值
-                        if result < -0.005:  # 小于使用黄色
-                            gap_ws[gap_gap_cell.coordinate].fill = PatternFill(
-                                start_color='FFCC00', end_color='FFCC00', fill_type='solid')
-                        elif result > 0.005:  # 大于使用红色
-                            gap_ws[gap_gap_cell.coordinate].fill = PatternFill(
-                                start_color='FF7C80', end_color='FF7C80', fill_type='solid')
-            # 处理非表头字体
-            gap_ws[gap_dev_cell.coordinate].font = Font(
-                size=8, bold=False, color='000000')
-            gap_ws[gap_uat_cell.coordinate].font = Font(
-                size=8, bold=False, color='000000')
-            gap_ws[gap_gap_cell.coordinate].font = Font(
-                size=8, bold=False, color='000000')  # 调整Gap单元格字体size
             if irow == 1:  # 处理头部
-                dev_title = f'{dev_filed}&"-系统"'
-                uat_title = f'{uat_filed}&"-品牌"'
-                # print(f'dev-title-->{dev_title}')
-                # print(f'uat-title-->{uat_title}')
-                gap_ws[gap_dev_cell.coordinate].value = dev_title  # dev头
-                gap_ws[gap_uat_cell.coordinate].value = uat_title  # uat头
-                gap_ws[gap_gap_cell.coordinate].value = 'Gap'
-                gap_ws[gap_dev_cell.coordinate].font = Font(
-                    size=10, bold=True, color='000000')
-                gap_ws[gap_uat_cell.coordinate].font = Font(
-                    size=10, bold=True, color='000000')
-                gap_ws[gap_gap_cell.coordinate].font = Font(
-                    size=10, bold=True, color='000000')
-                gap_ws[gap_dev_cell.coordinate].fill = PatternFill(start_color='00a67d', end_color='00a67d',
-                                                                   fill_type='solid')
-                gap_ws[gap_uat_cell.coordinate].fill = PatternFill(start_color='FF7F50', end_color='FF7F50',
-                                                                   fill_type='solid')
-                gap_ws[gap_gap_cell.coordinate].fill = PatternFill(start_color='df3079', end_color='df3079',
-                                                                   fill_type='solid')
+                if new_rule:
+                    dev_title = f'{dev_filed}'
+                    # uat_title = f'{uat_filed}&"-品牌"'
+                    # gap_ws[gap_dev_cell.coordinate].value = dev_title  # dev头
+                    gap_ws.cell(row=irow, column=gap_dev_col).value = dev_title
+                    gap_ws.cell(row=irow + 1, column=gap_dev_col).value = "品牌数据"
+                    gap_ws.cell(row=irow + 1, column=gap_uat_col).value = "系统数据"
+                    gap_ws.cell(row=irow + 1, column=gap_col).value = "Gap"
+                    # gap_ws[gap_uat_cell.coordinate].value = uat_title  # uat头
+                    # gap_ws[gap_gap_cell.coordinate].value = 'Gap'
+
+                    gap_ws.cell(row=irow + 1, column=gap_dev_col).font = Font(size=10, bold=False, color='000000')
+                    gap_ws.cell(row=irow + 1, column=gap_uat_col).font = Font(size=10, bold=False, color='000000')
+                    gap_ws.cell(row=irow + 1, column=gap_col).font = Font(size=10, bold=False, color='000000')
+                    gap_ws[gap_dev_cell.coordinate].font = Font(size=10, bold=True, color='000000')
+                    gap_ws[gap_uat_cell.coordinate].font = Font(size=10, bold=True, color='000000')
+                    gap_ws[gap_gap_cell.coordinate].font = Font(size=10, bold=True, color='000000')
+                else:
+                    dev_title = f'{dev_filed}&"-系统"'
+                    uat_title = f'{uat_filed}&"-品牌"'
+                    # print(f'dev-title-->{dev_title}')
+                    # print(f'uat-title-->{uat_title}')
+                    gap_ws[gap_dev_cell.coordinate].value = dev_title  # dev头
+                    gap_ws[gap_uat_cell.coordinate].value = uat_title  # uat头
+                    gap_ws[gap_gap_cell.coordinate].value = 'Gap'
+                    gap_ws[gap_dev_cell.coordinate].font = Font(size=10, bold=True, color='000000')
+                    gap_ws[gap_uat_cell.coordinate].font = Font(size=10, bold=True, color='000000')
+                    gap_ws[gap_gap_cell.coordinate].font = Font(size=10, bold=True, color='000000')
+                    gap_ws[gap_dev_cell.coordinate].fill = PatternFill(start_color='00a67d', end_color='00a67d', fill_type='solid')
+                    gap_ws[gap_uat_cell.coordinate].fill = PatternFill(start_color='FF7F50', end_color='FF7F50', fill_type='solid')
+                    gap_ws[gap_gap_cell.coordinate].fill = PatternFill(start_color='df3079', end_color='df3079', fill_type='solid')
+            else:  #不是第一行
+                # 先判断对比表，如果对比表没有值，就直接不计算Gap,但是前两个单元格仍旧引用数据
+                if uat_value is None:  # 品牌字段为空
+                    # 当对比品牌数据为空时，不进行Gap，将三列单元格全部置灰
+                    gap_ws[gap_gap_cell.coordinate] = None
+                    gap_ws[gap_gap_cell.coordinate].fill = PatternFill(start_color='BFBFBF', end_color='BFBFBF', fill_type='solid')
+                    gap_ws[gap_dev_cell.coordinate].fill = PatternFill(start_color='BFBFBF', end_color='BFBFBF', fill_type='solid')
+                    gap_ws[gap_uat_cell.coordinate].fill = PatternFill(start_color='BFBFBF', end_color='BFBFBF', fill_type='solid')
+                else:  # 品牌字段非空
+                    dev_value = parse_value(dev_value)
+                    uat_value = parse_value(uat_value)
+                    do_logger(f"\t🚀当前遍历行数{irow}, dev:{dev_value} type:{type(dev_value)}, uat:{uat_value} type:{type(uat_value)}")
+                    if not isinstance(uat_value, (
+                        int,
+                        float,
+                        )):  # 处理字符串字段(不可计算)
+                        if isinstance(dev_value, (datetime)) or isinstance(uat_value, (datetime, )):
+                            gap_dev_cell.style = datetime_style  # 添加检测单元格日期格式并且设置格式
+                            gap_uat_cell.style = datetime_style
+                        # 非计算字段采用特殊公式标记成False,此行是为了写入表格，但是颜色需要单独处理
+                        gap_ws[gap_gap_cell.coordinate] = f'=EXACT("{dev_value}","{uat_value}")'
+                        # 处理颜色
+                        if dev_value != uat_value:  # 标记False 为红色
+                            gap_ws[gap_gap_cell.coordinate].fill = PatternFill(start_color='FF7C80', end_color='FF7C80', fill_type='solid')
+                        else:  # True
+                            # 548235-font C6E0B4-bg
+                            # gap_ws[gap_gap_cell.coordinate].fill = PatternFill(start_color='C6E0B4',end_color='C6E0B4', fill_type='solid')
+                            pass
+                    else:  # 省下的都是可计算值
+                        dev_value = float(dev_value)
+                        uat_value = float(uat_value)
+                        # 处理能计算的字段
+                        if isinstance(dev_ws[f'{sr[col_index]}{irow}'].value, (int, float)) and uat_value != 0:
+                            # 当品牌值不为零，且不等于TS值
+                            gap_ws[
+                                gap_gap_cell.coordinate
+                                ] = f'=IF({dev_value}=0,IF({uat_value}=0,0,IF({dev_value}>{uat_value},({uat_value}-{dev_value})/{dev_value},({uat_value}-{dev_value})/{uat_value})),IF({uat_value}=0,0,IF({dev_value}>{uat_value},({uat_value}-{dev_value})/{dev_value},({uat_value}-{dev_value})/{uat_value})))'
+                            # 设置单元格格式
+                            gap_ws[gap_gap_cell.coordinate].number_format = numbers.FORMAT_PERCENTAGE_00
+                            # 根据计算结果-设背景颜色
+                            try:
+                                result = (uat_value - dev_value) / dev_value if dev_value != 0 else (
+                                    0 if uat_value == 0 else ((uat_value - dev_value) / dev_value if dev_value > uat_value else (uat_value - dev_value) / uat_value)
+                                    ) if uat_value != 0 else 0
+                                # result = (float(dev_value) - float(uat_value)) / float(uat_value)
+                            except ZeroDivisionError:
+                                result = 0.0  # 或者其他你认为合适的默认值
+                            if result < -0.005:  # 小于使用黄色
+                                gap_ws[gap_gap_cell.coordinate].fill = PatternFill(start_color='FFCC00', end_color='FFCC00', fill_type='solid')
+                            elif result > 0.005:  # 大于使用红色
+                                gap_ws[gap_gap_cell.coordinate].fill = PatternFill(start_color='FF7C80', end_color='FF7C80', fill_type='solid')
+                        else:  # 品牌值=0，
+                            gap_ws[
+                                gap_gap_cell.coordinate
+                                ] = f'=IF({dev_value}=0,IF({uat_value}=0,0,IF({dev_value}>{uat_value},({uat_value}-{dev_value})/{dev_value},({uat_value}-{dev_value})/{uat_value})),IF({uat_value}=0,0,IF({dev_value}>{uat_value},({uat_value}-{dev_value})/{dev_value},({uat_value}-{dev_value})/{uat_value})))'
+                            # 设置单元格格式
+                            gap_ws[gap_gap_cell.coordinate].number_format = numbers.FORMAT_PERCENTAGE_00
+                            try:
+                                result = (uat_value - dev_value) / dev_value if dev_value != 0 else (
+                                    0 if uat_value == 0 else ((uat_value - dev_value) / dev_value if dev_value > uat_value else (uat_value - dev_value) / uat_value)
+                                    ) if uat_value != 0 else 0
+                                # result = (float(dev_value) - float(uat_value)) / float(uat_value)
+                            except ZeroDivisionError:
+                                result = 0.0  # 或者其他你认为合适的默认值
+                            if result < -0.005:  # 小于使用黄色
+                                gap_ws[gap_gap_cell.coordinate].fill = PatternFill(start_color='FFCC00', end_color='FFCC00', fill_type='solid')
+                            elif result > 0.005:  # 大于使用红色
+                                gap_ws[gap_gap_cell.coordinate].fill = PatternFill(start_color='FF7C80', end_color='FF7C80', fill_type='solid')
+                    # 处理非表头字体
+                    gap_ws[gap_dev_cell.coordinate].font = Font(size=8, bold=False, color='000000')
+                    gap_ws[gap_uat_cell.coordinate].font = Font(size=8, bold=False, color='000000')
+                    gap_ws[gap_gap_cell.coordinate].font = Font(size=8, bold=False, color='000000')  # 调整Gap单元格字体size
+
     print('🎁Gap_Sheet生成成功🎁')
 
 
 @auto_save
 def get_data_by_row_title(gap: Gap):
-    ColorPrint.print("""
+    ColorPrint.print(
+        """
 在这之前！你需要将品牌表头第2行，改成TS对应的mapping值！！这很重要
 Mapping from sheet title data
 匹配两个表头，将能匹配上的，数据传入另一个表头下方
 @param ws_name:品牌sheetName
 @param _is_reference: 1/0 (是/否开启全部匹配)
 传参方式 品牌表名 1/0
-    """, color='random')
+    """,
+        color='random'
+        )
     _values = input_selector('请分别输入【品牌表名  ？】')
     ws_name, _is_reference = _values[:2]
     _is_reference = int(_is_reference)
@@ -310,8 +327,7 @@ Mapping from sheet title data
         if _title in brand_title:  # 如果系统表头在品牌第二行,这里默认只匹配第一个字段，如果有相同字段
             index_brand = brand_title.index(_title)  # 索引-品牌
             _row = 3  # 第三行
-            brand_cell = brand_sheet.cell(
-                row=_row, column=index_brand + 1)  # 品牌第3行数据cell对象,kais
+            brand_cell = brand_sheet.cell(row=_row, column=index_brand + 1)  # 品牌第3行数据cell对象,kais
             print(brand_cell.coordinate, brand_max_row)
             ts_cell_2 = ts_sheet.cell(row=_row, column=index_system + 1)
             ts_cell_2.value = f'={brand_sheet.title}!{brand_cell.coordinate}'
@@ -331,7 +347,7 @@ def contrast_sheets(gap: Gap):
         sheet_name2 (str): sheet2名称
         p_column (str): sheet2列名
     """
-    ColorPrint.print("注意!!操作的数据列请确保格式完全一致，请排除空格引号等问题！\n"*3, color='random')
+    ColorPrint.print("注意!!操作的数据列请确保格式完全一致，请排除空格引号等问题！\n" * 3, color='random')
     _val1 = input_selector('请分别输入【表名1 匹配列名1（需要大写字母）】')
     try:
         sheet_name1, column_1 = _val1[:2]
@@ -379,18 +395,17 @@ def set_gap_by_vlookup(gap: Gap):
     max_row = max(ws_brand.max_row, ws_system.max_row)
     min_row = min(ws_brand.max_row, ws_system.max_row)
     sr = set_az()
-    system_title: dict = {cell.value: _i for _i, cell in enumerate(
-        ws_system[1], start=1)}  # 此处将字段作为键，索引作为值
-    for i in track(range(1, max_col*3, 3), description=f'匹配进度列'):  # 此处i代表新表中的每一列的开头一列
+    system_title: dict = {cell.value: _i for _i, cell in enumerate(ws_system[1], start=1)}  # 此处将字段作为键，索引作为值
+    for i in track(range(1, max_col * 3, 3), description=f'匹配进度列'):  # 此处i代表新表中的每一列的开头一列
         # print(i)
         brand_col = i
-        system_col = i+1
-        gap_col = i+2
-        _index = i//3
+        system_col = i + 1
+        gap_col = i + 2
+        _index = i // 3
         quote_col_name = sr[_index]  # 需要引入的列名
         # 当前列title,这里需要直接取brand字段
         title = ws_brand[f'{quote_col_name}2'].value
-        for irow in range(1, min_row+1):
+        for irow in range(1, min_row + 1):
             _brand = ws_brand[f'{quote_col_name}{irow}']
             _system = ws_system[f'{quote_col_name}{irow}']
             # 标注出3个cell对象
@@ -471,16 +486,16 @@ fundict = {
     '3': contrast_sheets,
     '4': set_gap_by_vlookup,
     '5': set_gap_sheet,
-}
+    }
 
 
 def function_list(obj: Gap):
-    ColorPrint.print('    ', '='*10, '功能列表', '='*10, color='yellow')
+    ColorPrint.print('    ', '=' * 10, '功能列表', '=' * 10, color='yellow')
     for i in fundict:
         print()
         ColorPrint.print("          ", i, fundict[i].__name__, color='yellow')
     print()
-    ColorPrint.print('    ', '='*10, '功能列表', '='*10, color='yellow')
+    ColorPrint.print('    ', '=' * 10, '功能列表', '=' * 10, color='yellow')
     _x = input_selector("选择功能：")
     x = _x[:1][0]
     if x not in fundict.keys():

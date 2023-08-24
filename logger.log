@@ -676,3 +676,1443 @@
 18:42:42.119595: 	🚀当前遍历行数31, dev:0.013000000000000001 type:<class 'float'>, uat:0.013000000000000001 type:<class 'float'>
 18:42:42.121601: 🚀当前遍历列数R,表头->CTR Evol%
 18:42:42.122597: 	🚀当前遍历行数1, dev:CTR Evol% type:<class 'str'>, uat:CTR Evol% type:<class 'str'>
+17:20:54.538154: 🟡开始生成Gap_sheet🟡
+17:20:54.541169: 🚀最大列66
+🚀最大行1
+17:20:54.552132: 🚀当前遍历列数A,表头->日期
+17:20:54.553133: 	🚀当前遍历行数1, dev:日期 type:<class 'str'>, uat:日期 type:<class 'str'>
+17:20:54.555138: 🚀当前遍历列数B,表头->时段
+17:20:54.555138: 	🚀当前遍历行数1, dev:时段 type:<class 'str'>, uat:时段 type:<class 'str'>
+17:20:54.558137: 🚀当前遍历列数C,表头->时长
+（h）
+17:20:54.558137: 	🚀当前遍历行数1, dev:时长
+（h） type:<class 'str'>, uat:时长
+（h） type:<class 'str'>
+17:20:54.560135: 🚀当前遍历列数D,表头->全店GMV
+17:20:54.561138: 	🚀当前遍历行数1, dev:全店GMV type:<class 'str'>, uat:全店GMV type:<class 'str'>
+17:20:54.562136: 🚀当前遍历列数E,表头->全店Sellout
+17:20:54.563135: 	🚀当前遍历行数1, dev:全店Sellout type:<class 'str'>, uat:全店Sellout type:<class 'str'>
+17:20:54.564135: 🚀当前遍历列数F,表头->退款金额
+17:20:54.565137: 	🚀当前遍历行数1, dev:退款金额 type:<class 'str'>, uat:退款金额 type:<class 'str'>
+17:20:54.567136: 🚀当前遍历列数G,表头->仅退款
+17:20:54.567136: 	🚀当前遍历行数1, dev:仅退款 type:<class 'str'>, uat:仅退款 type:<class 'str'>
+17:20:54.569133: 🚀当前遍历列数H,表头->拒收拦截
+17:20:54.569133: 	🚀当前遍历行数1, dev:拒收拦截 type:<class 'str'>, uat:拒收拦截 type:<class 'str'>
+17:20:54.570133: 🚀当前遍历列数I,表头->退货退款
+17:20:54.571137: 	🚀当前遍历行数1, dev:退货退款 type:<class 'str'>, uat:退货退款 type:<class 'str'>
+17:20:54.572138: 🚀当前遍历列数J,表头->退款率
+17:20:54.573139: 	🚀当前遍历行数1, dev:退款率 type:<class 'str'>, uat:退款率 type:<class 'str'>
+17:20:54.574146: 🚀当前遍历列数K,表头->全店NSO
+17:20:54.575137: 	🚀当前遍历行数1, dev:全店NSO type:<class 'str'>, uat:全店NSO type:<class 'str'>
+17:20:54.576138: 🚀当前遍历列数L,表头->全店NSO目标
+17:20:54.577135: 	🚀当前遍历行数1, dev:全店NSO目标 type:<class 'str'>, uat:全店NSO目标 type:<class 'str'>
+17:20:54.578135: 🚀当前遍历列数M,表头->全店NSO
+当日达成率
+17:20:54.579139: 	🚀当前遍历行数1, dev:全店NSO
+当日达成率 type:<class 'str'>, uat:全店NSO
+当日达成率 type:<class 'str'>
+17:20:54.580144: 🚀当前遍历列数N,表头->店铺GMV
+17:20:54.581138: 	🚀当前遍历行数1, dev:店铺GMV type:<class 'str'>, uat:店铺GMV type:<class 'str'>
+17:20:54.582136: 🚀当前遍历列数O,表头->店铺Sellout
+17:20:54.582136: 	🚀当前遍历行数1, dev:店铺Sellout type:<class 'str'>, uat:店铺Sellout type:<class 'str'>
+17:20:54.584135: 🚀当前遍历列数P,表头->商城SO
+17:20:54.584135: 	🚀当前遍历行数1, dev:商城SO type:<class 'str'>, uat:商城SO type:<class 'str'>
+17:20:54.585136: 🚀当前遍历列数Q,表头->店播直播GMV
+17:20:54.586131: 	🚀当前遍历行数1, dev:店播直播GMV type:<class 'str'>, uat:店播直播GMV type:<class 'str'>
+17:20:54.587132: 🚀当前遍历列数R,表头->店播Sellout
+17:20:54.588143: 	🚀当前遍历行数1, dev:店播Sellout type:<class 'str'>, uat:店播Sellout type:<class 'str'>
+17:20:54.589136: 🚀当前遍历列数S,表头->退款金额
+17:20:54.590137: 	🚀当前遍历行数1, dev:退款金额 type:<class 'str'>, uat:退款金额 type:<class 'str'>
+17:20:54.592134: 🚀当前遍历列数T,表头->仅退款
+17:20:54.592134: 	🚀当前遍历行数1, dev:仅退款 type:<class 'str'>, uat:仅退款 type:<class 'str'>
+17:20:54.594137: 🚀当前遍历列数U,表头->拒收拦截
+17:20:54.594137: 	🚀当前遍历行数1, dev:拒收拦截 type:<class 'str'>, uat:拒收拦截 type:<class 'str'>
+17:20:54.596136: 🚀当前遍历列数V,表头->退货退款
+17:20:54.596136: 	🚀当前遍历行数1, dev:退货退款 type:<class 'str'>, uat:退货退款 type:<class 'str'>
+17:20:54.597138: 🚀当前遍历列数W,表头->退款率
+17:20:54.598134: 	🚀当前遍历行数1, dev:退款率 type:<class 'str'>, uat:退款率 type:<class 'str'>
+17:20:54.599135: 🚀当前遍历列数X,表头->店铺NSO
+17:20:54.600136: 	🚀当前遍历行数1, dev:店铺NSO type:<class 'str'>, uat:店铺NSO type:<class 'str'>
+17:20:54.602141: 🚀当前遍历列数Y,表头->店铺NSO目标
+17:20:54.603135: 	🚀当前遍历行数1, dev:店铺NSO目标 type:<class 'str'>, uat:店铺NSO目标 type:<class 'str'>
+17:20:54.605148: 🚀当前遍历列数Z,表头->店铺NSO完成率
+17:20:54.606137: 	🚀当前遍历行数1, dev:店铺NSO完成率 type:<class 'str'>, uat:店铺NSO完成率 type:<class 'str'>
+17:20:54.607135: 🚀当前遍历列数AA,表头->达播GMV
+17:20:54.608134: 	🚀当前遍历行数1, dev:达播GMV type:<class 'str'>, uat:达播GMV type:<class 'str'>
+17:20:54.609135: 🚀当前遍历列数AB,表头->达播Sellout
+17:20:54.609135: 	🚀当前遍历行数1, dev:达播Sellout type:<class 'str'>, uat:达播Sellout type:<class 'str'>
+17:20:54.611133: 🚀当前遍历列数AC,表头->退款金额
+17:20:54.611133: 	🚀当前遍历行数1, dev:退款金额 type:<class 'str'>, uat:退款金额 type:<class 'str'>
+17:20:54.612132: 🚀当前遍历列数AD,表头->仅退款
+17:20:54.613131: 	🚀当前遍历行数1, dev:仅退款 type:<class 'str'>, uat:仅退款 type:<class 'str'>
+17:20:54.614133: 🚀当前遍历列数AE,表头->拒收拦截
+17:20:54.614133: 	🚀当前遍历行数1, dev:拒收拦截 type:<class 'str'>, uat:拒收拦截 type:<class 'str'>
+17:20:54.615134: 🚀当前遍历列数AF,表头->退货退款
+17:20:54.615134: 	🚀当前遍历行数1, dev:退货退款 type:<class 'str'>, uat:退货退款 type:<class 'str'>
+17:20:54.617135: 🚀当前遍历列数AG,表头->达播退款率
+17:20:54.617135: 	🚀当前遍历行数1, dev:达播退款率 type:<class 'str'>, uat:达播退款率 type:<class 'str'>
+17:20:54.618139: 🚀当前遍历列数AH,表头->达播NSO
+17:20:54.619134: 	🚀当前遍历行数1, dev:达播NSO type:<class 'str'>, uat:达播NSO type:<class 'str'>
+17:20:54.620134: 🚀当前遍历列数AI,表头->达播NSO目标
+17:20:54.620134: 	🚀当前遍历行数1, dev:达播NSO目标 type:<class 'str'>, uat:达播NSO目标 type:<class 'str'>
+17:20:54.621138: 🚀当前遍历列数AJ,表头->达播NSO完成率
+17:20:54.622135: 	🚀当前遍历行数1, dev:达播NSO完成率 type:<class 'str'>, uat:达播NSO完成率 type:<class 'str'>
+17:20:54.623134: 🚀当前遍历列数AK,表头->挂车GMV
+17:20:54.624134: 	🚀当前遍历行数1, dev:挂车GMV type:<class 'str'>, uat:挂车GMV type:<class 'str'>
+17:20:54.625136: 🚀当前遍历列数AL,表头->退款金额
+17:20:54.625136: 	🚀当前遍历行数1, dev:退款金额 type:<class 'str'>, uat:退款金额 type:<class 'str'>
+17:20:54.626133: 🚀当前遍历列数AM,表头->视频退款率
+17:20:54.627134: 	🚀当前遍历行数1, dev:视频退款率 type:<class 'str'>, uat:视频退款率 type:<class 'str'>
+17:20:54.628134: 🚀当前遍历列数AN,表头->消耗
+17:20:54.628134: 	🚀当前遍历行数1, dev:消耗 type:<class 'str'>, uat:消耗 type:<class 'str'>
+17:20:54.629134: 🚀当前遍历列数AO,表头->千川成交金额
+17:20:54.630132: 	🚀当前遍历行数1, dev:千川成交金额 type:<class 'str'>, uat:千川成交金额 type:<class 'str'>
+17:20:54.631134: 🚀当前遍历列数AP,表头->付费流量占比
+17:20:54.631134: 	🚀当前遍历行数1, dev:付费流量占比 type:<class 'str'>, uat:付费流量占比 type:<class 'str'>
+17:20:54.632132: 🚀当前遍历列数AQ,表头->千川直投ROI
+17:20:54.633133: 	🚀当前遍历行数1, dev:千川直投ROI type:<class 'str'>, uat:千川直投ROI type:<class 'str'>
+17:20:54.634134: 🚀当前遍历列数AR,表头->全店ROI
+17:20:54.634134: 	🚀当前遍历行数1, dev:全店ROI type:<class 'str'>, uat:全店ROI type:<class 'str'>
+17:20:54.635133: 🚀当前遍历列数AS,表头->直播GMV
+17:20:54.636133: 	🚀当前遍历行数1, dev:直播GMV type:<class 'str'>, uat:直播GMV type:<class 'str'>
+17:20:54.637134: 🚀当前遍历列数AT,表头->GPM
+1000*直播间成交金额/观看人次
+17:20:54.637134: 	🚀当前遍历行数1, dev:GPM
+1000*直播间成交金额/观看人次 type:<class 'str'>, uat:GPM
+1000*直播间成交金额/观看人次 type:<class 'str'>
+17:20:54.639140: 🚀当前遍历列数AU,表头->免费GMV
+17:20:54.639140: 	🚀当前遍历行数1, dev:免费GMV type:<class 'str'>, uat:免费GMV type:<class 'str'>
+17:20:54.641134: 🚀当前遍历列数AV,表头->免费GMV占比
+17:20:54.641134: 	🚀当前遍历行数1, dev:免费GMV占比 type:<class 'str'>, uat:免费GMV占比 type:<class 'str'>
+17:20:54.642131: 🚀当前遍历列数AW,表头->成交件数
+17:20:54.643133: 	🚀当前遍历行数1, dev:成交件数 type:<class 'str'>, uat:成交件数 type:<class 'str'>
+17:20:54.644133: 🚀当前遍历列数AX,表头->成交人数
+17:20:54.644133: 	🚀当前遍历行数1, dev:成交人数 type:<class 'str'>, uat:成交人数 type:<class 'str'>
+17:20:54.645132: 🚀当前遍历列数AY,表头->成交转化率
+17:20:54.646133: 	🚀当前遍历行数1, dev:成交转化率 type:<class 'str'>, uat:成交转化率 type:<class 'str'>
+17:20:54.647135: 🚀当前遍历列数AZ,表头->直播间商品点击人数
+17:20:54.647135: 	🚀当前遍历行数1, dev:直播间商品点击人数 type:<class 'str'>, uat:直播间商品点击人数 type:<class 'str'>
+17:20:54.648134: 🚀当前遍历列数BA,表头->观看点击转化率
+17:20:54.649139: 	🚀当前遍历行数1, dev:观看点击转化率 type:<class 'str'>, uat:观看点击转化率 type:<class 'str'>
+17:20:54.650134: 🚀当前遍历列数BB,表头->点击成交转化率
+17:20:54.650134: 	🚀当前遍历行数1, dev:点击成交转化率 type:<class 'str'>, uat:点击成交转化率 type:<class 'str'>
+17:20:54.651134: 🚀当前遍历列数BC,表头->UV价值
+17:20:54.652136: 	🚀当前遍历行数1, dev:UV价值 type:<class 'str'>, uat:UV价值 type:<class 'str'>
+17:20:54.653134: 🚀当前遍历列数BD,表头->客单价
+17:20:54.653134: 	🚀当前遍历行数1, dev:客单价 type:<class 'str'>, uat:客单价 type:<class 'str'>
+17:20:54.654133: 🚀当前遍历列数BE,表头->观看人数
+17:20:54.655134: 	🚀当前遍历行数1, dev:观看人数 type:<class 'str'>, uat:观看人数 type:<class 'str'>
+17:20:54.656135: 🚀当前遍历列数BF,表头->观看人次
+17:20:54.659137: 	🚀当前遍历行数1, dev:观看人次 type:<class 'str'>, uat:观看人次 type:<class 'str'>
+17:20:54.661130: 🚀当前遍历列数BG,表头->最高在线人数
+17:20:54.661130: 	🚀当前遍历行数1, dev:最高在线人数 type:<class 'str'>, uat:最高在线人数 type:<class 'str'>
+17:20:54.663135: 🚀当前遍历列数BH,表头->平均在线人数
+17:20:54.663135: 	🚀当前遍历行数1, dev:平均在线人数 type:<class 'str'>, uat:平均在线人数 type:<class 'str'>
+17:20:54.665133: 🚀当前遍历列数BI,表头->人均观看时长(s)
+17:20:54.666131: 	🚀当前遍历行数1, dev:人均观看时长(s) type:<class 'str'>, uat:人均观看时长(s) type:<class 'str'>
+17:20:54.667134: 🚀当前遍历列数BJ,表头->新增粉丝数
+17:20:54.667134: 	🚀当前遍历行数1, dev:新增粉丝数 type:<class 'str'>, uat:新增粉丝数 type:<class 'str'>
+17:20:54.669133: 🚀当前遍历列数BK,表头->看播粉丝占比
+17:20:54.669133: 	🚀当前遍历行数1, dev:看播粉丝占比 type:<class 'str'>, uat:看播粉丝占比 type:<class 'str'>
+17:20:54.670134: 🚀当前遍历列数BL,表头->粉丝成交占比
+17:20:54.670134: 	🚀当前遍历行数1, dev:粉丝成交占比 type:<class 'str'>, uat:粉丝成交占比 type:<class 'str'>
+17:20:54.672135: 🚀当前遍历列数BM,表头->粉丝成交GMV
+17:20:54.673139: 	🚀当前遍历行数1, dev:粉丝成交GMV type:<class 'str'>, uat:粉丝成交GMV type:<class 'str'>
+17:20:54.675141: 🚀当前遍历列数BN,表头->增粉率
+17:20:54.675141: 	🚀当前遍历行数1, dev:增粉率 type:<class 'str'>, uat:增粉率 type:<class 'str'>
+17:24:17.145982: 🟡开始生成Gap_sheet🟡
+17:24:17.148983: 🚀最大列66
+🚀最大行1
+17:24:17.159978: 🚀当前遍历列数A,表头->日期
+17:24:17.160981: 	🚀当前遍历行数1, dev:日期 type:<class 'str'>, uat:日期 type:<class 'str'>
+17:24:17.161987: 🚀当前遍历列数B,表头->时段
+17:24:17.162982: 	🚀当前遍历行数1, dev:时段 type:<class 'str'>, uat:时段 type:<class 'str'>
+17:24:17.164988: 🚀当前遍历列数C,表头->时长
+（h）
+17:24:17.165999: 	🚀当前遍历行数1, dev:时长
+（h） type:<class 'str'>, uat:时长
+（h） type:<class 'str'>
+17:24:17.167985: 🚀当前遍历列数D,表头->全店GMV
+17:24:17.167985: 	🚀当前遍历行数1, dev:全店GMV type:<class 'str'>, uat:全店GMV type:<class 'str'>
+17:24:17.168992: 🚀当前遍历列数E,表头->全店Sellout
+17:24:17.169987: 	🚀当前遍历行数1, dev:全店Sellout type:<class 'str'>, uat:全店Sellout type:<class 'str'>
+17:24:17.171988: 🚀当前遍历列数F,表头->退款金额
+17:24:17.171988: 	🚀当前遍历行数1, dev:退款金额 type:<class 'str'>, uat:退款金额 type:<class 'str'>
+17:24:17.174985: 🚀当前遍历列数G,表头->仅退款
+17:24:17.174985: 	🚀当前遍历行数1, dev:仅退款 type:<class 'str'>, uat:仅退款 type:<class 'str'>
+17:24:17.176986: 🚀当前遍历列数H,表头->拒收拦截
+17:24:17.176986: 	🚀当前遍历行数1, dev:拒收拦截 type:<class 'str'>, uat:拒收拦截 type:<class 'str'>
+17:24:17.178995: 🚀当前遍历列数I,表头->退货退款
+17:24:17.180983: 	🚀当前遍历行数1, dev:退货退款 type:<class 'str'>, uat:退货退款 type:<class 'str'>
+17:24:17.181987: 🚀当前遍历列数J,表头->退款率
+17:24:17.182983: 	🚀当前遍历行数1, dev:退款率 type:<class 'str'>, uat:退款率 type:<class 'str'>
+17:24:17.183981: 🚀当前遍历列数K,表头->全店NSO
+17:24:17.183981: 	🚀当前遍历行数1, dev:全店NSO type:<class 'str'>, uat:全店NSO type:<class 'str'>
+17:24:17.184980: 🚀当前遍历列数L,表头->全店NSO目标
+17:24:17.185980: 	🚀当前遍历行数1, dev:全店NSO目标 type:<class 'str'>, uat:全店NSO目标 type:<class 'str'>
+17:24:17.186980: 🚀当前遍历列数M,表头->全店NSO
+当日达成率
+17:24:17.186980: 	🚀当前遍历行数1, dev:全店NSO
+当日达成率 type:<class 'str'>, uat:全店NSO
+当日达成率 type:<class 'str'>
+17:24:17.187981: 🚀当前遍历列数N,表头->店铺GMV
+17:24:17.187981: 	🚀当前遍历行数1, dev:店铺GMV type:<class 'str'>, uat:店铺GMV type:<class 'str'>
+17:24:17.189987: 🚀当前遍历列数O,表头->店铺Sellout
+17:24:17.190986: 	🚀当前遍历行数1, dev:店铺Sellout type:<class 'str'>, uat:店铺Sellout type:<class 'str'>
+17:24:17.191981: 🚀当前遍历列数P,表头->商城SO
+17:24:17.191981: 	🚀当前遍历行数1, dev:商城SO type:<class 'str'>, uat:商城SO type:<class 'str'>
+17:24:17.192980: 🚀当前遍历列数Q,表头->店播直播GMV
+17:24:17.192980: 	🚀当前遍历行数1, dev:店播直播GMV type:<class 'str'>, uat:店播直播GMV type:<class 'str'>
+17:24:17.194991: 🚀当前遍历列数R,表头->店播Sellout
+17:24:17.195991: 	🚀当前遍历行数1, dev:店播Sellout type:<class 'str'>, uat:店播Sellout type:<class 'str'>
+17:24:17.197992: 🚀当前遍历列数S,表头->退款金额
+17:24:17.197992: 	🚀当前遍历行数1, dev:退款金额 type:<class 'str'>, uat:退款金额 type:<class 'str'>
+17:24:17.200983: 🚀当前遍历列数T,表头->仅退款
+17:24:17.200983: 	🚀当前遍历行数1, dev:仅退款 type:<class 'str'>, uat:仅退款 type:<class 'str'>
+17:24:17.202987: 🚀当前遍历列数U,表头->拒收拦截
+17:24:17.203987: 	🚀当前遍历行数1, dev:拒收拦截 type:<class 'str'>, uat:拒收拦截 type:<class 'str'>
+17:24:17.204983: 🚀当前遍历列数V,表头->退货退款
+17:24:17.205984: 	🚀当前遍历行数1, dev:退货退款 type:<class 'str'>, uat:退货退款 type:<class 'str'>
+17:24:17.206981: 🚀当前遍历列数W,表头->退款率
+17:24:17.207981: 	🚀当前遍历行数1, dev:退款率 type:<class 'str'>, uat:退款率 type:<class 'str'>
+17:24:17.208986: 🚀当前遍历列数X,表头->店铺NSO
+17:24:17.208986: 	🚀当前遍历行数1, dev:店铺NSO type:<class 'str'>, uat:店铺NSO type:<class 'str'>
+17:24:17.210980: 🚀当前遍历列数Y,表头->店铺NSO目标
+17:24:17.210980: 	🚀当前遍历行数1, dev:店铺NSO目标 type:<class 'str'>, uat:店铺NSO目标 type:<class 'str'>
+17:24:17.212989: 🚀当前遍历列数Z,表头->店铺NSO完成率
+17:24:17.213984: 	🚀当前遍历行数1, dev:店铺NSO完成率 type:<class 'str'>, uat:店铺NSO完成率 type:<class 'str'>
+17:24:17.214982: 🚀当前遍历列数AA,表头->达播GMV
+17:24:17.215982: 	🚀当前遍历行数1, dev:达播GMV type:<class 'str'>, uat:达播GMV type:<class 'str'>
+17:24:17.216982: 🚀当前遍历列数AB,表头->达播Sellout
+17:24:17.216982: 	🚀当前遍历行数1, dev:达播Sellout type:<class 'str'>, uat:达播Sellout type:<class 'str'>
+17:24:17.217981: 🚀当前遍历列数AC,表头->退款金额
+17:24:17.218981: 	🚀当前遍历行数1, dev:退款金额 type:<class 'str'>, uat:退款金额 type:<class 'str'>
+17:24:17.219982: 🚀当前遍历列数AD,表头->仅退款
+17:24:17.219982: 	🚀当前遍历行数1, dev:仅退款 type:<class 'str'>, uat:仅退款 type:<class 'str'>
+17:24:17.221983: 🚀当前遍历列数AE,表头->拒收拦截
+17:24:17.221983: 	🚀当前遍历行数1, dev:拒收拦截 type:<class 'str'>, uat:拒收拦截 type:<class 'str'>
+17:24:17.222983: 🚀当前遍历列数AF,表头->退货退款
+17:24:17.223985: 	🚀当前遍历行数1, dev:退货退款 type:<class 'str'>, uat:退货退款 type:<class 'str'>
+17:24:17.224985: 🚀当前遍历列数AG,表头->达播退款率
+17:24:17.225982: 	🚀当前遍历行数1, dev:达播退款率 type:<class 'str'>, uat:达播退款率 type:<class 'str'>
+17:24:17.226982: 🚀当前遍历列数AH,表头->达播NSO
+17:24:17.226982: 	🚀当前遍历行数1, dev:达播NSO type:<class 'str'>, uat:达播NSO type:<class 'str'>
+17:24:17.228984: 🚀当前遍历列数AI,表头->达播NSO目标
+17:24:17.228984: 	🚀当前遍历行数1, dev:达播NSO目标 type:<class 'str'>, uat:达播NSO目标 type:<class 'str'>
+17:24:17.229989: 🚀当前遍历列数AJ,表头->达播NSO完成率
+17:24:17.230982: 	🚀当前遍历行数1, dev:达播NSO完成率 type:<class 'str'>, uat:达播NSO完成率 type:<class 'str'>
+17:24:17.231987: 🚀当前遍历列数AK,表头->挂车GMV
+17:24:17.231987: 	🚀当前遍历行数1, dev:挂车GMV type:<class 'str'>, uat:挂车GMV type:<class 'str'>
+17:24:17.233980: 🚀当前遍历列数AL,表头->退款金额
+17:24:17.233980: 	🚀当前遍历行数1, dev:退款金额 type:<class 'str'>, uat:退款金额 type:<class 'str'>
+17:24:17.235978: 🚀当前遍历列数AM,表头->视频退款率
+17:24:17.235978: 	🚀当前遍历行数1, dev:视频退款率 type:<class 'str'>, uat:视频退款率 type:<class 'str'>
+17:24:17.237978: 🚀当前遍历列数AN,表头->消耗
+17:24:17.237978: 	🚀当前遍历行数1, dev:消耗 type:<class 'str'>, uat:消耗 type:<class 'str'>
+17:24:17.238978: 🚀当前遍历列数AO,表头->千川成交金额
+17:24:17.239978: 	🚀当前遍历行数1, dev:千川成交金额 type:<class 'str'>, uat:千川成交金额 type:<class 'str'>
+17:24:17.240978: 🚀当前遍历列数AP,表头->付费流量占比
+17:24:17.240978: 	🚀当前遍历行数1, dev:付费流量占比 type:<class 'str'>, uat:付费流量占比 type:<class 'str'>
+17:24:17.241982: 🚀当前遍历列数AQ,表头->千川直投ROI
+17:24:17.241982: 	🚀当前遍历行数1, dev:千川直投ROI type:<class 'str'>, uat:千川直投ROI type:<class 'str'>
+17:24:17.243979: 🚀当前遍历列数AR,表头->全店ROI
+17:24:17.243979: 	🚀当前遍历行数1, dev:全店ROI type:<class 'str'>, uat:全店ROI type:<class 'str'>
+17:24:17.244986: 🚀当前遍历列数AS,表头->直播GMV
+17:24:17.245981: 	🚀当前遍历行数1, dev:直播GMV type:<class 'str'>, uat:直播GMV type:<class 'str'>
+17:24:17.246983: 🚀当前遍历列数AT,表头->GPM
+1000*直播间成交金额/观看人次
+17:24:17.246983: 	🚀当前遍历行数1, dev:GPM
+1000*直播间成交金额/观看人次 type:<class 'str'>, uat:GPM
+1000*直播间成交金额/观看人次 type:<class 'str'>
+17:24:17.247982: 🚀当前遍历列数AU,表头->免费GMV
+17:24:17.248979: 	🚀当前遍历行数1, dev:免费GMV type:<class 'str'>, uat:免费GMV type:<class 'str'>
+17:24:17.249980: 🚀当前遍历列数AV,表头->免费GMV占比
+17:24:17.249980: 	🚀当前遍历行数1, dev:免费GMV占比 type:<class 'str'>, uat:免费GMV占比 type:<class 'str'>
+17:24:17.250979: 🚀当前遍历列数AW,表头->成交件数
+17:24:17.251979: 	🚀当前遍历行数1, dev:成交件数 type:<class 'str'>, uat:成交件数 type:<class 'str'>
+17:24:17.252983: 🚀当前遍历列数AX,表头->成交人数
+17:24:17.252983: 	🚀当前遍历行数1, dev:成交人数 type:<class 'str'>, uat:成交人数 type:<class 'str'>
+17:24:17.253980: 🚀当前遍历列数AY,表头->成交转化率
+17:24:17.254980: 	🚀当前遍历行数1, dev:成交转化率 type:<class 'str'>, uat:成交转化率 type:<class 'str'>
+17:24:17.255981: 🚀当前遍历列数AZ,表头->直播间商品点击人数
+17:24:17.255981: 	🚀当前遍历行数1, dev:直播间商品点击人数 type:<class 'str'>, uat:直播间商品点击人数 type:<class 'str'>
+17:24:17.256980: 🚀当前遍历列数BA,表头->观看点击转化率
+17:24:17.256980: 	🚀当前遍历行数1, dev:观看点击转化率 type:<class 'str'>, uat:观看点击转化率 type:<class 'str'>
+17:24:17.257980: 🚀当前遍历列数BB,表头->点击成交转化率
+17:24:17.258980: 	🚀当前遍历行数1, dev:点击成交转化率 type:<class 'str'>, uat:点击成交转化率 type:<class 'str'>
+17:24:17.259980: 🚀当前遍历列数BC,表头->UV价值
+17:24:17.259980: 	🚀当前遍历行数1, dev:UV价值 type:<class 'str'>, uat:UV价值 type:<class 'str'>
+17:24:17.261983: 🚀当前遍历列数BD,表头->客单价
+17:24:17.261983: 	🚀当前遍历行数1, dev:客单价 type:<class 'str'>, uat:客单价 type:<class 'str'>
+17:24:17.262981: 🚀当前遍历列数BE,表头->观看人数
+17:24:17.263979: 	🚀当前遍历行数1, dev:观看人数 type:<class 'str'>, uat:观看人数 type:<class 'str'>
+17:24:17.264980: 🚀当前遍历列数BF,表头->观看人次
+17:24:17.264980: 	🚀当前遍历行数1, dev:观看人次 type:<class 'str'>, uat:观看人次 type:<class 'str'>
+17:24:17.265979: 🚀当前遍历列数BG,表头->最高在线人数
+17:24:17.266980: 	🚀当前遍历行数1, dev:最高在线人数 type:<class 'str'>, uat:最高在线人数 type:<class 'str'>
+17:24:17.267979: 🚀当前遍历列数BH,表头->平均在线人数
+17:24:17.270985: 	🚀当前遍历行数1, dev:平均在线人数 type:<class 'str'>, uat:平均在线人数 type:<class 'str'>
+17:24:17.271985: 🚀当前遍历列数BI,表头->人均观看时长(s)
+17:24:17.271985: 	🚀当前遍历行数1, dev:人均观看时长(s) type:<class 'str'>, uat:人均观看时长(s) type:<class 'str'>
+17:24:17.272982: 🚀当前遍历列数BJ,表头->新增粉丝数
+17:24:17.273980: 	🚀当前遍历行数1, dev:新增粉丝数 type:<class 'str'>, uat:新增粉丝数 type:<class 'str'>
+17:24:17.274981: 🚀当前遍历列数BK,表头->看播粉丝占比
+17:24:17.274981: 	🚀当前遍历行数1, dev:看播粉丝占比 type:<class 'str'>, uat:看播粉丝占比 type:<class 'str'>
+17:24:17.275983: 🚀当前遍历列数BL,表头->粉丝成交占比
+17:24:17.275983: 	🚀当前遍历行数1, dev:粉丝成交占比 type:<class 'str'>, uat:粉丝成交占比 type:<class 'str'>
+17:24:17.276981: 🚀当前遍历列数BM,表头->粉丝成交GMV
+17:24:17.277984: 	🚀当前遍历行数1, dev:粉丝成交GMV type:<class 'str'>, uat:粉丝成交GMV type:<class 'str'>
+17:24:17.278990: 🚀当前遍历列数BN,表头->增粉率
+17:24:17.279982: 	🚀当前遍历行数1, dev:增粉率 type:<class 'str'>, uat:增粉率 type:<class 'str'>
+17:38:50.575468: 🟡开始生成Gap_sheet🟡
+17:38:50.577464: 🚀最大列66
+🚀最大行1
+17:38:50.587550: 🚀当前遍历列数A,表头->日期
+17:38:50.588570: 	🚀当前遍历行数1, dev:日期 type:<class 'str'>, uat:日期 type:<class 'str'>
+17:38:50.589571: 🚀当前遍历列数B,表头->时段
+17:38:50.590575: 	🚀当前遍历行数1, dev:时段 type:<class 'str'>, uat:时段 type:<class 'str'>
+17:38:50.591578: 🚀当前遍历列数C,表头->时长
+（h）
+17:38:50.592574: 	🚀当前遍历行数1, dev:时长
+（h） type:<class 'str'>, uat:时长
+（h） type:<class 'str'>
+17:38:50.593572: 🚀当前遍历列数D,表头->全店GMV
+17:38:50.594574: 	🚀当前遍历行数1, dev:全店GMV type:<class 'str'>, uat:全店GMV type:<class 'str'>
+17:38:50.595568: 🚀当前遍历列数E,表头->全店Sellout
+17:38:50.595568: 	🚀当前遍历行数1, dev:全店Sellout type:<class 'str'>, uat:全店Sellout type:<class 'str'>
+17:38:50.596570: 🚀当前遍历列数F,表头->退款金额
+17:38:50.597569: 	🚀当前遍历行数1, dev:退款金额 type:<class 'str'>, uat:退款金额 type:<class 'str'>
+17:38:50.599569: 🚀当前遍历列数G,表头->仅退款
+17:38:50.600574: 	🚀当前遍历行数1, dev:仅退款 type:<class 'str'>, uat:仅退款 type:<class 'str'>
+17:38:50.601569: 🚀当前遍历列数H,表头->拒收拦截
+17:38:50.601569: 	🚀当前遍历行数1, dev:拒收拦截 type:<class 'str'>, uat:拒收拦截 type:<class 'str'>
+17:38:50.602570: 🚀当前遍历列数I,表头->退货退款
+17:38:50.603570: 	🚀当前遍历行数1, dev:退货退款 type:<class 'str'>, uat:退货退款 type:<class 'str'>
+17:38:50.604569: 🚀当前遍历列数J,表头->退款率
+17:38:50.604569: 	🚀当前遍历行数1, dev:退款率 type:<class 'str'>, uat:退款率 type:<class 'str'>
+17:38:50.606575: 🚀当前遍历列数K,表头->全店NSO
+17:38:50.607580: 	🚀当前遍历行数1, dev:全店NSO type:<class 'str'>, uat:全店NSO type:<class 'str'>
+17:38:50.609577: 🚀当前遍历列数L,表头->全店NSO目标
+17:38:50.610571: 	🚀当前遍历行数1, dev:全店NSO目标 type:<class 'str'>, uat:全店NSO目标 type:<class 'str'>
+17:38:50.611571: 🚀当前遍历列数M,表头->全店NSO
+当日达成率
+17:38:50.612572: 	🚀当前遍历行数1, dev:全店NSO
+当日达成率 type:<class 'str'>, uat:全店NSO
+当日达成率 type:<class 'str'>
+17:38:50.613571: 🚀当前遍历列数N,表头->店铺GMV
+17:38:50.615572: 	🚀当前遍历行数1, dev:店铺GMV type:<class 'str'>, uat:店铺GMV type:<class 'str'>
+17:38:50.617569: 🚀当前遍历列数O,表头->店铺Sellout
+17:38:50.617569: 	🚀当前遍历行数1, dev:店铺Sellout type:<class 'str'>, uat:店铺Sellout type:<class 'str'>
+17:38:50.621573: 🚀当前遍历列数P,表头->商城SO
+17:38:50.622577: 	🚀当前遍历行数1, dev:商城SO type:<class 'str'>, uat:商城SO type:<class 'str'>
+17:38:50.624572: 🚀当前遍历列数Q,表头->店播直播GMV
+17:38:50.625584: 	🚀当前遍历行数1, dev:店播直播GMV type:<class 'str'>, uat:店播直播GMV type:<class 'str'>
+17:38:50.626592: 🚀当前遍历列数R,表头->店播Sellout
+17:38:50.627583: 	🚀当前遍历行数1, dev:店播Sellout type:<class 'str'>, uat:店播Sellout type:<class 'str'>
+17:38:50.629573: 🚀当前遍历列数S,表头->退款金额
+17:38:50.630575: 	🚀当前遍历行数1, dev:退款金额 type:<class 'str'>, uat:退款金额 type:<class 'str'>
+17:38:50.631571: 🚀当前遍历列数T,表头->仅退款
+17:38:50.632573: 	🚀当前遍历行数1, dev:仅退款 type:<class 'str'>, uat:仅退款 type:<class 'str'>
+17:38:50.633570: 🚀当前遍历列数U,表头->拒收拦截
+17:38:50.634568: 	🚀当前遍历行数1, dev:拒收拦截 type:<class 'str'>, uat:拒收拦截 type:<class 'str'>
+17:38:50.635569: 🚀当前遍历列数V,表头->退货退款
+17:38:50.636571: 	🚀当前遍历行数1, dev:退货退款 type:<class 'str'>, uat:退货退款 type:<class 'str'>
+17:38:50.637569: 🚀当前遍历列数W,表头->退款率
+17:38:50.637569: 	🚀当前遍历行数1, dev:退款率 type:<class 'str'>, uat:退款率 type:<class 'str'>
+17:38:50.639570: 🚀当前遍历列数X,表头->店铺NSO
+17:38:50.640580: 	🚀当前遍历行数1, dev:店铺NSO type:<class 'str'>, uat:店铺NSO type:<class 'str'>
+17:38:50.641575: 🚀当前遍历列数Y,表头->店铺NSO目标
+17:38:50.642577: 	🚀当前遍历行数1, dev:店铺NSO目标 type:<class 'str'>, uat:店铺NSO目标 type:<class 'str'>
+17:38:50.644577: 🚀当前遍历列数Z,表头->店铺NSO完成率
+17:38:50.645573: 	🚀当前遍历行数1, dev:店铺NSO完成率 type:<class 'str'>, uat:店铺NSO完成率 type:<class 'str'>
+17:38:50.646569: 🚀当前遍历列数AA,表头->达播GMV
+17:38:50.647569: 	🚀当前遍历行数1, dev:达播GMV type:<class 'str'>, uat:达播GMV type:<class 'str'>
+17:38:50.648572: 🚀当前遍历列数AB,表头->达播Sellout
+17:38:50.649569: 	🚀当前遍历行数1, dev:达播Sellout type:<class 'str'>, uat:达播Sellout type:<class 'str'>
+17:38:50.650571: 🚀当前遍历列数AC,表头->退款金额
+17:38:50.651570: 	🚀当前遍历行数1, dev:退款金额 type:<class 'str'>, uat:退款金额 type:<class 'str'>
+17:38:50.652574: 🚀当前遍历列数AD,表头->仅退款
+17:38:50.653575: 	🚀当前遍历行数1, dev:仅退款 type:<class 'str'>, uat:仅退款 type:<class 'str'>
+17:38:50.655572: 🚀当前遍历列数AE,表头->拒收拦截
+17:38:50.655572: 	🚀当前遍历行数1, dev:拒收拦截 type:<class 'str'>, uat:拒收拦截 type:<class 'str'>
+17:38:50.657585: 🚀当前遍历列数AF,表头->退货退款
+17:38:50.658570: 	🚀当前遍历行数1, dev:退货退款 type:<class 'str'>, uat:退货退款 type:<class 'str'>
+17:38:50.659572: 🚀当前遍历列数AG,表头->达播退款率
+17:38:50.660569: 	🚀当前遍历行数1, dev:达播退款率 type:<class 'str'>, uat:达播退款率 type:<class 'str'>
+17:38:50.661569: 🚀当前遍历列数AH,表头->达播NSO
+17:38:50.662567: 	🚀当前遍历行数1, dev:达播NSO type:<class 'str'>, uat:达播NSO type:<class 'str'>
+17:38:50.663568: 🚀当前遍历列数AI,表头->达播NSO目标
+17:38:50.664568: 	🚀当前遍历行数1, dev:达播NSO目标 type:<class 'str'>, uat:达播NSO目标 type:<class 'str'>
+17:38:50.666572: 🚀当前遍历列数AJ,表头->达播NSO完成率
+17:38:50.666572: 	🚀当前遍历行数1, dev:达播NSO完成率 type:<class 'str'>, uat:达播NSO完成率 type:<class 'str'>
+17:38:50.667569: 🚀当前遍历列数AK,表头->挂车GMV
+17:38:50.668568: 	🚀当前遍历行数1, dev:挂车GMV type:<class 'str'>, uat:挂车GMV type:<class 'str'>
+17:38:50.670570: 🚀当前遍历列数AL,表头->退款金额
+17:38:50.671572: 	🚀当前遍历行数1, dev:退款金额 type:<class 'str'>, uat:退款金额 type:<class 'str'>
+17:38:50.672571: 🚀当前遍历列数AM,表头->视频退款率
+17:38:50.673575: 	🚀当前遍历行数1, dev:视频退款率 type:<class 'str'>, uat:视频退款率 type:<class 'str'>
+17:38:50.675570: 🚀当前遍历列数AN,表头->消耗
+17:38:50.675570: 	🚀当前遍历行数1, dev:消耗 type:<class 'str'>, uat:消耗 type:<class 'str'>
+17:38:50.677570: 🚀当前遍历列数AO,表头->千川成交金额
+17:38:50.678567: 	🚀当前遍历行数1, dev:千川成交金额 type:<class 'str'>, uat:千川成交金额 type:<class 'str'>
+17:38:50.679570: 🚀当前遍历列数AP,表头->付费流量占比
+17:38:50.680572: 	🚀当前遍历行数1, dev:付费流量占比 type:<class 'str'>, uat:付费流量占比 type:<class 'str'>
+17:38:50.681571: 🚀当前遍历列数AQ,表头->千川直投ROI
+17:38:50.682570: 	🚀当前遍历行数1, dev:千川直投ROI type:<class 'str'>, uat:千川直投ROI type:<class 'str'>
+17:38:50.684568: 🚀当前遍历列数AR,表头->全店ROI
+17:38:50.684568: 	🚀当前遍历行数1, dev:全店ROI type:<class 'str'>, uat:全店ROI type:<class 'str'>
+17:38:50.686570: 🚀当前遍历列数AS,表头->直播GMV
+17:38:50.686570: 	🚀当前遍历行数1, dev:直播GMV type:<class 'str'>, uat:直播GMV type:<class 'str'>
+17:38:50.687571: 🚀当前遍历列数AT,表头->GPM
+1000*直播间成交金额/观看人次
+17:38:50.688568: 	🚀当前遍历行数1, dev:GPM
+1000*直播间成交金额/观看人次 type:<class 'str'>, uat:GPM
+1000*直播间成交金额/观看人次 type:<class 'str'>
+17:38:50.690575: 🚀当前遍历列数AU,表头->免费GMV
+17:38:50.690575: 	🚀当前遍历行数1, dev:免费GMV type:<class 'str'>, uat:免费GMV type:<class 'str'>
+17:38:50.692572: 🚀当前遍历列数AV,表头->免费GMV占比
+17:38:50.692572: 	🚀当前遍历行数1, dev:免费GMV占比 type:<class 'str'>, uat:免费GMV占比 type:<class 'str'>
+17:38:50.694571: 🚀当前遍历列数AW,表头->成交件数
+17:38:50.695571: 	🚀当前遍历行数1, dev:成交件数 type:<class 'str'>, uat:成交件数 type:<class 'str'>
+17:38:50.696570: 🚀当前遍历列数AX,表头->成交人数
+17:38:50.696570: 	🚀当前遍历行数1, dev:成交人数 type:<class 'str'>, uat:成交人数 type:<class 'str'>
+17:38:50.698570: 🚀当前遍历列数AY,表头->成交转化率
+17:38:50.699569: 	🚀当前遍历行数1, dev:成交转化率 type:<class 'str'>, uat:成交转化率 type:<class 'str'>
+17:38:50.703573: 🚀当前遍历列数AZ,表头->直播间商品点击人数
+17:38:50.703573: 	🚀当前遍历行数1, dev:直播间商品点击人数 type:<class 'str'>, uat:直播间商品点击人数 type:<class 'str'>
+17:38:50.705569: 🚀当前遍历列数BA,表头->观看点击转化率
+17:38:50.706569: 	🚀当前遍历行数1, dev:观看点击转化率 type:<class 'str'>, uat:观看点击转化率 type:<class 'str'>
+17:38:50.707570: 🚀当前遍历列数BB,表头->点击成交转化率
+17:38:50.708567: 	🚀当前遍历行数1, dev:点击成交转化率 type:<class 'str'>, uat:点击成交转化率 type:<class 'str'>
+17:38:50.709570: 🚀当前遍历列数BC,表头->UV价值
+17:38:50.710570: 	🚀当前遍历行数1, dev:UV价值 type:<class 'str'>, uat:UV价值 type:<class 'str'>
+17:38:50.711571: 🚀当前遍历列数BD,表头->客单价
+17:38:50.712568: 	🚀当前遍历行数1, dev:客单价 type:<class 'str'>, uat:客单价 type:<class 'str'>
+17:38:50.713571: 🚀当前遍历列数BE,表头->观看人数
+17:38:50.714568: 	🚀当前遍历行数1, dev:观看人数 type:<class 'str'>, uat:观看人数 type:<class 'str'>
+17:38:50.716575: 🚀当前遍历列数BF,表头->观看人次
+17:38:50.716575: 	🚀当前遍历行数1, dev:观看人次 type:<class 'str'>, uat:观看人次 type:<class 'str'>
+17:38:50.719580: 🚀当前遍历列数BG,表头->最高在线人数
+17:38:50.719580: 	🚀当前遍历行数1, dev:最高在线人数 type:<class 'str'>, uat:最高在线人数 type:<class 'str'>
+17:38:50.722580: 🚀当前遍历列数BH,表头->平均在线人数
+17:38:50.722580: 	🚀当前遍历行数1, dev:平均在线人数 type:<class 'str'>, uat:平均在线人数 type:<class 'str'>
+17:38:50.725578: 🚀当前遍历列数BI,表头->人均观看时长(s)
+17:38:50.726580: 	🚀当前遍历行数1, dev:人均观看时长(s) type:<class 'str'>, uat:人均观看时长(s) type:<class 'str'>
+17:38:50.728569: 🚀当前遍历列数BJ,表头->新增粉丝数
+17:38:50.729571: 	🚀当前遍历行数1, dev:新增粉丝数 type:<class 'str'>, uat:新增粉丝数 type:<class 'str'>
+17:38:50.730569: 🚀当前遍历列数BK,表头->看播粉丝占比
+17:38:50.731570: 	🚀当前遍历行数1, dev:看播粉丝占比 type:<class 'str'>, uat:看播粉丝占比 type:<class 'str'>
+17:38:50.733568: 🚀当前遍历列数BL,表头->粉丝成交占比
+17:38:50.733568: 	🚀当前遍历行数1, dev:粉丝成交占比 type:<class 'str'>, uat:粉丝成交占比 type:<class 'str'>
+17:38:50.735567: 🚀当前遍历列数BM,表头->粉丝成交GMV
+17:38:50.735567: 	🚀当前遍历行数1, dev:粉丝成交GMV type:<class 'str'>, uat:粉丝成交GMV type:<class 'str'>
+17:38:50.737567: 🚀当前遍历列数BN,表头->增粉率
+17:38:50.737567: 	🚀当前遍历行数1, dev:增粉率 type:<class 'str'>, uat:增粉率 type:<class 'str'>
+17:40:00.092662: 🟡开始生成Gap_sheet🟡
+17:40:00.094662: 🚀最大列66
+🚀最大行1
+17:40:00.105660: 🚀当前遍历列数A,表头->日期
+17:40:00.105660: 	🚀当前遍历行数1, dev:日期 type:<class 'str'>, uat:日期 type:<class 'str'>
+17:40:00.106663: 🚀当前遍历列数B,表头->时段
+17:40:00.107657: 	🚀当前遍历行数1, dev:时段 type:<class 'str'>, uat:时段 type:<class 'str'>
+17:40:00.108658: 🚀当前遍历列数C,表头->时长
+（h）
+17:40:00.109662: 	🚀当前遍历行数1, dev:时长
+（h） type:<class 'str'>, uat:时长
+（h） type:<class 'str'>
+17:40:00.110661: 🚀当前遍历列数D,表头->全店GMV
+17:40:00.112666: 	🚀当前遍历行数1, dev:全店GMV type:<class 'str'>, uat:全店GMV type:<class 'str'>
+17:40:00.114658: 🚀当前遍历列数E,表头->全店Sellout
+17:40:00.114658: 	🚀当前遍历行数1, dev:全店Sellout type:<class 'str'>, uat:全店Sellout type:<class 'str'>
+17:40:00.115658: 🚀当前遍历列数F,表头->退款金额
+17:40:00.116660: 	🚀当前遍历行数1, dev:退款金额 type:<class 'str'>, uat:退款金额 type:<class 'str'>
+17:40:00.117662: 🚀当前遍历列数G,表头->仅退款
+17:40:00.118660: 	🚀当前遍历行数1, dev:仅退款 type:<class 'str'>, uat:仅退款 type:<class 'str'>
+17:40:00.119659: 🚀当前遍历列数H,表头->拒收拦截
+17:40:00.119659: 	🚀当前遍历行数1, dev:拒收拦截 type:<class 'str'>, uat:拒收拦截 type:<class 'str'>
+17:40:00.121657: 🚀当前遍历列数I,表头->退货退款
+17:40:00.121657: 	🚀当前遍历行数1, dev:退货退款 type:<class 'str'>, uat:退货退款 type:<class 'str'>
+17:40:00.122658: 🚀当前遍历列数J,表头->退款率
+17:40:00.123660: 	🚀当前遍历行数1, dev:退款率 type:<class 'str'>, uat:退款率 type:<class 'str'>
+17:40:00.124661: 🚀当前遍历列数K,表头->全店NSO
+17:40:00.125662: 	🚀当前遍历行数1, dev:全店NSO type:<class 'str'>, uat:全店NSO type:<class 'str'>
+17:40:00.126666: 🚀当前遍历列数L,表头->全店NSO目标
+17:40:00.127665: 	🚀当前遍历行数1, dev:全店NSO目标 type:<class 'str'>, uat:全店NSO目标 type:<class 'str'>
+17:40:00.129661: 🚀当前遍历列数M,表头->全店NSO
+当日达成率
+17:40:00.130668: 	🚀当前遍历行数1, dev:全店NSO
+当日达成率 type:<class 'str'>, uat:全店NSO
+当日达成率 type:<class 'str'>
+17:40:00.132666: 🚀当前遍历列数N,表头->店铺GMV
+17:40:00.132666: 	🚀当前遍历行数1, dev:店铺GMV type:<class 'str'>, uat:店铺GMV type:<class 'str'>
+17:40:00.134663: 🚀当前遍历列数O,表头->店铺Sellout
+17:40:00.134663: 	🚀当前遍历行数1, dev:店铺Sellout type:<class 'str'>, uat:店铺Sellout type:<class 'str'>
+17:40:00.135664: 🚀当前遍历列数P,表头->商城SO
+17:40:00.136658: 	🚀当前遍历行数1, dev:商城SO type:<class 'str'>, uat:商城SO type:<class 'str'>
+17:40:00.138663: 🚀当前遍历列数Q,表头->店播直播GMV
+17:40:00.139664: 	🚀当前遍历行数1, dev:店播直播GMV type:<class 'str'>, uat:店播直播GMV type:<class 'str'>
+17:40:00.143664: 🚀当前遍历列数R,表头->店播Sellout
+17:40:00.144664: 	🚀当前遍历行数1, dev:店播Sellout type:<class 'str'>, uat:店播Sellout type:<class 'str'>
+17:40:00.146663: 🚀当前遍历列数S,表头->退款金额
+17:40:00.147658: 	🚀当前遍历行数1, dev:退款金额 type:<class 'str'>, uat:退款金额 type:<class 'str'>
+17:40:00.148666: 🚀当前遍历列数T,表头->仅退款
+17:40:00.149659: 	🚀当前遍历行数1, dev:仅退款 type:<class 'str'>, uat:仅退款 type:<class 'str'>
+17:40:00.151661: 🚀当前遍历列数U,表头->拒收拦截
+17:40:00.151661: 	🚀当前遍历行数1, dev:拒收拦截 type:<class 'str'>, uat:拒收拦截 type:<class 'str'>
+17:40:00.153660: 🚀当前遍历列数V,表头->退货退款
+17:40:00.154659: 	🚀当前遍历行数1, dev:退货退款 type:<class 'str'>, uat:退货退款 type:<class 'str'>
+17:40:00.155659: 🚀当前遍历列数W,表头->退款率
+17:40:00.156660: 	🚀当前遍历行数1, dev:退款率 type:<class 'str'>, uat:退款率 type:<class 'str'>
+17:40:00.158659: 🚀当前遍历列数X,表头->店铺NSO
+17:40:00.159662: 	🚀当前遍历行数1, dev:店铺NSO type:<class 'str'>, uat:店铺NSO type:<class 'str'>
+17:40:00.160663: 🚀当前遍历列数Y,表头->店铺NSO目标
+17:40:00.161662: 	🚀当前遍历行数1, dev:店铺NSO目标 type:<class 'str'>, uat:店铺NSO目标 type:<class 'str'>
+17:40:00.163665: 🚀当前遍历列数Z,表头->店铺NSO完成率
+17:40:00.165670: 	🚀当前遍历行数1, dev:店铺NSO完成率 type:<class 'str'>, uat:店铺NSO完成率 type:<class 'str'>
+17:40:00.167663: 🚀当前遍历列数AA,表头->达播GMV
+17:40:00.167663: 	🚀当前遍历行数1, dev:达播GMV type:<class 'str'>, uat:达播GMV type:<class 'str'>
+17:40:00.169664: 🚀当前遍历列数AB,表头->达播Sellout
+17:40:00.170661: 	🚀当前遍历行数1, dev:达播Sellout type:<class 'str'>, uat:达播Sellout type:<class 'str'>
+17:40:00.172658: 🚀当前遍历列数AC,表头->退款金额
+17:40:00.172658: 	🚀当前遍历行数1, dev:退款金额 type:<class 'str'>, uat:退款金额 type:<class 'str'>
+17:40:00.174659: 🚀当前遍历列数AD,表头->仅退款
+17:40:00.175661: 	🚀当前遍历行数1, dev:仅退款 type:<class 'str'>, uat:仅退款 type:<class 'str'>
+17:40:00.177660: 🚀当前遍历列数AE,表头->拒收拦截
+17:40:00.178662: 	🚀当前遍历行数1, dev:拒收拦截 type:<class 'str'>, uat:拒收拦截 type:<class 'str'>
+17:40:00.179660: 🚀当前遍历列数AF,表头->退货退款
+17:40:00.180657: 	🚀当前遍历行数1, dev:退货退款 type:<class 'str'>, uat:退货退款 type:<class 'str'>
+17:40:00.182658: 🚀当前遍历列数AG,表头->达播退款率
+17:40:00.182658: 	🚀当前遍历行数1, dev:达播退款率 type:<class 'str'>, uat:达播退款率 type:<class 'str'>
+17:40:00.184658: 🚀当前遍历列数AH,表头->达播NSO
+17:40:00.184658: 	🚀当前遍历行数1, dev:达播NSO type:<class 'str'>, uat:达播NSO type:<class 'str'>
+17:40:00.186663: 🚀当前遍历列数AI,表头->达播NSO目标
+17:40:00.187658: 	🚀当前遍历行数1, dev:达播NSO目标 type:<class 'str'>, uat:达播NSO目标 type:<class 'str'>
+17:40:00.189661: 🚀当前遍历列数AJ,表头->达播NSO完成率
+17:40:00.189661: 	🚀当前遍历行数1, dev:达播NSO完成率 type:<class 'str'>, uat:达播NSO完成率 type:<class 'str'>
+17:40:00.191658: 🚀当前遍历列数AK,表头->挂车GMV
+17:40:00.192669: 	🚀当前遍历行数1, dev:挂车GMV type:<class 'str'>, uat:挂车GMV type:<class 'str'>
+17:40:00.194659: 🚀当前遍历列数AL,表头->退款金额
+17:40:00.194659: 	🚀当前遍历行数1, dev:退款金额 type:<class 'str'>, uat:退款金额 type:<class 'str'>
+17:40:00.196659: 🚀当前遍历列数AM,表头->视频退款率
+17:40:00.196659: 	🚀当前遍历行数1, dev:视频退款率 type:<class 'str'>, uat:视频退款率 type:<class 'str'>
+17:40:00.198658: 🚀当前遍历列数AN,表头->消耗
+17:40:00.198658: 	🚀当前遍历行数1, dev:消耗 type:<class 'str'>, uat:消耗 type:<class 'str'>
+17:40:00.200659: 🚀当前遍历列数AO,表头->千川成交金额
+17:40:00.201661: 	🚀当前遍历行数1, dev:千川成交金额 type:<class 'str'>, uat:千川成交金额 type:<class 'str'>
+17:40:00.203658: 🚀当前遍历列数AP,表头->付费流量占比
+17:40:00.203658: 	🚀当前遍历行数1, dev:付费流量占比 type:<class 'str'>, uat:付费流量占比 type:<class 'str'>
+17:40:00.205658: 🚀当前遍历列数AQ,表头->千川直投ROI
+17:40:00.208657: 	🚀当前遍历行数1, dev:千川直投ROI type:<class 'str'>, uat:千川直投ROI type:<class 'str'>
+17:40:00.210661: 🚀当前遍历列数AR,表头->全店ROI
+17:40:00.211660: 	🚀当前遍历行数1, dev:全店ROI type:<class 'str'>, uat:全店ROI type:<class 'str'>
+17:40:00.212659: 🚀当前遍历列数AS,表头->直播GMV
+17:40:00.213658: 	🚀当前遍历行数1, dev:直播GMV type:<class 'str'>, uat:直播GMV type:<class 'str'>
+17:40:00.215657: 🚀当前遍历列数AT,表头->GPM
+1000*直播间成交金额/观看人次
+17:40:00.215657: 	🚀当前遍历行数1, dev:GPM
+1000*直播间成交金额/观看人次 type:<class 'str'>, uat:GPM
+1000*直播间成交金额/观看人次 type:<class 'str'>
+17:40:00.217657: 🚀当前遍历列数AU,表头->免费GMV
+17:40:00.217657: 	🚀当前遍历行数1, dev:免费GMV type:<class 'str'>, uat:免费GMV type:<class 'str'>
+17:40:00.219659: 🚀当前遍历列数AV,表头->免费GMV占比
+17:40:00.220659: 	🚀当前遍历行数1, dev:免费GMV占比 type:<class 'str'>, uat:免费GMV占比 type:<class 'str'>
+17:40:00.222664: 🚀当前遍历列数AW,表头->成交件数
+17:40:00.223658: 	🚀当前遍历行数1, dev:成交件数 type:<class 'str'>, uat:成交件数 type:<class 'str'>
+17:40:00.225660: 🚀当前遍历列数AX,表头->成交人数
+17:40:00.225660: 	🚀当前遍历行数1, dev:成交人数 type:<class 'str'>, uat:成交人数 type:<class 'str'>
+17:40:00.227660: 🚀当前遍历列数AY,表头->成交转化率
+17:40:00.228660: 	🚀当前遍历行数1, dev:成交转化率 type:<class 'str'>, uat:成交转化率 type:<class 'str'>
+17:40:00.230667: 🚀当前遍历列数AZ,表头->直播间商品点击人数
+17:40:00.231670: 	🚀当前遍历行数1, dev:直播间商品点击人数 type:<class 'str'>, uat:直播间商品点击人数 type:<class 'str'>
+17:40:00.233670: 🚀当前遍历列数BA,表头->观看点击转化率
+17:40:00.234667: 	🚀当前遍历行数1, dev:观看点击转化率 type:<class 'str'>, uat:观看点击转化率 type:<class 'str'>
+17:40:00.236666: 🚀当前遍历列数BB,表头->点击成交转化率
+17:40:00.237660: 	🚀当前遍历行数1, dev:点击成交转化率 type:<class 'str'>, uat:点击成交转化率 type:<class 'str'>
+17:40:00.239658: 🚀当前遍历列数BC,表头->UV价值
+17:40:00.239658: 	🚀当前遍历行数1, dev:UV价值 type:<class 'str'>, uat:UV价值 type:<class 'str'>
+17:40:00.242663: 🚀当前遍历列数BD,表头->客单价
+17:40:00.242663: 	🚀当前遍历行数1, dev:客单价 type:<class 'str'>, uat:客单价 type:<class 'str'>
+17:40:00.244659: 🚀当前遍历列数BE,表头->观看人数
+17:40:00.245660: 	🚀当前遍历行数1, dev:观看人数 type:<class 'str'>, uat:观看人数 type:<class 'str'>
+17:40:00.247656: 🚀当前遍历列数BF,表头->观看人次
+17:40:00.247656: 	🚀当前遍历行数1, dev:观看人次 type:<class 'str'>, uat:观看人次 type:<class 'str'>
+17:40:00.249657: 🚀当前遍历列数BG,表头->最高在线人数
+17:40:00.250659: 	🚀当前遍历行数1, dev:最高在线人数 type:<class 'str'>, uat:最高在线人数 type:<class 'str'>
+17:40:00.251658: 🚀当前遍历列数BH,表头->平均在线人数
+17:40:00.252661: 	🚀当前遍历行数1, dev:平均在线人数 type:<class 'str'>, uat:平均在线人数 type:<class 'str'>
+17:40:00.254660: 🚀当前遍历列数BI,表头->人均观看时长(s)
+17:40:00.255660: 	🚀当前遍历行数1, dev:人均观看时长(s) type:<class 'str'>, uat:人均观看时长(s) type:<class 'str'>
+17:40:00.257665: 🚀当前遍历列数BJ,表头->新增粉丝数
+17:40:00.258663: 	🚀当前遍历行数1, dev:新增粉丝数 type:<class 'str'>, uat:新增粉丝数 type:<class 'str'>
+17:40:00.261663: 🚀当前遍历列数BK,表头->看播粉丝占比
+17:40:00.262658: 	🚀当前遍历行数1, dev:看播粉丝占比 type:<class 'str'>, uat:看播粉丝占比 type:<class 'str'>
+17:40:00.264661: 🚀当前遍历列数BL,表头->粉丝成交占比
+17:40:00.264661: 	🚀当前遍历行数1, dev:粉丝成交占比 type:<class 'str'>, uat:粉丝成交占比 type:<class 'str'>
+17:40:00.266656: 🚀当前遍历列数BM,表头->粉丝成交GMV
+17:40:00.266656: 	🚀当前遍历行数1, dev:粉丝成交GMV type:<class 'str'>, uat:粉丝成交GMV type:<class 'str'>
+17:40:00.268656: 🚀当前遍历列数BN,表头->增粉率
+17:40:00.269657: 	🚀当前遍历行数1, dev:增粉率 type:<class 'str'>, uat:增粉率 type:<class 'str'>
+17:45:46.325823: 🟡开始生成Gap_sheet🟡
+17:45:46.327822: 🚀最大列66
+🚀最大行1
+17:45:46.338822: 🚀当前遍历列数A,表头->日期
+17:45:46.338822: 	🚀当前遍历行数1, dev:日期 type:<class 'str'>, uat:日期 type:<class 'str'>
+17:45:46.339820: 🚀当前遍历列数B,表头->时段
+17:45:46.340820: 	🚀当前遍历行数1, dev:时段 type:<class 'str'>, uat:时段 type:<class 'str'>
+17:45:46.341823: 🚀当前遍历列数C,表头->时长
+（h）
+17:45:46.341823: 	🚀当前遍历行数1, dev:时长
+（h） type:<class 'str'>, uat:时长
+（h） type:<class 'str'>
+17:45:46.343825: 🚀当前遍历列数D,表头->全店GMV
+17:45:46.343825: 	🚀当前遍历行数1, dev:全店GMV type:<class 'str'>, uat:全店GMV type:<class 'str'>
+17:45:46.344823: 🚀当前遍历列数E,表头->全店Sellout
+17:45:46.344823: 	🚀当前遍历行数1, dev:全店Sellout type:<class 'str'>, uat:全店Sellout type:<class 'str'>
+17:45:46.345820: 🚀当前遍历列数F,表头->退款金额
+17:45:46.346819: 	🚀当前遍历行数1, dev:退款金额 type:<class 'str'>, uat:退款金额 type:<class 'str'>
+17:45:46.349818: 🚀当前遍历列数G,表头->仅退款
+17:45:46.349818: 	🚀当前遍历行数1, dev:仅退款 type:<class 'str'>, uat:仅退款 type:<class 'str'>
+17:45:46.350819: 🚀当前遍历列数H,表头->拒收拦截
+17:45:46.351834: 	🚀当前遍历行数1, dev:拒收拦截 type:<class 'str'>, uat:拒收拦截 type:<class 'str'>
+17:45:46.352819: 🚀当前遍历列数I,表头->退货退款
+17:45:46.353828: 	🚀当前遍历行数1, dev:退货退款 type:<class 'str'>, uat:退货退款 type:<class 'str'>
+17:45:46.354830: 🚀当前遍历列数J,表头->退款率
+17:45:46.355828: 	🚀当前遍历行数1, dev:退款率 type:<class 'str'>, uat:退款率 type:<class 'str'>
+17:45:46.356827: 🚀当前遍历列数K,表头->全店NSO
+17:45:46.357828: 	🚀当前遍历行数1, dev:全店NSO type:<class 'str'>, uat:全店NSO type:<class 'str'>
+17:45:46.358826: 🚀当前遍历列数L,表头->全店NSO目标
+17:45:46.358826: 	🚀当前遍历行数1, dev:全店NSO目标 type:<class 'str'>, uat:全店NSO目标 type:<class 'str'>
+17:45:46.359829: 🚀当前遍历列数M,表头->全店NSO
+当日达成率
+17:45:46.360828: 	🚀当前遍历行数1, dev:全店NSO
+当日达成率 type:<class 'str'>, uat:全店NSO
+当日达成率 type:<class 'str'>
+17:45:46.362822: 🚀当前遍历列数N,表头->店铺GMV
+17:45:46.362822: 	🚀当前遍历行数1, dev:店铺GMV type:<class 'str'>, uat:店铺GMV type:<class 'str'>
+17:45:46.363825: 🚀当前遍历列数O,表头->店铺Sellout
+17:45:46.364828: 	🚀当前遍历行数1, dev:店铺Sellout type:<class 'str'>, uat:店铺Sellout type:<class 'str'>
+17:45:46.366824: 🚀当前遍历列数P,表头->商城SO
+17:45:46.367825: 	🚀当前遍历行数1, dev:商城SO type:<class 'str'>, uat:商城SO type:<class 'str'>
+17:45:46.368819: 🚀当前遍历列数Q,表头->店播直播GMV
+17:45:46.370827: 	🚀当前遍历行数1, dev:店播直播GMV type:<class 'str'>, uat:店播直播GMV type:<class 'str'>
+17:45:46.371824: 🚀当前遍历列数R,表头->店播Sellout
+17:45:46.372829: 	🚀当前遍历行数1, dev:店播Sellout type:<class 'str'>, uat:店播Sellout type:<class 'str'>
+17:45:46.374822: 🚀当前遍历列数S,表头->退款金额
+17:45:46.374822: 	🚀当前遍历行数1, dev:退款金额 type:<class 'str'>, uat:退款金额 type:<class 'str'>
+17:45:46.375820: 🚀当前遍历列数T,表头->仅退款
+17:45:46.376829: 	🚀当前遍历行数1, dev:仅退款 type:<class 'str'>, uat:仅退款 type:<class 'str'>
+17:45:46.377821: 🚀当前遍历列数U,表头->拒收拦截
+17:45:46.378834: 	🚀当前遍历行数1, dev:拒收拦截 type:<class 'str'>, uat:拒收拦截 type:<class 'str'>
+17:45:46.379829: 🚀当前遍历列数V,表头->退货退款
+17:45:46.380823: 	🚀当前遍历行数1, dev:退货退款 type:<class 'str'>, uat:退货退款 type:<class 'str'>
+17:45:46.381822: 🚀当前遍历列数W,表头->退款率
+17:45:46.382821: 	🚀当前遍历行数1, dev:退款率 type:<class 'str'>, uat:退款率 type:<class 'str'>
+17:45:46.383821: 🚀当前遍历列数X,表头->店铺NSO
+17:45:46.384823: 	🚀当前遍历行数1, dev:店铺NSO type:<class 'str'>, uat:店铺NSO type:<class 'str'>
+17:45:46.384823: 🚀当前遍历列数Y,表头->店铺NSO目标
+17:45:46.385823: 	🚀当前遍历行数1, dev:店铺NSO目标 type:<class 'str'>, uat:店铺NSO目标 type:<class 'str'>
+17:45:46.386821: 🚀当前遍历列数Z,表头->店铺NSO完成率
+17:45:46.387831: 	🚀当前遍历行数1, dev:店铺NSO完成率 type:<class 'str'>, uat:店铺NSO完成率 type:<class 'str'>
+17:45:46.389820: 🚀当前遍历列数AA,表头->达播GMV
+17:45:46.389820: 	🚀当前遍历行数1, dev:达播GMV type:<class 'str'>, uat:达播GMV type:<class 'str'>
+17:45:46.391820: 🚀当前遍历列数AB,表头->达播Sellout
+17:45:46.391820: 	🚀当前遍历行数1, dev:达播Sellout type:<class 'str'>, uat:达播Sellout type:<class 'str'>
+17:45:46.392818: 🚀当前遍历列数AC,表头->退款金额
+17:45:46.393819: 	🚀当前遍历行数1, dev:退款金额 type:<class 'str'>, uat:退款金额 type:<class 'str'>
+17:45:46.394818: 🚀当前遍历列数AD,表头->仅退款
+17:45:46.394818: 	🚀当前遍历行数1, dev:仅退款 type:<class 'str'>, uat:仅退款 type:<class 'str'>
+17:45:46.395821: 🚀当前遍历列数AE,表头->拒收拦截
+17:45:46.396820: 	🚀当前遍历行数1, dev:拒收拦截 type:<class 'str'>, uat:拒收拦截 type:<class 'str'>
+17:45:46.396820: 🚀当前遍历列数AF,表头->退货退款
+17:45:46.397817: 	🚀当前遍历行数1, dev:退货退款 type:<class 'str'>, uat:退货退款 type:<class 'str'>
+17:45:46.398818: 🚀当前遍历列数AG,表头->达播退款率
+17:45:46.398818: 	🚀当前遍历行数1, dev:达播退款率 type:<class 'str'>, uat:达播退款率 type:<class 'str'>
+17:45:46.399819: 🚀当前遍历列数AH,表头->达播NSO
+17:45:46.400822: 	🚀当前遍历行数1, dev:达播NSO type:<class 'str'>, uat:达播NSO type:<class 'str'>
+17:45:46.401818: 🚀当前遍历列数AI,表头->达播NSO目标
+17:45:46.401818: 	🚀当前遍历行数1, dev:达播NSO目标 type:<class 'str'>, uat:达播NSO目标 type:<class 'str'>
+17:45:46.402822: 🚀当前遍历列数AJ,表头->达播NSO完成率
+17:45:46.403828: 	🚀当前遍历行数1, dev:达播NSO完成率 type:<class 'str'>, uat:达播NSO完成率 type:<class 'str'>
+17:45:46.405821: 🚀当前遍历列数AK,表头->挂车GMV
+17:45:46.405821: 	🚀当前遍历行数1, dev:挂车GMV type:<class 'str'>, uat:挂车GMV type:<class 'str'>
+17:45:46.406820: 🚀当前遍历列数AL,表头->退款金额
+17:45:46.407822: 	🚀当前遍历行数1, dev:退款金额 type:<class 'str'>, uat:退款金额 type:<class 'str'>
+17:45:46.407822: 🚀当前遍历列数AM,表头->视频退款率
+17:45:46.408818: 	🚀当前遍历行数1, dev:视频退款率 type:<class 'str'>, uat:视频退款率 type:<class 'str'>
+17:45:46.409819: 🚀当前遍历列数AN,表头->消耗
+17:45:46.409819: 	🚀当前遍历行数1, dev:消耗 type:<class 'str'>, uat:消耗 type:<class 'str'>
+17:45:46.410818: 🚀当前遍历列数AO,表头->千川成交金额
+17:45:46.411818: 	🚀当前遍历行数1, dev:千川成交金额 type:<class 'str'>, uat:千川成交金额 type:<class 'str'>
+17:45:46.412819: 🚀当前遍历列数AP,表头->付费流量占比
+17:45:46.413821: 	🚀当前遍历行数1, dev:付费流量占比 type:<class 'str'>, uat:付费流量占比 type:<class 'str'>
+17:45:46.414821: 🚀当前遍历列数AQ,表头->千川直投ROI
+17:45:46.414821: 	🚀当前遍历行数1, dev:千川直投ROI type:<class 'str'>, uat:千川直投ROI type:<class 'str'>
+17:45:46.415820: 🚀当前遍历列数AR,表头->全店ROI
+17:45:46.416819: 	🚀当前遍历行数1, dev:全店ROI type:<class 'str'>, uat:全店ROI type:<class 'str'>
+17:45:46.417819: 🚀当前遍历列数AS,表头->直播GMV
+17:45:46.418820: 	🚀当前遍历行数1, dev:直播GMV type:<class 'str'>, uat:直播GMV type:<class 'str'>
+17:45:46.419820: 🚀当前遍历列数AT,表头->GPM
+1000*直播间成交金额/观看人次
+17:45:46.420823: 	🚀当前遍历行数1, dev:GPM
+1000*直播间成交金额/观看人次 type:<class 'str'>, uat:GPM
+1000*直播间成交金额/观看人次 type:<class 'str'>
+17:45:46.421821: 🚀当前遍历列数AU,表头->免费GMV
+17:45:46.421821: 	🚀当前遍历行数1, dev:免费GMV type:<class 'str'>, uat:免费GMV type:<class 'str'>
+17:45:46.422821: 🚀当前遍历列数AV,表头->免费GMV占比
+17:45:46.423818: 	🚀当前遍历行数1, dev:免费GMV占比 type:<class 'str'>, uat:免费GMV占比 type:<class 'str'>
+17:45:46.424822: 🚀当前遍历列数AW,表头->成交件数
+17:45:46.424822: 	🚀当前遍历行数1, dev:成交件数 type:<class 'str'>, uat:成交件数 type:<class 'str'>
+17:45:46.425818: 🚀当前遍历列数AX,表头->成交人数
+17:45:46.426821: 	🚀当前遍历行数1, dev:成交人数 type:<class 'str'>, uat:成交人数 type:<class 'str'>
+17:45:46.427821: 🚀当前遍历列数AY,表头->成交转化率
+17:45:46.427821: 	🚀当前遍历行数1, dev:成交转化率 type:<class 'str'>, uat:成交转化率 type:<class 'str'>
+17:45:46.428819: 🚀当前遍历列数AZ,表头->直播间商品点击人数
+17:45:46.429818: 	🚀当前遍历行数1, dev:直播间商品点击人数 type:<class 'str'>, uat:直播间商品点击人数 type:<class 'str'>
+17:45:46.430822: 🚀当前遍历列数BA,表头->观看点击转化率
+17:45:46.430822: 	🚀当前遍历行数1, dev:观看点击转化率 type:<class 'str'>, uat:观看点击转化率 type:<class 'str'>
+17:45:46.431818: 🚀当前遍历列数BB,表头->点击成交转化率
+17:45:46.432820: 	🚀当前遍历行数1, dev:点击成交转化率 type:<class 'str'>, uat:点击成交转化率 type:<class 'str'>
+17:45:46.433823: 🚀当前遍历列数BC,表头->UV价值
+17:45:46.433823: 	🚀当前遍历行数1, dev:UV价值 type:<class 'str'>, uat:UV价值 type:<class 'str'>
+17:45:46.434820: 🚀当前遍历列数BD,表头->客单价
+17:45:46.435819: 	🚀当前遍历行数1, dev:客单价 type:<class 'str'>, uat:客单价 type:<class 'str'>
+17:45:46.436821: 🚀当前遍历列数BE,表头->观看人数
+17:45:46.437824: 	🚀当前遍历行数1, dev:观看人数 type:<class 'str'>, uat:观看人数 type:<class 'str'>
+17:45:46.437824: 🚀当前遍历列数BF,表头->观看人次
+17:45:46.438819: 	🚀当前遍历行数1, dev:观看人次 type:<class 'str'>, uat:观看人次 type:<class 'str'>
+17:45:46.439819: 🚀当前遍历列数BG,表头->最高在线人数
+17:45:46.439819: 	🚀当前遍历行数1, dev:最高在线人数 type:<class 'str'>, uat:最高在线人数 type:<class 'str'>
+17:45:46.440822: 🚀当前遍历列数BH,表头->平均在线人数
+17:45:46.441820: 	🚀当前遍历行数1, dev:平均在线人数 type:<class 'str'>, uat:平均在线人数 type:<class 'str'>
+17:45:46.442821: 🚀当前遍历列数BI,表头->人均观看时长(s)
+17:45:46.442821: 	🚀当前遍历行数1, dev:人均观看时长(s) type:<class 'str'>, uat:人均观看时长(s) type:<class 'str'>
+17:45:46.443818: 🚀当前遍历列数BJ,表头->新增粉丝数
+17:45:46.444822: 	🚀当前遍历行数1, dev:新增粉丝数 type:<class 'str'>, uat:新增粉丝数 type:<class 'str'>
+17:45:46.445819: 🚀当前遍历列数BK,表头->看播粉丝占比
+17:45:46.445819: 	🚀当前遍历行数1, dev:看播粉丝占比 type:<class 'str'>, uat:看播粉丝占比 type:<class 'str'>
+17:45:46.446818: 🚀当前遍历列数BL,表头->粉丝成交占比
+17:45:46.447820: 	🚀当前遍历行数1, dev:粉丝成交占比 type:<class 'str'>, uat:粉丝成交占比 type:<class 'str'>
+17:45:46.450819: 🚀当前遍历列数BM,表头->粉丝成交GMV
+17:45:46.450819: 	🚀当前遍历行数1, dev:粉丝成交GMV type:<class 'str'>, uat:粉丝成交GMV type:<class 'str'>
+17:45:46.451820: 🚀当前遍历列数BN,表头->增粉率
+17:45:46.452818: 	🚀当前遍历行数1, dev:增粉率 type:<class 'str'>, uat:增粉率 type:<class 'str'>
+17:56:12.259081: 🟡开始生成Gap_sheet🟡
+17:56:12.262085: 🚀最大列66
+🚀最大行1
+17:56:12.271076: 🚀当前遍历列数A,表头->日期
+17:56:12.272077: 	🚀当前遍历行数1, dev:日期 type:<class 'str'>, uat:日期 type:<class 'str'>
+17:56:12.274080: 🚀当前遍历列数B,表头->时段
+17:56:12.275082: 	🚀当前遍历行数1, dev:时段 type:<class 'str'>, uat:时段 type:<class 'str'>
+17:56:12.276079: 🚀当前遍历列数C,表头->时长
+（h）
+17:56:12.277092: 	🚀当前遍历行数1, dev:时长
+（h） type:<class 'str'>, uat:时长
+（h） type:<class 'str'>
+17:56:12.279084: 🚀当前遍历列数D,表头->全店GMV
+17:56:12.280084: 	🚀当前遍历行数1, dev:全店GMV type:<class 'str'>, uat:全店GMV type:<class 'str'>
+17:56:12.281083: 🚀当前遍历列数E,表头->全店Sellout
+17:56:12.282087: 	🚀当前遍历行数1, dev:全店Sellout type:<class 'str'>, uat:全店Sellout type:<class 'str'>
+17:56:12.283082: 🚀当前遍历列数F,表头->退款金额
+17:56:12.284076: 	🚀当前遍历行数1, dev:退款金额 type:<class 'str'>, uat:退款金额 type:<class 'str'>
+17:56:12.285083: 🚀当前遍历列数G,表头->仅退款
+17:56:12.287085: 	🚀当前遍历行数1, dev:仅退款 type:<class 'str'>, uat:仅退款 type:<class 'str'>
+17:56:12.289083: 🚀当前遍历列数H,表头->拒收拦截
+17:56:12.290085: 	🚀当前遍历行数1, dev:拒收拦截 type:<class 'str'>, uat:拒收拦截 type:<class 'str'>
+17:56:12.293083: 🚀当前遍历列数I,表头->退货退款
+17:56:12.294078: 	🚀当前遍历行数1, dev:退货退款 type:<class 'str'>, uat:退货退款 type:<class 'str'>
+17:56:12.295079: 🚀当前遍历列数J,表头->退款率
+17:56:12.295079: 	🚀当前遍历行数1, dev:退款率 type:<class 'str'>, uat:退款率 type:<class 'str'>
+17:56:12.297075: 🚀当前遍历列数K,表头->全店NSO
+17:56:12.297075: 	🚀当前遍历行数1, dev:全店NSO type:<class 'str'>, uat:全店NSO type:<class 'str'>
+17:56:12.299075: 🚀当前遍历列数L,表头->全店NSO目标
+17:56:12.299075: 	🚀当前遍历行数1, dev:全店NSO目标 type:<class 'str'>, uat:全店NSO目标 type:<class 'str'>
+17:56:12.300075: 🚀当前遍历列数M,表头->全店NSO
+当日达成率
+17:56:12.301082: 	🚀当前遍历行数1, dev:全店NSO
+当日达成率 type:<class 'str'>, uat:全店NSO
+当日达成率 type:<class 'str'>
+17:56:12.303080: 🚀当前遍历列数N,表头->店铺GMV
+17:56:12.303080: 	🚀当前遍历行数1, dev:店铺GMV type:<class 'str'>, uat:店铺GMV type:<class 'str'>
+17:56:12.305076: 🚀当前遍历列数O,表头->店铺Sellout
+17:56:12.305076: 	🚀当前遍历行数1, dev:店铺Sellout type:<class 'str'>, uat:店铺Sellout type:<class 'str'>
+17:56:12.307077: 🚀当前遍历列数P,表头->商城SO
+17:56:12.307077: 	🚀当前遍历行数1, dev:商城SO type:<class 'str'>, uat:商城SO type:<class 'str'>
+17:56:12.309078: 🚀当前遍历列数Q,表头->店播直播GMV
+17:56:12.310082: 	🚀当前遍历行数1, dev:店播直播GMV type:<class 'str'>, uat:店播直播GMV type:<class 'str'>
+17:56:12.311076: 🚀当前遍历列数R,表头->店播Sellout
+17:56:12.312082: 	🚀当前遍历行数1, dev:店播Sellout type:<class 'str'>, uat:店播Sellout type:<class 'str'>
+17:56:12.313076: 🚀当前遍历列数S,表头->退款金额
+17:56:12.314081: 	🚀当前遍历行数1, dev:退款金额 type:<class 'str'>, uat:退款金额 type:<class 'str'>
+17:56:12.315078: 🚀当前遍历列数T,表头->仅退款
+17:56:12.316079: 	🚀当前遍历行数1, dev:仅退款 type:<class 'str'>, uat:仅退款 type:<class 'str'>
+17:56:12.317076: 🚀当前遍历列数U,表头->拒收拦截
+17:56:12.318077: 	🚀当前遍历行数1, dev:拒收拦截 type:<class 'str'>, uat:拒收拦截 type:<class 'str'>
+17:56:12.320078: 🚀当前遍历列数V,表头->退货退款
+17:56:12.321078: 	🚀当前遍历行数1, dev:退货退款 type:<class 'str'>, uat:退货退款 type:<class 'str'>
+17:56:12.322078: 🚀当前遍历列数W,表头->退款率
+17:56:12.323076: 	🚀当前遍历行数1, dev:退款率 type:<class 'str'>, uat:退款率 type:<class 'str'>
+17:56:12.325078: 🚀当前遍历列数X,表头->店铺NSO
+17:56:12.326077: 	🚀当前遍历行数1, dev:店铺NSO type:<class 'str'>, uat:店铺NSO type:<class 'str'>
+17:56:12.327077: 🚀当前遍历列数Y,表头->店铺NSO目标
+17:56:12.328079: 	🚀当前遍历行数1, dev:店铺NSO目标 type:<class 'str'>, uat:店铺NSO目标 type:<class 'str'>
+17:56:12.329076: 🚀当前遍历列数Z,表头->店铺NSO完成率
+17:56:12.330076: 	🚀当前遍历行数1, dev:店铺NSO完成率 type:<class 'str'>, uat:店铺NSO完成率 type:<class 'str'>
+17:56:12.331080: 🚀当前遍历列数AA,表头->达播GMV
+17:56:12.332084: 	🚀当前遍历行数1, dev:达播GMV type:<class 'str'>, uat:达播GMV type:<class 'str'>
+17:56:12.333081: 🚀当前遍历列数AB,表头->达播Sellout
+17:56:12.334080: 	🚀当前遍历行数1, dev:达播Sellout type:<class 'str'>, uat:达播Sellout type:<class 'str'>
+17:56:12.336081: 🚀当前遍历列数AC,表头->退款金额
+17:56:12.336081: 	🚀当前遍历行数1, dev:退款金额 type:<class 'str'>, uat:退款金额 type:<class 'str'>
+17:56:12.337077: 🚀当前遍历列数AD,表头->仅退款
+17:56:12.338078: 	🚀当前遍历行数1, dev:仅退款 type:<class 'str'>, uat:仅退款 type:<class 'str'>
+17:56:12.340078: 🚀当前遍历列数AE,表头->拒收拦截
+17:56:12.341080: 	🚀当前遍历行数1, dev:拒收拦截 type:<class 'str'>, uat:拒收拦截 type:<class 'str'>
+17:56:12.342081: 🚀当前遍历列数AF,表头->退货退款
+17:56:12.343079: 	🚀当前遍历行数1, dev:退货退款 type:<class 'str'>, uat:退货退款 type:<class 'str'>
+17:56:12.344079: 🚀当前遍历列数AG,表头->达播退款率
+17:56:12.345077: 	🚀当前遍历行数1, dev:达播退款率 type:<class 'str'>, uat:达播退款率 type:<class 'str'>
+17:56:12.346080: 🚀当前遍历列数AH,表头->达播NSO
+17:56:12.347076: 	🚀当前遍历行数1, dev:达播NSO type:<class 'str'>, uat:达播NSO type:<class 'str'>
+17:56:12.348077: 🚀当前遍历列数AI,表头->达播NSO目标
+17:56:12.349077: 	🚀当前遍历行数1, dev:达播NSO目标 type:<class 'str'>, uat:达播NSO目标 type:<class 'str'>
+17:56:12.350078: 🚀当前遍历列数AJ,表头->达播NSO完成率
+17:56:12.351077: 	🚀当前遍历行数1, dev:达播NSO完成率 type:<class 'str'>, uat:达播NSO完成率 type:<class 'str'>
+17:56:12.353088: 🚀当前遍历列数AK,表头->挂车GMV
+17:56:12.354082: 	🚀当前遍历行数1, dev:挂车GMV type:<class 'str'>, uat:挂车GMV type:<class 'str'>
+17:56:12.356083: 🚀当前遍历列数AL,表头->退款金额
+17:56:12.356083: 	🚀当前遍历行数1, dev:退款金额 type:<class 'str'>, uat:退款金额 type:<class 'str'>
+17:56:12.358081: 🚀当前遍历列数AM,表头->视频退款率
+17:56:12.359077: 	🚀当前遍历行数1, dev:视频退款率 type:<class 'str'>, uat:视频退款率 type:<class 'str'>
+17:56:12.360077: 🚀当前遍历列数AN,表头->消耗
+17:56:12.361082: 	🚀当前遍历行数1, dev:消耗 type:<class 'str'>, uat:消耗 type:<class 'str'>
+17:56:12.363083: 🚀当前遍历列数AO,表头->千川成交金额
+17:56:12.364079: 	🚀当前遍历行数1, dev:千川成交金额 type:<class 'str'>, uat:千川成交金额 type:<class 'str'>
+17:56:12.365081: 🚀当前遍历列数AP,表头->付费流量占比
+17:56:12.366080: 	🚀当前遍历行数1, dev:付费流量占比 type:<class 'str'>, uat:付费流量占比 type:<class 'str'>
+17:56:12.367076: 🚀当前遍历列数AQ,表头->千川直投ROI
+17:56:12.368078: 	🚀当前遍历行数1, dev:千川直投ROI type:<class 'str'>, uat:千川直投ROI type:<class 'str'>
+17:56:12.370077: 🚀当前遍历列数AR,表头->全店ROI
+17:56:12.370077: 	🚀当前遍历行数1, dev:全店ROI type:<class 'str'>, uat:全店ROI type:<class 'str'>
+17:56:12.372076: 🚀当前遍历列数AS,表头->直播GMV
+17:56:12.372076: 	🚀当前遍历行数1, dev:直播GMV type:<class 'str'>, uat:直播GMV type:<class 'str'>
+17:56:12.374082: 🚀当前遍历列数AT,表头->GPM
+1000*直播间成交金额/观看人次
+17:56:12.374082: 	🚀当前遍历行数1, dev:GPM
+1000*直播间成交金额/观看人次 type:<class 'str'>, uat:GPM
+1000*直播间成交金额/观看人次 type:<class 'str'>
+17:56:12.376078: 🚀当前遍历列数AU,表头->免费GMV
+17:56:12.377075: 	🚀当前遍历行数1, dev:免费GMV type:<class 'str'>, uat:免费GMV type:<class 'str'>
+17:56:12.378077: 🚀当前遍历列数AV,表头->免费GMV占比
+17:56:12.379076: 	🚀当前遍历行数1, dev:免费GMV占比 type:<class 'str'>, uat:免费GMV占比 type:<class 'str'>
+17:56:12.380078: 🚀当前遍历列数AW,表头->成交件数
+17:56:12.380078: 	🚀当前遍历行数1, dev:成交件数 type:<class 'str'>, uat:成交件数 type:<class 'str'>
+17:56:12.382076: 🚀当前遍历列数AX,表头->成交人数
+17:56:12.385079: 	🚀当前遍历行数1, dev:成交人数 type:<class 'str'>, uat:成交人数 type:<class 'str'>
+17:56:12.386084: 🚀当前遍历列数AY,表头->成交转化率
+17:56:12.386084: 	🚀当前遍历行数1, dev:成交转化率 type:<class 'str'>, uat:成交转化率 type:<class 'str'>
+17:56:12.388075: 🚀当前遍历列数AZ,表头->直播间商品点击人数
+17:56:12.388075: 	🚀当前遍历行数1, dev:直播间商品点击人数 type:<class 'str'>, uat:直播间商品点击人数 type:<class 'str'>
+17:56:12.389077: 🚀当前遍历列数BA,表头->观看点击转化率
+17:56:12.390076: 	🚀当前遍历行数1, dev:观看点击转化率 type:<class 'str'>, uat:观看点击转化率 type:<class 'str'>
+17:56:12.392081: 🚀当前遍历列数BB,表头->点击成交转化率
+17:56:12.392081: 	🚀当前遍历行数1, dev:点击成交转化率 type:<class 'str'>, uat:点击成交转化率 type:<class 'str'>
+17:56:12.393082: 🚀当前遍历列数BC,表头->UV价值
+17:56:12.394075: 	🚀当前遍历行数1, dev:UV价值 type:<class 'str'>, uat:UV价值 type:<class 'str'>
+17:56:12.395075: 🚀当前遍历列数BD,表头->客单价
+17:56:12.396079: 	🚀当前遍历行数1, dev:客单价 type:<class 'str'>, uat:客单价 type:<class 'str'>
+17:56:12.397077: 🚀当前遍历列数BE,表头->观看人数
+17:56:12.398086: 	🚀当前遍历行数1, dev:观看人数 type:<class 'str'>, uat:观看人数 type:<class 'str'>
+17:56:12.399079: 🚀当前遍历列数BF,表头->观看人次
+17:56:12.400075: 	🚀当前遍历行数1, dev:观看人次 type:<class 'str'>, uat:观看人次 type:<class 'str'>
+17:56:12.401077: 🚀当前遍历列数BG,表头->最高在线人数
+17:56:12.402075: 	🚀当前遍历行数1, dev:最高在线人数 type:<class 'str'>, uat:最高在线人数 type:<class 'str'>
+17:56:12.403077: 🚀当前遍历列数BH,表头->平均在线人数
+17:56:12.404078: 	🚀当前遍历行数1, dev:平均在线人数 type:<class 'str'>, uat:平均在线人数 type:<class 'str'>
+17:56:12.405080: 🚀当前遍历列数BI,表头->人均观看时长(s)
+17:56:12.406081: 	🚀当前遍历行数1, dev:人均观看时长(s) type:<class 'str'>, uat:人均观看时长(s) type:<class 'str'>
+17:56:12.407076: 🚀当前遍历列数BJ,表头->新增粉丝数
+17:56:12.408084: 	🚀当前遍历行数1, dev:新增粉丝数 type:<class 'str'>, uat:新增粉丝数 type:<class 'str'>
+17:56:12.410082: 🚀当前遍历列数BK,表头->看播粉丝占比
+17:56:12.410082: 	🚀当前遍历行数1, dev:看播粉丝占比 type:<class 'str'>, uat:看播粉丝占比 type:<class 'str'>
+17:56:12.412079: 🚀当前遍历列数BL,表头->粉丝成交占比
+17:56:12.413077: 	🚀当前遍历行数1, dev:粉丝成交占比 type:<class 'str'>, uat:粉丝成交占比 type:<class 'str'>
+17:56:12.414078: 🚀当前遍历列数BM,表头->粉丝成交GMV
+17:56:12.415078: 	🚀当前遍历行数1, dev:粉丝成交GMV type:<class 'str'>, uat:粉丝成交GMV type:<class 'str'>
+17:56:12.417076: 🚀当前遍历列数BN,表头->增粉率
+17:56:12.417076: 	🚀当前遍历行数1, dev:增粉率 type:<class 'str'>, uat:增粉率 type:<class 'str'>
+18:11:44.701185: 🟡开始生成Gap_sheet🟡
+18:11:44.704181: 🚀最大列66
+🚀最大行1
+18:11:44.715180: 🚀当前遍历列数A,表头->日期
+18:11:44.715180: 	🚀当前遍历行数1, dev:日期 type:<class 'str'>, uat:日期 type:<class 'str'>
+18:11:44.716182: 🚀当前遍历列数B,表头->时段
+18:11:44.717179: 	🚀当前遍历行数1, dev:时段 type:<class 'str'>, uat:时段 type:<class 'str'>
+18:11:44.717179: 🚀当前遍历列数C,表头->时长
+（h）
+18:11:44.718181: 	🚀当前遍历行数1, dev:时长
+（h） type:<class 'str'>, uat:时长
+（h） type:<class 'str'>
+18:11:44.719182: 🚀当前遍历列数D,表头->全店GMV
+18:11:44.719182: 	🚀当前遍历行数1, dev:全店GMV type:<class 'str'>, uat:全店GMV type:<class 'str'>
+18:11:44.720182: 🚀当前遍历列数E,表头->全店Sellout
+18:11:44.720182: 	🚀当前遍历行数1, dev:全店Sellout type:<class 'str'>, uat:全店Sellout type:<class 'str'>
+18:11:44.722184: 🚀当前遍历列数F,表头->退款金额
+18:11:44.723186: 	🚀当前遍历行数1, dev:退款金额 type:<class 'str'>, uat:退款金额 type:<class 'str'>
+18:11:44.724188: 🚀当前遍历列数G,表头->仅退款
+18:11:44.725183: 	🚀当前遍历行数1, dev:仅退款 type:<class 'str'>, uat:仅退款 type:<class 'str'>
+18:11:44.725183: 🚀当前遍历列数H,表头->拒收拦截
+18:11:44.726186: 	🚀当前遍历行数1, dev:拒收拦截 type:<class 'str'>, uat:拒收拦截 type:<class 'str'>
+18:11:44.727187: 🚀当前遍历列数I,表头->退货退款
+18:11:44.727187: 	🚀当前遍历行数1, dev:退货退款 type:<class 'str'>, uat:退货退款 type:<class 'str'>
+18:11:44.728183: 🚀当前遍历列数J,表头->退款率
+18:11:44.729183: 	🚀当前遍历行数1, dev:退款率 type:<class 'str'>, uat:退款率 type:<class 'str'>
+18:11:44.731189: 🚀当前遍历列数K,表头->全店NSO
+18:11:44.732189: 	🚀当前遍历行数1, dev:全店NSO type:<class 'str'>, uat:全店NSO type:<class 'str'>
+18:11:44.734187: 🚀当前遍历列数L,表头->全店NSO目标
+18:11:44.734187: 	🚀当前遍历行数1, dev:全店NSO目标 type:<class 'str'>, uat:全店NSO目标 type:<class 'str'>
+18:11:44.735191: 🚀当前遍历列数M,表头->全店NSO
+当日达成率
+18:11:44.736189: 	🚀当前遍历行数1, dev:全店NSO
+当日达成率 type:<class 'str'>, uat:全店NSO
+当日达成率 type:<class 'str'>
+18:11:44.737188: 🚀当前遍历列数N,表头->店铺GMV
+18:11:44.737188: 	🚀当前遍历行数1, dev:店铺GMV type:<class 'str'>, uat:店铺GMV type:<class 'str'>
+18:11:44.738184: 🚀当前遍历列数O,表头->店铺Sellout
+18:11:44.739190: 	🚀当前遍历行数1, dev:店铺Sellout type:<class 'str'>, uat:店铺Sellout type:<class 'str'>
+18:11:44.740188: 🚀当前遍历列数P,表头->商城SO
+18:11:44.741198: 	🚀当前遍历行数1, dev:商城SO type:<class 'str'>, uat:商城SO type:<class 'str'>
+18:11:44.742185: 🚀当前遍历列数Q,表头->店播直播GMV
+18:11:44.742185: 	🚀当前遍历行数1, dev:店播直播GMV type:<class 'str'>, uat:店播直播GMV type:<class 'str'>
+18:11:44.743194: 🚀当前遍历列数R,表头->店播Sellout
+18:11:44.744189: 	🚀当前遍历行数1, dev:店播Sellout type:<class 'str'>, uat:店播Sellout type:<class 'str'>
+18:11:44.745189: 🚀当前遍历列数S,表头->退款金额
+18:11:44.745189: 	🚀当前遍历行数1, dev:退款金额 type:<class 'str'>, uat:退款金额 type:<class 'str'>
+18:11:44.747186: 🚀当前遍历列数T,表头->仅退款
+18:11:44.747186: 	🚀当前遍历行数1, dev:仅退款 type:<class 'str'>, uat:仅退款 type:<class 'str'>
+18:11:44.748180: 🚀当前遍历列数U,表头->拒收拦截
+18:11:44.748180: 	🚀当前遍历行数1, dev:拒收拦截 type:<class 'str'>, uat:拒收拦截 type:<class 'str'>
+18:11:44.749182: 🚀当前遍历列数V,表头->退货退款
+18:11:44.749182: 	🚀当前遍历行数1, dev:退货退款 type:<class 'str'>, uat:退货退款 type:<class 'str'>
+18:11:44.750182: 🚀当前遍历列数W,表头->退款率
+18:11:44.751182: 	🚀当前遍历行数1, dev:退款率 type:<class 'str'>, uat:退款率 type:<class 'str'>
+18:11:44.751182: 🚀当前遍历列数X,表头->店铺NSO
+18:11:44.752185: 	🚀当前遍历行数1, dev:店铺NSO type:<class 'str'>, uat:店铺NSO type:<class 'str'>
+18:11:44.753182: 🚀当前遍历列数Y,表头->店铺NSO目标
+18:11:44.753182: 	🚀当前遍历行数1, dev:店铺NSO目标 type:<class 'str'>, uat:店铺NSO目标 type:<class 'str'>
+18:11:44.754183: 🚀当前遍历列数Z,表头->店铺NSO完成率
+18:11:44.755190: 	🚀当前遍历行数1, dev:店铺NSO完成率 type:<class 'str'>, uat:店铺NSO完成率 type:<class 'str'>
+18:11:44.757186: 🚀当前遍历列数AA,表头->达播GMV
+18:11:44.757186: 	🚀当前遍历行数1, dev:达播GMV type:<class 'str'>, uat:达播GMV type:<class 'str'>
+18:11:44.759186: 🚀当前遍历列数AB,表头->达播Sellout
+18:11:44.760192: 	🚀当前遍历行数1, dev:达播Sellout type:<class 'str'>, uat:达播Sellout type:<class 'str'>
+18:11:44.761185: 🚀当前遍历列数AC,表头->退款金额
+18:11:44.762194: 	🚀当前遍历行数1, dev:退款金额 type:<class 'str'>, uat:退款金额 type:<class 'str'>
+18:11:44.763191: 🚀当前遍历列数AD,表头->仅退款
+18:11:44.763191: 	🚀当前遍历行数1, dev:仅退款 type:<class 'str'>, uat:仅退款 type:<class 'str'>
+18:11:44.764184: 🚀当前遍历列数AE,表头->拒收拦截
+18:11:44.765194: 	🚀当前遍历行数1, dev:拒收拦截 type:<class 'str'>, uat:拒收拦截 type:<class 'str'>
+18:11:44.766190: 🚀当前遍历列数AF,表头->退货退款
+18:11:44.767185: 	🚀当前遍历行数1, dev:退货退款 type:<class 'str'>, uat:退货退款 type:<class 'str'>
+18:11:44.768181: 🚀当前遍历列数AG,表头->达播退款率
+18:11:44.768181: 	🚀当前遍历行数1, dev:达播退款率 type:<class 'str'>, uat:达播退款率 type:<class 'str'>
+18:11:44.769185: 🚀当前遍历列数AH,表头->达播NSO
+18:11:44.769185: 	🚀当前遍历行数1, dev:达播NSO type:<class 'str'>, uat:达播NSO type:<class 'str'>
+18:11:44.770183: 🚀当前遍历列数AI,表头->达播NSO目标
+18:11:44.771179: 	🚀当前遍历行数1, dev:达播NSO目标 type:<class 'str'>, uat:达播NSO目标 type:<class 'str'>
+18:11:44.772194: 🚀当前遍历列数AJ,表头->达播NSO完成率
+18:11:44.772194: 	🚀当前遍历行数1, dev:达播NSO完成率 type:<class 'str'>, uat:达播NSO完成率 type:<class 'str'>
+18:11:44.773185: 🚀当前遍历列数AK,表头->挂车GMV
+18:11:44.774182: 	🚀当前遍历行数1, dev:挂车GMV type:<class 'str'>, uat:挂车GMV type:<class 'str'>
+18:11:44.775186: 🚀当前遍历列数AL,表头->退款金额
+18:11:44.775186: 	🚀当前遍历行数1, dev:退款金额 type:<class 'str'>, uat:退款金额 type:<class 'str'>
+18:11:44.777186: 🚀当前遍历列数AM,表头->视频退款率
+18:11:44.777186: 	🚀当前遍历行数1, dev:视频退款率 type:<class 'str'>, uat:视频退款率 type:<class 'str'>
+18:11:44.778185: 🚀当前遍历列数AN,表头->消耗
+18:11:44.779187: 	🚀当前遍历行数1, dev:消耗 type:<class 'str'>, uat:消耗 type:<class 'str'>
+18:11:44.780186: 🚀当前遍历列数AO,表头->千川成交金额
+18:11:44.780186: 	🚀当前遍历行数1, dev:千川成交金额 type:<class 'str'>, uat:千川成交金额 type:<class 'str'>
+18:11:44.782183: 🚀当前遍历列数AP,表头->付费流量占比
+18:11:44.782183: 	🚀当前遍历行数1, dev:付费流量占比 type:<class 'str'>, uat:付费流量占比 type:<class 'str'>
+18:11:44.783183: 🚀当前遍历列数AQ,表头->千川直投ROI
+18:11:44.783183: 	🚀当前遍历行数1, dev:千川直投ROI type:<class 'str'>, uat:千川直投ROI type:<class 'str'>
+18:11:44.784182: 🚀当前遍历列数AR,表头->全店ROI
+18:11:44.784182: 	🚀当前遍历行数1, dev:全店ROI type:<class 'str'>, uat:全店ROI type:<class 'str'>
+18:11:44.785181: 🚀当前遍历列数AS,表头->直播GMV
+18:11:44.785181: 	🚀当前遍历行数1, dev:直播GMV type:<class 'str'>, uat:直播GMV type:<class 'str'>
+18:11:44.786181: 🚀当前遍历列数AT,表头->GPM
+1000*直播间成交金额/观看人次
+18:11:44.787180: 	🚀当前遍历行数1, dev:GPM
+1000*直播间成交金额/观看人次 type:<class 'str'>, uat:GPM
+1000*直播间成交金额/观看人次 type:<class 'str'>
+18:11:44.788190: 🚀当前遍历列数AU,表头->免费GMV
+18:11:44.788190: 	🚀当前遍历行数1, dev:免费GMV type:<class 'str'>, uat:免费GMV type:<class 'str'>
+18:11:44.790187: 🚀当前遍历列数AV,表头->免费GMV占比
+18:11:44.790187: 	🚀当前遍历行数1, dev:免费GMV占比 type:<class 'str'>, uat:免费GMV占比 type:<class 'str'>
+18:11:44.791182: 🚀当前遍历列数AW,表头->成交件数
+18:11:44.792183: 	🚀当前遍历行数1, dev:成交件数 type:<class 'str'>, uat:成交件数 type:<class 'str'>
+18:11:44.792183: 🚀当前遍历列数AX,表头->成交人数
+18:11:44.793182: 	🚀当前遍历行数1, dev:成交人数 type:<class 'str'>, uat:成交人数 type:<class 'str'>
+18:11:44.794183: 🚀当前遍历列数AY,表头->成交转化率
+18:11:44.794183: 	🚀当前遍历行数1, dev:成交转化率 type:<class 'str'>, uat:成交转化率 type:<class 'str'>
+18:11:44.795182: 🚀当前遍历列数AZ,表头->直播间商品点击人数
+18:11:44.795182: 	🚀当前遍历行数1, dev:直播间商品点击人数 type:<class 'str'>, uat:直播间商品点击人数 type:<class 'str'>
+18:11:44.796181: 🚀当前遍历列数BA,表头->观看点击转化率
+18:11:44.796181: 	🚀当前遍历行数1, dev:观看点击转化率 type:<class 'str'>, uat:观看点击转化率 type:<class 'str'>
+18:11:44.797181: 🚀当前遍历列数BB,表头->点击成交转化率
+18:11:44.798182: 	🚀当前遍历行数1, dev:点击成交转化率 type:<class 'str'>, uat:点击成交转化率 type:<class 'str'>
+18:11:44.799180: 🚀当前遍历列数BC,表头->UV价值
+18:11:44.799180: 	🚀当前遍历行数1, dev:UV价值 type:<class 'str'>, uat:UV价值 type:<class 'str'>
+18:11:44.800180: 🚀当前遍历列数BD,表头->客单价
+18:11:44.800180: 	🚀当前遍历行数1, dev:客单价 type:<class 'str'>, uat:客单价 type:<class 'str'>
+18:11:44.801181: 🚀当前遍历列数BE,表头->观看人数
+18:11:44.801181: 	🚀当前遍历行数1, dev:观看人数 type:<class 'str'>, uat:观看人数 type:<class 'str'>
+18:11:44.802179: 🚀当前遍历列数BF,表头->观看人次
+18:11:44.802179: 	🚀当前遍历行数1, dev:观看人次 type:<class 'str'>, uat:观看人次 type:<class 'str'>
+18:11:44.803181: 🚀当前遍历列数BG,表头->最高在线人数
+18:11:44.804179: 	🚀当前遍历行数1, dev:最高在线人数 type:<class 'str'>, uat:最高在线人数 type:<class 'str'>
+18:11:44.804179: 🚀当前遍历列数BH,表头->平均在线人数
+18:11:44.805185: 	🚀当前遍历行数1, dev:平均在线人数 type:<class 'str'>, uat:平均在线人数 type:<class 'str'>
+18:11:44.806186: 🚀当前遍历列数BI,表头->人均观看时长(s)
+18:11:44.807187: 	🚀当前遍历行数1, dev:人均观看时长(s) type:<class 'str'>, uat:人均观看时长(s) type:<class 'str'>
+18:11:44.808184: 🚀当前遍历列数BJ,表头->新增粉丝数
+18:11:44.808184: 	🚀当前遍历行数1, dev:新增粉丝数 type:<class 'str'>, uat:新增粉丝数 type:<class 'str'>
+18:11:44.809181: 🚀当前遍历列数BK,表头->看播粉丝占比
+18:11:44.809181: 	🚀当前遍历行数1, dev:看播粉丝占比 type:<class 'str'>, uat:看播粉丝占比 type:<class 'str'>
+18:11:44.810178: 🚀当前遍历列数BL,表头->粉丝成交占比
+18:11:44.811180: 	🚀当前遍历行数1, dev:粉丝成交占比 type:<class 'str'>, uat:粉丝成交占比 type:<class 'str'>
+18:11:44.811180: 🚀当前遍历列数BM,表头->粉丝成交GMV
+18:11:44.812181: 	🚀当前遍历行数1, dev:粉丝成交GMV type:<class 'str'>, uat:粉丝成交GMV type:<class 'str'>
+18:11:44.813184: 🚀当前遍历列数BN,表头->增粉率
+18:11:44.813184: 	🚀当前遍历行数1, dev:增粉率 type:<class 'str'>, uat:增粉率 type:<class 'str'>
+18:15:28.616982: 🟡开始生成Gap_sheet🟡
+18:15:28.619983: 🚀最大列66
+🚀最大行1
+18:15:28.631977: 🚀当前遍历列数A,表头->日期
+18:15:28.631977: 	🚀当前遍历行数1, dev:日期 type:<class 'str'>, uat:日期 type:<class 'str'>
+18:15:28.632978: 🚀当前遍历列数B,表头->时段
+18:15:28.633979: 	🚀当前遍历行数1, dev:时段 type:<class 'str'>, uat:时段 type:<class 'str'>
+18:15:28.635977: 🚀当前遍历列数C,表头->时长
+（h）
+18:15:28.635977: 	🚀当前遍历行数1, dev:时长
+（h） type:<class 'str'>, uat:时长
+（h） type:<class 'str'>
+18:15:28.637975: 🚀当前遍历列数D,表头->全店GMV
+18:15:28.637975: 	🚀当前遍历行数1, dev:全店GMV type:<class 'str'>, uat:全店GMV type:<class 'str'>
+18:15:28.639980: 🚀当前遍历列数E,表头->全店Sellout
+18:15:28.640977: 	🚀当前遍历行数1, dev:全店Sellout type:<class 'str'>, uat:全店Sellout type:<class 'str'>
+18:15:28.642983: 🚀当前遍历列数F,表头->退款金额
+18:15:28.642983: 	🚀当前遍历行数1, dev:退款金额 type:<class 'str'>, uat:退款金额 type:<class 'str'>
+18:15:28.644977: 🚀当前遍历列数G,表头->仅退款
+18:15:28.644977: 	🚀当前遍历行数1, dev:仅退款 type:<class 'str'>, uat:仅退款 type:<class 'str'>
+18:15:28.646980: 🚀当前遍历列数H,表头->拒收拦截
+18:15:28.647979: 	🚀当前遍历行数1, dev:拒收拦截 type:<class 'str'>, uat:拒收拦截 type:<class 'str'>
+18:15:28.649978: 🚀当前遍历列数I,表头->退货退款
+18:15:28.649978: 	🚀当前遍历行数1, dev:退货退款 type:<class 'str'>, uat:退货退款 type:<class 'str'>
+18:15:28.651983: 🚀当前遍历列数J,表头->退款率
+18:15:28.652983: 	🚀当前遍历行数1, dev:退款率 type:<class 'str'>, uat:退款率 type:<class 'str'>
+18:15:28.654978: 🚀当前遍历列数K,表头->全店NSO
+18:15:28.655980: 	🚀当前遍历行数1, dev:全店NSO type:<class 'str'>, uat:全店NSO type:<class 'str'>
+18:15:28.656983: 🚀当前遍历列数L,表头->全店NSO目标
+18:15:28.657980: 	🚀当前遍历行数1, dev:全店NSO目标 type:<class 'str'>, uat:全店NSO目标 type:<class 'str'>
+18:15:28.659991: 🚀当前遍历列数M,表头->全店NSO
+当日达成率
+18:15:28.659991: 	🚀当前遍历行数1, dev:全店NSO
+当日达成率 type:<class 'str'>, uat:全店NSO
+当日达成率 type:<class 'str'>
+18:15:28.661979: 🚀当前遍历列数N,表头->店铺GMV
+18:15:28.662984: 	🚀当前遍历行数1, dev:店铺GMV type:<class 'str'>, uat:店铺GMV type:<class 'str'>
+18:15:28.666989: 🚀当前遍历列数O,表头->店铺Sellout
+18:15:28.669985: 	🚀当前遍历行数1, dev:店铺Sellout type:<class 'str'>, uat:店铺Sellout type:<class 'str'>
+18:15:28.671977: 🚀当前遍历列数P,表头->商城SO
+18:15:28.672979: 	🚀当前遍历行数1, dev:商城SO type:<class 'str'>, uat:商城SO type:<class 'str'>
+18:15:28.673977: 🚀当前遍历列数Q,表头->店播直播GMV
+18:15:28.674982: 	🚀当前遍历行数1, dev:店播直播GMV type:<class 'str'>, uat:店播直播GMV type:<class 'str'>
+18:15:28.675978: 🚀当前遍历列数R,表头->店播Sellout
+18:15:28.675978: 	🚀当前遍历行数1, dev:店播Sellout type:<class 'str'>, uat:店播Sellout type:<class 'str'>
+18:15:28.677981: 🚀当前遍历列数S,表头->退款金额
+18:15:28.677981: 	🚀当前遍历行数1, dev:退款金额 type:<class 'str'>, uat:退款金额 type:<class 'str'>
+18:15:28.679988: 🚀当前遍历列数T,表头->仅退款
+18:15:28.680987: 	🚀当前遍历行数1, dev:仅退款 type:<class 'str'>, uat:仅退款 type:<class 'str'>
+18:15:28.684985: 🚀当前遍历列数U,表头->拒收拦截
+18:15:28.684985: 	🚀当前遍历行数1, dev:拒收拦截 type:<class 'str'>, uat:拒收拦截 type:<class 'str'>
+18:15:28.686977: 🚀当前遍历列数V,表头->退货退款
+18:15:28.686977: 	🚀当前遍历行数1, dev:退货退款 type:<class 'str'>, uat:退货退款 type:<class 'str'>
+18:15:28.689977: 🚀当前遍历列数W,表头->退款率
+18:15:28.689977: 	🚀当前遍历行数1, dev:退款率 type:<class 'str'>, uat:退款率 type:<class 'str'>
+18:15:28.691980: 🚀当前遍历列数X,表头->店铺NSO
+18:15:28.691980: 	🚀当前遍历行数1, dev:店铺NSO type:<class 'str'>, uat:店铺NSO type:<class 'str'>
+18:15:28.692976: 🚀当前遍历列数Y,表头->店铺NSO目标
+18:15:28.693978: 	🚀当前遍历行数1, dev:店铺NSO目标 type:<class 'str'>, uat:店铺NSO目标 type:<class 'str'>
+18:15:28.695982: 🚀当前遍历列数Z,表头->店铺NSO完成率
+18:15:28.696990: 	🚀当前遍历行数1, dev:店铺NSO完成率 type:<class 'str'>, uat:店铺NSO完成率 type:<class 'str'>
+18:15:28.698981: 🚀当前遍历列数AA,表头->达播GMV
+18:15:28.699981: 	🚀当前遍历行数1, dev:达播GMV type:<class 'str'>, uat:达播GMV type:<class 'str'>
+18:15:28.701978: 🚀当前遍历列数AB,表头->达播Sellout
+18:15:28.702977: 	🚀当前遍历行数1, dev:达播Sellout type:<class 'str'>, uat:达播Sellout type:<class 'str'>
+18:15:28.703980: 🚀当前遍历列数AC,表头->退款金额
+18:15:28.704975: 	🚀当前遍历行数1, dev:退款金额 type:<class 'str'>, uat:退款金额 type:<class 'str'>
+18:15:28.705976: 🚀当前遍历列数AD,表头->仅退款
+18:15:28.706979: 	🚀当前遍历行数1, dev:仅退款 type:<class 'str'>, uat:仅退款 type:<class 'str'>
+18:15:28.707979: 🚀当前遍历列数AE,表头->拒收拦截
+18:15:28.708982: 	🚀当前遍历行数1, dev:拒收拦截 type:<class 'str'>, uat:拒收拦截 type:<class 'str'>
+18:15:28.709978: 🚀当前遍历列数AF,表头->退货退款
+18:15:28.710979: 	🚀当前遍历行数1, dev:退货退款 type:<class 'str'>, uat:退货退款 type:<class 'str'>
+18:15:28.712980: 🚀当前遍历列数AG,表头->达播退款率
+18:15:28.712980: 	🚀当前遍历行数1, dev:达播退款率 type:<class 'str'>, uat:达播退款率 type:<class 'str'>
+18:15:28.714980: 🚀当前遍历列数AH,表头->达播NSO
+18:15:28.715980: 	🚀当前遍历行数1, dev:达播NSO type:<class 'str'>, uat:达播NSO type:<class 'str'>
+18:15:28.717770: 🚀当前遍历列数AI,表头->达播NSO目标
+18:15:28.718772: 	🚀当前遍历行数1, dev:达播NSO目标 type:<class 'str'>, uat:达播NSO目标 type:<class 'str'>
+18:15:28.720770: 🚀当前遍历列数AJ,表头->达播NSO完成率
+18:15:28.720770: 	🚀当前遍历行数1, dev:达播NSO完成率 type:<class 'str'>, uat:达播NSO完成率 type:<class 'str'>
+18:15:28.722771: 🚀当前遍历列数AK,表头->挂车GMV
+18:15:28.722771: 	🚀当前遍历行数1, dev:挂车GMV type:<class 'str'>, uat:挂车GMV type:<class 'str'>
+18:15:28.724770: 🚀当前遍历列数AL,表头->退款金额
+18:15:28.724770: 	🚀当前遍历行数1, dev:退款金额 type:<class 'str'>, uat:退款金额 type:<class 'str'>
+18:15:28.726769: 🚀当前遍历列数AM,表头->视频退款率
+18:15:28.726769: 	🚀当前遍历行数1, dev:视频退款率 type:<class 'str'>, uat:视频退款率 type:<class 'str'>
+18:15:28.728774: 🚀当前遍历列数AN,表头->消耗
+18:15:28.729770: 	🚀当前遍历行数1, dev:消耗 type:<class 'str'>, uat:消耗 type:<class 'str'>
+18:15:28.731770: 🚀当前遍历列数AO,表头->千川成交金额
+18:15:28.733767: 	🚀当前遍历行数1, dev:千川成交金额 type:<class 'str'>, uat:千川成交金额 type:<class 'str'>
+18:15:28.735769: 🚀当前遍历列数AP,表头->付费流量占比
+18:15:28.735769: 	🚀当前遍历行数1, dev:付费流量占比 type:<class 'str'>, uat:付费流量占比 type:<class 'str'>
+18:15:28.737771: 🚀当前遍历列数AQ,表头->千川直投ROI
+18:15:28.737771: 	🚀当前遍历行数1, dev:千川直投ROI type:<class 'str'>, uat:千川直投ROI type:<class 'str'>
+18:15:28.739770: 🚀当前遍历列数AR,表头->全店ROI
+18:15:28.740770: 	🚀当前遍历行数1, dev:全店ROI type:<class 'str'>, uat:全店ROI type:<class 'str'>
+18:15:28.741770: 🚀当前遍历列数AS,表头->直播GMV
+18:15:28.742768: 	🚀当前遍历行数1, dev:直播GMV type:<class 'str'>, uat:直播GMV type:<class 'str'>
+18:15:28.743771: 🚀当前遍历列数AT,表头->GPM
+1000*直播间成交金额/观看人次
+18:15:28.744769: 	🚀当前遍历行数1, dev:GPM
+1000*直播间成交金额/观看人次 type:<class 'str'>, uat:GPM
+1000*直播间成交金额/观看人次 type:<class 'str'>
+18:15:28.745774: 🚀当前遍历列数AU,表头->免费GMV
+18:15:28.746770: 	🚀当前遍历行数1, dev:免费GMV type:<class 'str'>, uat:免费GMV type:<class 'str'>
+18:15:28.748771: 🚀当前遍历列数AV,表头->免费GMV占比
+18:15:28.749770: 	🚀当前遍历行数1, dev:免费GMV占比 type:<class 'str'>, uat:免费GMV占比 type:<class 'str'>
+18:15:28.750775: 🚀当前遍历列数AW,表头->成交件数
+18:15:28.751767: 	🚀当前遍历行数1, dev:成交件数 type:<class 'str'>, uat:成交件数 type:<class 'str'>
+18:15:28.752770: 🚀当前遍历列数AX,表头->成交人数
+18:15:28.753773: 	🚀当前遍历行数1, dev:成交人数 type:<class 'str'>, uat:成交人数 type:<class 'str'>
+18:15:28.754769: 🚀当前遍历列数AY,表头->成交转化率
+18:15:28.755766: 	🚀当前遍历行数1, dev:成交转化率 type:<class 'str'>, uat:成交转化率 type:<class 'str'>
+18:15:28.756769: 🚀当前遍历列数AZ,表头->直播间商品点击人数
+18:15:28.757767: 	🚀当前遍历行数1, dev:直播间商品点击人数 type:<class 'str'>, uat:直播间商品点击人数 type:<class 'str'>
+18:15:28.759767: 🚀当前遍历列数BA,表头->观看点击转化率
+18:15:28.759767: 	🚀当前遍历行数1, dev:观看点击转化率 type:<class 'str'>, uat:观看点击转化率 type:<class 'str'>
+18:15:28.760769: 🚀当前遍历列数BB,表头->点击成交转化率
+18:15:28.761768: 	🚀当前遍历行数1, dev:点击成交转化率 type:<class 'str'>, uat:点击成交转化率 type:<class 'str'>
+18:15:28.763773: 🚀当前遍历列数BC,表头->UV价值
+18:15:28.764776: 	🚀当前遍历行数1, dev:UV价值 type:<class 'str'>, uat:UV价值 type:<class 'str'>
+18:15:28.767768: 🚀当前遍历列数BD,表头->客单价
+18:15:28.767768: 	🚀当前遍历行数1, dev:客单价 type:<class 'str'>, uat:客单价 type:<class 'str'>
+18:15:28.769767: 🚀当前遍历列数BE,表头->观看人数
+18:15:28.769767: 	🚀当前遍历行数1, dev:观看人数 type:<class 'str'>, uat:观看人数 type:<class 'str'>
+18:15:28.771771: 🚀当前遍历列数BF,表头->观看人次
+18:15:28.771771: 	🚀当前遍历行数1, dev:观看人次 type:<class 'str'>, uat:观看人次 type:<class 'str'>
+18:15:28.773771: 🚀当前遍历列数BG,表头->最高在线人数
+18:15:28.773771: 	🚀当前遍历行数1, dev:最高在线人数 type:<class 'str'>, uat:最高在线人数 type:<class 'str'>
+18:15:28.775772: 🚀当前遍历列数BH,表头->平均在线人数
+18:15:28.775772: 	🚀当前遍历行数1, dev:平均在线人数 type:<class 'str'>, uat:平均在线人数 type:<class 'str'>
+18:15:28.777770: 🚀当前遍历列数BI,表头->人均观看时长(s)
+18:15:28.777770: 	🚀当前遍历行数1, dev:人均观看时长(s) type:<class 'str'>, uat:人均观看时长(s) type:<class 'str'>
+18:15:28.780774: 🚀当前遍历列数BJ,表头->新增粉丝数
+18:15:28.780774: 	🚀当前遍历行数1, dev:新增粉丝数 type:<class 'str'>, uat:新增粉丝数 type:<class 'str'>
+18:15:28.783772: 🚀当前遍历列数BK,表头->看播粉丝占比
+18:15:28.784771: 	🚀当前遍历行数1, dev:看播粉丝占比 type:<class 'str'>, uat:看播粉丝占比 type:<class 'str'>
+18:15:28.785770: 🚀当前遍历列数BL,表头->粉丝成交占比
+18:15:28.785770: 	🚀当前遍历行数1, dev:粉丝成交占比 type:<class 'str'>, uat:粉丝成交占比 type:<class 'str'>
+18:15:28.787771: 🚀当前遍历列数BM,表头->粉丝成交GMV
+18:15:28.787771: 	🚀当前遍历行数1, dev:粉丝成交GMV type:<class 'str'>, uat:粉丝成交GMV type:<class 'str'>
+18:15:28.789781: 🚀当前遍历列数BN,表头->增粉率
+18:15:28.789781: 	🚀当前遍历行数1, dev:增粉率 type:<class 'str'>, uat:增粉率 type:<class 'str'>
+18:19:56.918889: 🟡开始生成Gap_sheet🟡
+18:19:56.921891: 🚀最大列66
+🚀最大行1
+18:19:56.932883: 🚀当前遍历列数A,表头->日期
+18:19:56.932883: 	🚀当前遍历行数1, dev:日期 type:<class 'str'>, uat:日期 type:<class 'str'>
+18:19:56.934889: 🚀当前遍历列数B,表头->时段
+18:19:56.935888: 	🚀当前遍历行数1, dev:时段 type:<class 'str'>, uat:时段 type:<class 'str'>
+18:19:56.937893: 🚀当前遍历列数C,表头->时长
+（h）
+18:19:56.938892: 	🚀当前遍历行数1, dev:时长
+（h） type:<class 'str'>, uat:时长
+（h） type:<class 'str'>
+18:19:56.940893: 🚀当前遍历列数D,表头->全店GMV
+18:19:56.941891: 	🚀当前遍历行数1, dev:全店GMV type:<class 'str'>, uat:全店GMV type:<class 'str'>
+18:19:56.943888: 🚀当前遍历列数E,表头->全店Sellout
+18:19:56.943888: 	🚀当前遍历行数1, dev:全店Sellout type:<class 'str'>, uat:全店Sellout type:<class 'str'>
+18:19:56.945890: 🚀当前遍历列数F,表头->退款金额
+18:19:56.946891: 	🚀当前遍历行数1, dev:退款金额 type:<class 'str'>, uat:退款金额 type:<class 'str'>
+18:19:56.948890: 🚀当前遍历列数G,表头->仅退款
+18:19:56.948890: 	🚀当前遍历行数1, dev:仅退款 type:<class 'str'>, uat:仅退款 type:<class 'str'>
+18:19:56.950890: 🚀当前遍历列数H,表头->拒收拦截
+18:19:56.951895: 	🚀当前遍历行数1, dev:拒收拦截 type:<class 'str'>, uat:拒收拦截 type:<class 'str'>
+18:19:56.953892: 🚀当前遍历列数I,表头->退货退款
+18:19:56.954900: 	🚀当前遍历行数1, dev:退货退款 type:<class 'str'>, uat:退货退款 type:<class 'str'>
+18:19:56.956890: 🚀当前遍历列数J,表头->退款率
+18:19:56.956890: 	🚀当前遍历行数1, dev:退款率 type:<class 'str'>, uat:退款率 type:<class 'str'>
+18:19:56.958890: 🚀当前遍历列数K,表头->全店NSO
+18:19:56.959889: 	🚀当前遍历行数1, dev:全店NSO type:<class 'str'>, uat:全店NSO type:<class 'str'>
+18:19:56.961889: 🚀当前遍历列数L,表头->全店NSO目标
+18:19:56.961889: 	🚀当前遍历行数1, dev:全店NSO目标 type:<class 'str'>, uat:全店NSO目标 type:<class 'str'>
+18:19:56.964892: 🚀当前遍历列数M,表头->全店NSO
+当日达成率
+18:19:56.966900: 	🚀当前遍历行数1, dev:全店NSO
+当日达成率 type:<class 'str'>, uat:全店NSO
+当日达成率 type:<class 'str'>
+18:19:56.969896: 🚀当前遍历列数N,表头->店铺GMV
+18:19:56.969896: 	🚀当前遍历行数1, dev:店铺GMV type:<class 'str'>, uat:店铺GMV type:<class 'str'>
+18:19:56.972891: 🚀当前遍历列数O,表头->店铺Sellout
+18:19:56.973892: 	🚀当前遍历行数1, dev:店铺Sellout type:<class 'str'>, uat:店铺Sellout type:<class 'str'>
+18:19:56.975893: 🚀当前遍历列数P,表头->商城SO
+18:19:56.975893: 	🚀当前遍历行数1, dev:商城SO type:<class 'str'>, uat:商城SO type:<class 'str'>
+18:19:56.978892: 🚀当前遍历列数Q,表头->店播直播GMV
+18:19:56.979894: 	🚀当前遍历行数1, dev:店播直播GMV type:<class 'str'>, uat:店播直播GMV type:<class 'str'>
+18:19:56.981893: 🚀当前遍历列数R,表头->店播Sellout
+18:19:56.982892: 	🚀当前遍历行数1, dev:店播Sellout type:<class 'str'>, uat:店播Sellout type:<class 'str'>
+18:19:56.984890: 🚀当前遍历列数S,表头->退款金额
+18:19:56.984890: 	🚀当前遍历行数1, dev:退款金额 type:<class 'str'>, uat:退款金额 type:<class 'str'>
+18:19:56.986888: 🚀当前遍历列数T,表头->仅退款
+18:19:56.986888: 	🚀当前遍历行数1, dev:仅退款 type:<class 'str'>, uat:仅退款 type:<class 'str'>
+18:19:56.989889: 🚀当前遍历列数U,表头->拒收拦截
+18:19:56.990888: 	🚀当前遍历行数1, dev:拒收拦截 type:<class 'str'>, uat:拒收拦截 type:<class 'str'>
+18:19:56.991890: 🚀当前遍历列数V,表头->退货退款
+18:19:56.992887: 	🚀当前遍历行数1, dev:退货退款 type:<class 'str'>, uat:退货退款 type:<class 'str'>
+18:19:56.993887: 🚀当前遍历列数W,表头->退款率
+18:19:56.994886: 	🚀当前遍历行数1, dev:退款率 type:<class 'str'>, uat:退款率 type:<class 'str'>
+18:19:56.995889: 🚀当前遍历列数X,表头->店铺NSO
+18:19:56.996888: 	🚀当前遍历行数1, dev:店铺NSO type:<class 'str'>, uat:店铺NSO type:<class 'str'>
+18:19:56.998895: 🚀当前遍历列数Y,表头->店铺NSO目标
+18:19:56.998895: 	🚀当前遍历行数1, dev:店铺NSO目标 type:<class 'str'>, uat:店铺NSO目标 type:<class 'str'>
+18:19:57.001888: 🚀当前遍历列数Z,表头->店铺NSO完成率
+18:19:57.001888: 	🚀当前遍历行数1, dev:店铺NSO完成率 type:<class 'str'>, uat:店铺NSO完成率 type:<class 'str'>
+18:19:57.003887: 🚀当前遍历列数AA,表头->达播GMV
+18:19:57.005897: 	🚀当前遍历行数1, dev:达播GMV type:<class 'str'>, uat:达播GMV type:<class 'str'>
+18:19:57.007887: 🚀当前遍历列数AB,表头->达播Sellout
+18:19:57.007887: 	🚀当前遍历行数1, dev:达播Sellout type:<class 'str'>, uat:达播Sellout type:<class 'str'>
+18:19:57.009889: 🚀当前遍历列数AC,表头->退款金额
+18:19:57.009889: 	🚀当前遍历行数1, dev:退款金额 type:<class 'str'>, uat:退款金额 type:<class 'str'>
+18:19:57.011891: 🚀当前遍历列数AD,表头->仅退款
+18:19:57.011891: 	🚀当前遍历行数1, dev:仅退款 type:<class 'str'>, uat:仅退款 type:<class 'str'>
+18:19:57.013889: 🚀当前遍历列数AE,表头->拒收拦截
+18:19:57.014889: 	🚀当前遍历行数1, dev:拒收拦截 type:<class 'str'>, uat:拒收拦截 type:<class 'str'>
+18:19:57.015889: 🚀当前遍历列数AF,表头->退货退款
+18:19:57.016892: 	🚀当前遍历行数1, dev:退货退款 type:<class 'str'>, uat:退货退款 type:<class 'str'>
+18:19:57.017891: 🚀当前遍历列数AG,表头->达播退款率
+18:19:57.018892: 	🚀当前遍历行数1, dev:达播退款率 type:<class 'str'>, uat:达播退款率 type:<class 'str'>
+18:19:57.019887: 🚀当前遍历列数AH,表头->达播NSO
+18:19:57.020888: 	🚀当前遍历行数1, dev:达播NSO type:<class 'str'>, uat:达播NSO type:<class 'str'>
+18:19:57.022890: 🚀当前遍历列数AI,表头->达播NSO目标
+18:19:57.023889: 	🚀当前遍历行数1, dev:达播NSO目标 type:<class 'str'>, uat:达播NSO目标 type:<class 'str'>
+18:19:57.024889: 🚀当前遍历列数AJ,表头->达播NSO完成率
+18:19:57.025889: 	🚀当前遍历行数1, dev:达播NSO完成率 type:<class 'str'>, uat:达播NSO完成率 type:<class 'str'>
+18:19:57.026889: 🚀当前遍历列数AK,表头->挂车GMV
+18:19:57.027888: 	🚀当前遍历行数1, dev:挂车GMV type:<class 'str'>, uat:挂车GMV type:<class 'str'>
+18:19:57.028891: 🚀当前遍历列数AL,表头->退款金额
+18:19:57.029886: 	🚀当前遍历行数1, dev:退款金额 type:<class 'str'>, uat:退款金额 type:<class 'str'>
+18:19:57.031889: 🚀当前遍历列数AM,表头->视频退款率
+18:19:57.034890: 	🚀当前遍历行数1, dev:视频退款率 type:<class 'str'>, uat:视频退款率 type:<class 'str'>
+18:19:57.035892: 🚀当前遍历列数AN,表头->消耗
+18:19:57.036888: 	🚀当前遍历行数1, dev:消耗 type:<class 'str'>, uat:消耗 type:<class 'str'>
+18:19:57.038888: 🚀当前遍历列数AO,表头->千川成交金额
+18:19:57.038888: 	🚀当前遍历行数1, dev:千川成交金额 type:<class 'str'>, uat:千川成交金额 type:<class 'str'>
+18:19:57.040890: 🚀当前遍历列数AP,表头->付费流量占比
+18:19:57.041886: 	🚀当前遍历行数1, dev:付费流量占比 type:<class 'str'>, uat:付费流量占比 type:<class 'str'>
+18:19:57.043892: 🚀当前遍历列数AQ,表头->千川直投ROI
+18:19:57.043892: 	🚀当前遍历行数1, dev:千川直投ROI type:<class 'str'>, uat:千川直投ROI type:<class 'str'>
+18:19:57.045886: 🚀当前遍历列数AR,表头->全店ROI
+18:19:57.045886: 	🚀当前遍历行数1, dev:全店ROI type:<class 'str'>, uat:全店ROI type:<class 'str'>
+18:19:57.047892: 🚀当前遍历列数AS,表头->直播GMV
+18:19:57.048892: 	🚀当前遍历行数1, dev:直播GMV type:<class 'str'>, uat:直播GMV type:<class 'str'>
+18:19:57.049890: 🚀当前遍历列数AT,表头->GPM
+1000*直播间成交金额/观看人次
+18:19:57.050894: 	🚀当前遍历行数1, dev:GPM
+1000*直播间成交金额/观看人次 type:<class 'str'>, uat:GPM
+1000*直播间成交金额/观看人次 type:<class 'str'>
+18:19:57.052889: 🚀当前遍历列数AU,表头->免费GMV
+18:19:57.053890: 	🚀当前遍历行数1, dev:免费GMV type:<class 'str'>, uat:免费GMV type:<class 'str'>
+18:19:57.055891: 🚀当前遍历列数AV,表头->免费GMV占比
+18:19:57.056891: 	🚀当前遍历行数1, dev:免费GMV占比 type:<class 'str'>, uat:免费GMV占比 type:<class 'str'>
+18:19:57.058888: 🚀当前遍历列数AW,表头->成交件数
+18:19:57.058888: 	🚀当前遍历行数1, dev:成交件数 type:<class 'str'>, uat:成交件数 type:<class 'str'>
+18:19:57.060889: 🚀当前遍历列数AX,表头->成交人数
+18:19:57.060889: 	🚀当前遍历行数1, dev:成交人数 type:<class 'str'>, uat:成交人数 type:<class 'str'>
+18:19:57.062891: 🚀当前遍历列数AY,表头->成交转化率
+18:19:57.063889: 	🚀当前遍历行数1, dev:成交转化率 type:<class 'str'>, uat:成交转化率 type:<class 'str'>
+18:19:57.065888: 🚀当前遍历列数AZ,表头->直播间商品点击人数
+18:19:57.065888: 	🚀当前遍历行数1, dev:直播间商品点击人数 type:<class 'str'>, uat:直播间商品点击人数 type:<class 'str'>
+18:19:57.067890: 🚀当前遍历列数BA,表头->观看点击转化率
+18:19:57.067890: 	🚀当前遍历行数1, dev:观看点击转化率 type:<class 'str'>, uat:观看点击转化率 type:<class 'str'>
+18:19:57.069888: 🚀当前遍历列数BB,表头->点击成交转化率
+18:19:57.069888: 	🚀当前遍历行数1, dev:点击成交转化率 type:<class 'str'>, uat:点击成交转化率 type:<class 'str'>
+18:19:57.071897: 🚀当前遍历列数BC,表头->UV价值
+18:19:57.072889: 	🚀当前遍历行数1, dev:UV价值 type:<class 'str'>, uat:UV价值 type:<class 'str'>
+18:19:57.073892: 🚀当前遍历列数BD,表头->客单价
+18:19:57.074888: 	🚀当前遍历行数1, dev:客单价 type:<class 'str'>, uat:客单价 type:<class 'str'>
+18:19:57.076888: 🚀当前遍历列数BE,表头->观看人数
+18:19:57.076888: 	🚀当前遍历行数1, dev:观看人数 type:<class 'str'>, uat:观看人数 type:<class 'str'>
+18:19:57.078888: 🚀当前遍历列数BF,表头->观看人次
+18:19:57.078888: 	🚀当前遍历行数1, dev:观看人次 type:<class 'str'>, uat:观看人次 type:<class 'str'>
+18:19:57.080892: 🚀当前遍历列数BG,表头->最高在线人数
+18:19:57.081888: 	🚀当前遍历行数1, dev:最高在线人数 type:<class 'str'>, uat:最高在线人数 type:<class 'str'>
+18:19:57.082889: 🚀当前遍历列数BH,表头->平均在线人数
+18:19:57.083888: 	🚀当前遍历行数1, dev:平均在线人数 type:<class 'str'>, uat:平均在线人数 type:<class 'str'>
+18:19:57.084889: 🚀当前遍历列数BI,表头->人均观看时长(s)
+18:19:57.085887: 	🚀当前遍历行数1, dev:人均观看时长(s) type:<class 'str'>, uat:人均观看时长(s) type:<class 'str'>
+18:19:57.087889: 🚀当前遍历列数BJ,表头->新增粉丝数
+18:19:57.087889: 	🚀当前遍历行数1, dev:新增粉丝数 type:<class 'str'>, uat:新增粉丝数 type:<class 'str'>
+18:19:57.089890: 🚀当前遍历列数BK,表头->看播粉丝占比
+18:19:57.090889: 	🚀当前遍历行数1, dev:看播粉丝占比 type:<class 'str'>, uat:看播粉丝占比 type:<class 'str'>
+18:19:57.092888: 🚀当前遍历列数BL,表头->粉丝成交占比
+18:19:57.093889: 	🚀当前遍历行数1, dev:粉丝成交占比 type:<class 'str'>, uat:粉丝成交占比 type:<class 'str'>
+18:19:57.095888: 🚀当前遍历列数BM,表头->粉丝成交GMV
+18:19:57.095888: 	🚀当前遍历行数1, dev:粉丝成交GMV type:<class 'str'>, uat:粉丝成交GMV type:<class 'str'>
+18:19:57.097900: 🚀当前遍历列数BN,表头->增粉率
+18:19:57.097900: 	🚀当前遍历行数1, dev:增粉率 type:<class 'str'>, uat:增粉率 type:<class 'str'>
+18:22:35.653311: 🟡开始生成Gap_sheet🟡
+18:22:35.655309: 🚀最大列66
+🚀最大行1
+18:22:35.666303: 🚀当前遍历列数A,表头->日期
+18:22:35.667305: 	🚀当前遍历行数1, dev:日期 type:<class 'str'>, uat:日期 type:<class 'str'>
+18:22:35.667305: 🚀当前遍历列数B,表头->时段
+18:22:35.669312: 	🚀当前遍历行数1, dev:时段 type:<class 'str'>, uat:时段 type:<class 'str'>
+18:22:35.671307: 🚀当前遍历列数C,表头->时长
+（h）
+18:22:35.672305: 	🚀当前遍历行数1, dev:时长
+（h） type:<class 'str'>, uat:时长
+（h） type:<class 'str'>
+18:22:35.673306: 🚀当前遍历列数D,表头->全店GMV
+18:22:35.674312: 	🚀当前遍历行数1, dev:全店GMV type:<class 'str'>, uat:全店GMV type:<class 'str'>
+18:22:35.675307: 🚀当前遍历列数E,表头->全店Sellout
+18:22:35.676309: 	🚀当前遍历行数1, dev:全店Sellout type:<class 'str'>, uat:全店Sellout type:<class 'str'>
+18:22:35.677312: 🚀当前遍历列数F,表头->退款金额
+18:22:35.679311: 	🚀当前遍历行数1, dev:退款金额 type:<class 'str'>, uat:退款金额 type:<class 'str'>
+18:22:35.680310: 🚀当前遍历列数G,表头->仅退款
+18:22:35.682309: 	🚀当前遍历行数1, dev:仅退款 type:<class 'str'>, uat:仅退款 type:<class 'str'>
+18:22:35.683310: 🚀当前遍历列数H,表头->拒收拦截
+18:22:35.685308: 	🚀当前遍历行数1, dev:拒收拦截 type:<class 'str'>, uat:拒收拦截 type:<class 'str'>
+18:22:35.686309: 🚀当前遍历列数I,表头->退货退款
+18:22:35.688317: 	🚀当前遍历行数1, dev:退货退款 type:<class 'str'>, uat:退货退款 type:<class 'str'>
+18:22:35.689308: 🚀当前遍历列数J,表头->退款率
+18:22:35.691306: 	🚀当前遍历行数1, dev:退款率 type:<class 'str'>, uat:退款率 type:<class 'str'>
+18:22:35.692306: 🚀当前遍历列数K,表头->全店NSO
+18:22:35.693318: 	🚀当前遍历行数1, dev:全店NSO type:<class 'str'>, uat:全店NSO type:<class 'str'>
+18:22:35.694309: 🚀当前遍历列数L,表头->全店NSO目标
+18:22:35.696323: 	🚀当前遍历行数1, dev:全店NSO目标 type:<class 'str'>, uat:全店NSO目标 type:<class 'str'>
+18:22:35.697310: 🚀当前遍历列数M,表头->全店NSO
+当日达成率
+18:22:35.699310: 	🚀当前遍历行数1, dev:全店NSO
+当日达成率 type:<class 'str'>, uat:全店NSO
+当日达成率 type:<class 'str'>
+18:22:35.700307: 🚀当前遍历列数N,表头->店铺GMV
+18:22:35.702314: 	🚀当前遍历行数1, dev:店铺GMV type:<class 'str'>, uat:店铺GMV type:<class 'str'>
+18:22:35.703309: 🚀当前遍历列数O,表头->店铺Sellout
+18:22:35.704306: 	🚀当前遍历行数1, dev:店铺Sellout type:<class 'str'>, uat:店铺Sellout type:<class 'str'>
+18:22:35.705308: 🚀当前遍历列数P,表头->商城SO
+18:22:35.707306: 	🚀当前遍历行数1, dev:商城SO type:<class 'str'>, uat:商城SO type:<class 'str'>
+18:22:35.708306: 🚀当前遍历列数Q,表头->店播直播GMV
+18:22:35.709311: 	🚀当前遍历行数1, dev:店播直播GMV type:<class 'str'>, uat:店播直播GMV type:<class 'str'>
+18:22:35.711309: 🚀当前遍历列数R,表头->店播Sellout
+18:22:35.713307: 	🚀当前遍历行数1, dev:店播Sellout type:<class 'str'>, uat:店播Sellout type:<class 'str'>
+18:22:35.714308: 🚀当前遍历列数S,表头->退款金额
+18:22:35.715306: 	🚀当前遍历行数1, dev:退款金额 type:<class 'str'>, uat:退款金额 type:<class 'str'>
+18:22:35.716306: 🚀当前遍历列数T,表头->仅退款
+18:22:35.718305: 	🚀当前遍历行数1, dev:仅退款 type:<class 'str'>, uat:仅退款 type:<class 'str'>
+18:22:35.718305: 🚀当前遍历列数U,表头->拒收拦截
+18:22:35.720309: 	🚀当前遍历行数1, dev:拒收拦截 type:<class 'str'>, uat:拒收拦截 type:<class 'str'>
+18:22:35.720309: 🚀当前遍历列数V,表头->退货退款
+18:22:35.722306: 	🚀当前遍历行数1, dev:退货退款 type:<class 'str'>, uat:退货退款 type:<class 'str'>
+18:22:35.723310: 🚀当前遍历列数W,表头->退款率
+18:22:35.724307: 	🚀当前遍历行数1, dev:退款率 type:<class 'str'>, uat:退款率 type:<class 'str'>
+18:22:35.725305: 🚀当前遍历列数X,表头->店铺NSO
+18:22:35.726308: 	🚀当前遍历行数1, dev:店铺NSO type:<class 'str'>, uat:店铺NSO type:<class 'str'>
+18:22:35.727308: 🚀当前遍历列数Y,表头->店铺NSO目标
+18:22:35.729305: 	🚀当前遍历行数1, dev:店铺NSO目标 type:<class 'str'>, uat:店铺NSO目标 type:<class 'str'>
+18:22:35.730306: 🚀当前遍历列数Z,表头->店铺NSO完成率
+18:22:35.732309: 	🚀当前遍历行数1, dev:店铺NSO完成率 type:<class 'str'>, uat:店铺NSO完成率 type:<class 'str'>
+18:22:35.733313: 🚀当前遍历列数AA,表头->达播GMV
+18:22:35.735305: 	🚀当前遍历行数1, dev:达播GMV type:<class 'str'>, uat:达播GMV type:<class 'str'>
+18:22:35.735305: 🚀当前遍历列数AB,表头->达播Sellout
+18:22:35.737307: 	🚀当前遍历行数1, dev:达播Sellout type:<class 'str'>, uat:达播Sellout type:<class 'str'>
+18:22:35.738306: 🚀当前遍历列数AC,表头->退款金额
+18:22:35.739306: 	🚀当前遍历行数1, dev:退款金额 type:<class 'str'>, uat:退款金额 type:<class 'str'>
+18:22:35.740306: 🚀当前遍历列数AD,表头->仅退款
+18:22:35.741306: 	🚀当前遍历行数1, dev:仅退款 type:<class 'str'>, uat:仅退款 type:<class 'str'>
+18:22:35.742305: 🚀当前遍历列数AE,表头->拒收拦截
+18:22:35.744307: 	🚀当前遍历行数1, dev:拒收拦截 type:<class 'str'>, uat:拒收拦截 type:<class 'str'>
+18:22:35.745307: 🚀当前遍历列数AF,表头->退货退款
+18:22:35.746313: 	🚀当前遍历行数1, dev:退货退款 type:<class 'str'>, uat:退货退款 type:<class 'str'>
+18:22:35.747308: 🚀当前遍历列数AG,表头->达播退款率
+18:22:35.749307: 	🚀当前遍历行数1, dev:达播退款率 type:<class 'str'>, uat:达播退款率 type:<class 'str'>
+18:22:35.750308: 🚀当前遍历列数AH,表头->达播NSO
+18:22:35.751306: 	🚀当前遍历行数1, dev:达播NSO type:<class 'str'>, uat:达播NSO type:<class 'str'>
+18:22:35.752310: 🚀当前遍历列数AI,表头->达播NSO目标
+18:22:35.754306: 	🚀当前遍历行数1, dev:达播NSO目标 type:<class 'str'>, uat:达播NSO目标 type:<class 'str'>
+18:22:35.754306: 🚀当前遍历列数AJ,表头->达播NSO完成率
+18:22:35.755307: 	🚀当前遍历行数1, dev:达播NSO完成率 type:<class 'str'>, uat:达播NSO完成率 type:<class 'str'>
+18:22:35.756305: 🚀当前遍历列数AK,表头->挂车GMV
+18:22:35.757306: 	🚀当前遍历行数1, dev:挂车GMV type:<class 'str'>, uat:挂车GMV type:<class 'str'>
+18:22:35.758305: 🚀当前遍历列数AL,表头->退款金额
+18:22:35.760312: 	🚀当前遍历行数1, dev:退款金额 type:<class 'str'>, uat:退款金额 type:<class 'str'>
+18:22:35.761307: 🚀当前遍历列数AM,表头->视频退款率
+18:22:35.762305: 	🚀当前遍历行数1, dev:视频退款率 type:<class 'str'>, uat:视频退款率 type:<class 'str'>
+18:22:35.763307: 🚀当前遍历列数AN,表头->消耗
+18:22:35.766310: 	🚀当前遍历行数1, dev:消耗 type:<class 'str'>, uat:消耗 type:<class 'str'>
+18:22:35.767305: 🚀当前遍历列数AO,表头->千川成交金额
+18:22:35.768307: 	🚀当前遍历行数1, dev:千川成交金额 type:<class 'str'>, uat:千川成交金额 type:<class 'str'>
+18:22:35.769306: 🚀当前遍历列数AP,表头->付费流量占比
+18:22:35.770308: 	🚀当前遍历行数1, dev:付费流量占比 type:<class 'str'>, uat:付费流量占比 type:<class 'str'>
+18:22:35.771308: 🚀当前遍历列数AQ,表头->千川直投ROI
+18:22:35.773306: 	🚀当前遍历行数1, dev:千川直投ROI type:<class 'str'>, uat:千川直投ROI type:<class 'str'>
+18:22:35.773306: 🚀当前遍历列数AR,表头->全店ROI
+18:22:35.775306: 	🚀当前遍历行数1, dev:全店ROI type:<class 'str'>, uat:全店ROI type:<class 'str'>
+18:22:35.776309: 🚀当前遍历列数AS,表头->直播GMV
+18:22:35.777310: 	🚀当前遍历行数1, dev:直播GMV type:<class 'str'>, uat:直播GMV type:<class 'str'>
+18:22:35.778308: 🚀当前遍历列数AT,表头->GPM
+1000*直播间成交金额/观看人次
+18:22:35.780309: 	🚀当前遍历行数1, dev:GPM
+1000*直播间成交金额/观看人次 type:<class 'str'>, uat:GPM
+1000*直播间成交金额/观看人次 type:<class 'str'>
+18:22:35.781309: 🚀当前遍历列数AU,表头->免费GMV
+18:22:35.783309: 	🚀当前遍历行数1, dev:免费GMV type:<class 'str'>, uat:免费GMV type:<class 'str'>
+18:22:35.784307: 🚀当前遍历列数AV,表头->免费GMV占比
+18:22:35.786306: 	🚀当前遍历行数1, dev:免费GMV占比 type:<class 'str'>, uat:免费GMV占比 type:<class 'str'>
+18:22:35.786306: 🚀当前遍历列数AW,表头->成交件数
+18:22:35.788305: 	🚀当前遍历行数1, dev:成交件数 type:<class 'str'>, uat:成交件数 type:<class 'str'>
+18:22:35.789305: 🚀当前遍历列数AX,表头->成交人数
+18:22:35.790308: 	🚀当前遍历行数1, dev:成交人数 type:<class 'str'>, uat:成交人数 type:<class 'str'>
+18:22:35.791306: 🚀当前遍历列数AY,表头->成交转化率
+18:22:35.792309: 	🚀当前遍历行数1, dev:成交转化率 type:<class 'str'>, uat:成交转化率 type:<class 'str'>
+18:22:35.793311: 🚀当前遍历列数AZ,表头->直播间商品点击人数
+18:22:35.795320: 	🚀当前遍历行数1, dev:直播间商品点击人数 type:<class 'str'>, uat:直播间商品点击人数 type:<class 'str'>
+18:22:35.796311: 🚀当前遍历列数BA,表头->观看点击转化率
+18:22:35.797308: 	🚀当前遍历行数1, dev:观看点击转化率 type:<class 'str'>, uat:观看点击转化率 type:<class 'str'>
+18:22:35.798306: 🚀当前遍历列数BB,表头->点击成交转化率
+18:22:35.799314: 	🚀当前遍历行数1, dev:点击成交转化率 type:<class 'str'>, uat:点击成交转化率 type:<class 'str'>
+18:22:35.800304: 🚀当前遍历列数BC,表头->UV价值
+18:22:35.802305: 	🚀当前遍历行数1, dev:UV价值 type:<class 'str'>, uat:UV价值 type:<class 'str'>
+18:22:35.802305: 🚀当前遍历列数BD,表头->客单价
+18:22:35.804305: 	🚀当前遍历行数1, dev:客单价 type:<class 'str'>, uat:客单价 type:<class 'str'>
+18:22:35.805311: 🚀当前遍历列数BE,表头->观看人数
+18:22:35.806306: 	🚀当前遍历行数1, dev:观看人数 type:<class 'str'>, uat:观看人数 type:<class 'str'>
+18:22:35.807306: 🚀当前遍历列数BF,表头->观看人次
+18:22:35.809308: 	🚀当前遍历行数1, dev:观看人次 type:<class 'str'>, uat:观看人次 type:<class 'str'>
+18:22:35.810309: 🚀当前遍历列数BG,表头->最高在线人数
+18:22:35.812307: 	🚀当前遍历行数1, dev:最高在线人数 type:<class 'str'>, uat:最高在线人数 type:<class 'str'>
+18:22:35.813308: 🚀当前遍历列数BH,表头->平均在线人数
+18:22:35.814307: 	🚀当前遍历行数1, dev:平均在线人数 type:<class 'str'>, uat:平均在线人数 type:<class 'str'>
+18:22:35.815310: 🚀当前遍历列数BI,表头->人均观看时长(s)
+18:22:35.816309: 	🚀当前遍历行数1, dev:人均观看时长(s) type:<class 'str'>, uat:人均观看时长(s) type:<class 'str'>
+18:22:35.817305: 🚀当前遍历列数BJ,表头->新增粉丝数
+18:22:35.818307: 	🚀当前遍历行数1, dev:新增粉丝数 type:<class 'str'>, uat:新增粉丝数 type:<class 'str'>
+18:22:35.819305: 🚀当前遍历列数BK,表头->看播粉丝占比
+18:22:35.821307: 	🚀当前遍历行数1, dev:看播粉丝占比 type:<class 'str'>, uat:看播粉丝占比 type:<class 'str'>
+18:22:35.822305: 🚀当前遍历列数BL,表头->粉丝成交占比
+18:22:35.823306: 	🚀当前遍历行数1, dev:粉丝成交占比 type:<class 'str'>, uat:粉丝成交占比 type:<class 'str'>
+18:22:35.824306: 🚀当前遍历列数BM,表头->粉丝成交GMV
+18:22:35.826309: 	🚀当前遍历行数1, dev:粉丝成交GMV type:<class 'str'>, uat:粉丝成交GMV type:<class 'str'>
+18:22:35.827309: 🚀当前遍历列数BN,表头->增粉率
+18:22:35.829309: 	🚀当前遍历行数1, dev:增粉率 type:<class 'str'>, uat:增粉率 type:<class 'str'>
