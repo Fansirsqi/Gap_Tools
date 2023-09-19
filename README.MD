@@ -69,3 +69,22 @@ rules.append(rule4)
 for rule in rules:
     ws.conditional_formatting.add("C1:C38", rule)
 ```
+
+具体operator参数值可取有哪些呢?
+
+"between"：表示在两个值之间；
+"notBetween"：表示不在两个值之间；
+"equal"：表示等于；
+"notEqual"：表示不等于；
+"greaterThan"：表示大于；
+"lessThan"：表示小于；
+"greaterThanOrEqual"：表示大于等于；
+"lessThanOrEqual"：表示小于等于；
+"containsText"：表示包含特定文本；
+"notContainsText"：表示不包含特定文本；
+"startsWith"：表示以特定文本开头；
+"endsWith"：表示以特定文本结尾；
+"containsBlanks"：表示包含空单元格；
+"notContainsBlanks"：表示不包含空单元格；
+"containsErrors"：表示包含错误单元格；
+"notContainsErrors"：表示不包含错误单元格;
