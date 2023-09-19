@@ -1,0 +1,9 @@
+.venv/
+.vscode/
+*.xlsx
+__pycache__/
+*.xml
+*.log
+*.csv
+*.pyc
+ts.py
