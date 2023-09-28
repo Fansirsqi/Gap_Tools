@@ -1,7 +1,5 @@
 # _*_coding:utf-8_*_
 from logs import logger
-import re
-import time
 import os
 from functions import auto_save, get_data_by_any_row, set_gap
 from utils import input_selector, file_selector, clear
