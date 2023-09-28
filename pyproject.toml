@@ -1,2 +1,41 @@
 [tool.ruff]
 line-length = 188
+[tool.poetry]
+name = "gap-tools"
+version = "0.1.0"
+description = "用于DNY,GAP贴数"
+authors = ["fansir <2104898527@qq.com>"]
+license = "暂无"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+openpyxl = "3.1.2"
+annotated-types = "0.5.0"
+colorama = "0.4.6"
+et-xmlfile = "1.1.0"
+loguru = "0.7.1"
+mdurl = "0.1.2"
+numpy = "1.24.3"
+markdown-it-py = "3.0.0"
+pandas = "2.0.2"
+pydantic = "2.4.2"
+pydantic-core = "2.10.1"
+pygments = "2.16.1"
+python-dateutil = "2.8.2"
+pytz = "2023.3"
+rich = "13.5.2"
+six = "1.16.0"
+typing-extensions = "4.8.0"
+tzdata = "2023.3"
+win32-setctime = "1.1.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[[tool.poetry.source]]
+name = "tsinghua"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple/"
+priority = "primary"
