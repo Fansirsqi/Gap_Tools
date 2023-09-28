@@ -4,8 +4,7 @@ import re
 from rich.progress import track
 from openpyxl.worksheet.worksheet import Worksheet
 from openpyxl.workbook.workbook import Workbook
-from openpyxl.styles import PatternFill, Font
-from gapstyle import rules, center_align
+from gapstyle import rules, center_align, font_config, fill_config
 
 
 def auto_save(func):
@@ -107,7 +106,7 @@ def filed_comment(wb: Workbook, row_values: list, set_row: int = 1):
         gws.merge_cells(title_row=set_row, start_column=one, end_row=set_row, end_column=three)
 
 
-def set_gap(pws: Worksheet, tws: Worksheet, title_row: int = 2):
+def set_gap(pws: Worksheet, tws: Worksheet, title_row: int = 1):
     """生成GAP表头部
 
     Args:
@@ -130,10 +129,11 @@ def set_gap(pws: Worksheet, tws: Worksheet, title_row: int = 2):
         logger.debug(f"载入[传入]字段 -- {f_value}")
         g_title = gws.cell(row=title_row, column=one)
         g_title.value = f_value
-        g_title.fill = PatternFill(end_color="002060", fill_type="solid")
-        g_title.font = Font(color="FFFFFF", bold=True, name="微软雅黑", size=12)
-        try:
-            gws.merge_cells(title_row=title_row, start_column=one, end_row=title_row, end_column=three)  # 合并单元格,这里的字段是来自row_list
+        g_title.fill = fill_config.all_title_fill
+        g_title.font = font_config.all_title_font
+        g_title.alignment = center_align
+        try:  # 合并单元格
+            gws.merge_cells(start_row=title_row, start_column=one, end_row=title_row, end_column=three)  # 这里的字段是来自row_list
             logger.debug(f"合并单元格成功 -- {f_value}")
         except Exception as e:
             logger.error(f"合并单元格失败 -- {e}")
@@ -151,25 +151,29 @@ def set_gap(pws: Worksheet, tws: Worksheet, title_row: int = 2):
         g_t.value = t_quote
         g_g.value = "Gap"
 
-        g_p.fill = PatternFill(end_color="92d050", fill_type="solid")
-        g_t.fill = PatternFill(end_color="ffff00", fill_type="solid")
-        g_g.fill = PatternFill(end_color="ff0000", fill_type="solid")
+        g_p.fill = fill_config.brand_title_fill
+        g_t.fill = fill_config.system_title_fill
+        g_g.fill = fill_config.gap_title_fill
 
-        g_p.font = Font(name="微软雅黑", bold=True, color="FFFFFF", size=9)
-        g_t.font = Font(name="微软雅黑", bold=True, color="FFFFFF", size=9)
-        g_g.font = Font(name="微软雅黑", bold=True, color="FFFFFF", size=9)
+        g_p.font = font_config.gap_title_font
+        g_t.font = font_config.gap_title_font
+        g_g.font = font_config.gap_title_font
 
-    set_gap_title_value(pws, tws, gws, title_row + 1)
+        g_p.alignment = center_align
+        g_t.alignment = center_align
+        g_g.alignment = center_align
+
+    set_gap_title_value(pws, tws, gws, title_row + 2)
 
 
-def set_gap_title_value(pws: Worksheet, tws: Worksheet, gws: Worksheet, set_row: int = 9):
+def set_gap_title_value(pws: Worksheet, tws: Worksheet, gws: Worksheet, set_row: int):
     """_设置GAP标题下的一行,附带格式_
 
     Args:
         pws (Worksheet): _description_
         tws (Worksheet): _description_
         gws (Worksheet): _description_
-        set_row (int, optional): _description_. Defaults to 9.
+        set_row (int, optional): _description_..
     """
     for clo in range(1, pws.max_column * 3, 3):
         key = clo // 3
@@ -185,8 +189,8 @@ def set_gap_title_value(pws: Worksheet, tws: Worksheet, gws: Worksheet, set_row:
         _g_p = g_p.coordinate
         _g_g = g_g.coordinate
 
-        _p_quote = pws.cell(row=set_row, column=key + 1).coordinate
-        _t_quote = tws.cell(row=set_row, column=key + 1).coordinate
+        _p_quote = pws.cell(row=set_row - 1, column=key + 1).coordinate
+        _t_quote = tws.cell(row=set_row - 1, column=key + 1).coordinate
 
         p_quote = f"='{pws.title}'!{_p_quote}"
         t_quote = f"='{tws.title}'!{_t_quote}"
@@ -200,9 +204,9 @@ def set_gap_title_value(pws: Worksheet, tws: Worksheet, gws: Worksheet, set_row:
         g_t.value = t_quote
         g_g.value = gap_quote
 
-        g_p.font = Font(size=8, color="000000", name="微软雅黑")
-        g_t.font = Font(size=8, color="000000", name="微软雅黑")
-        g_g.font = Font(size=8, color="000000", name="微软雅黑")
+        g_p.font = font_config.gap_filed_font
+        g_t.font = font_config.gap_filed_font
+        g_g.font = font_config.gap_filed_font
 
         g_p.alignment = center_align
         g_t.alignment = center_align
