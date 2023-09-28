@@ -5,7 +5,8 @@ from loguru import logger
 logger.remove()
 logger.add(
     stdout,
-    # encoding='utf-8',
+    level="INFO",
+    # encoding="utf-8",
     colorize=True,
     format="<g>{time:MM-DD HH:mm:ss}</g> <level><w>[</w>{level}<w>]</w></level> | {message}",
 )
