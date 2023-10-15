@@ -213,5 +213,8 @@ def set_gap_title_value(pws: Worksheet, tws: Worksheet, gws: Worksheet, set_row:
         g_g.alignment = center_align
 
         g_g.number_format = "0.00%"
+        if one ==1:
+            g_p.number_format = "YYYY/M/D"
+            g_t.number_format = "YYYY/M/D"
         for rule in rules:
             gws.conditional_formatting.add(_g_g, rule)
