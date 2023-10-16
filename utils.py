@@ -43,10 +43,23 @@ def list_folder_(filter=[".venv", "__pycache__", ".vscode", ".git"], prt=True) -
     return folder_list
 
 
-def list_files(filter="*.xlsx", prt=True, prefix="~$"):
-    """列出文件"""
-    # 获取当前工作目录
-    current_dir = os.getcwd()
+def list_files(filter="*.xlsx", prt=True, prefix="~$", path=None):
+    """列出文件列表
+
+    Args:
+        filter (str, optional): _description_. Defaults to "*.xlsx". 文件类型
+        prt (bool, optional): _description_. Defaults to True. 是否打印
+        prefix (str, optional): _description_. Defaults to "~$". 过滤前缀
+        path (str, optional): _description_. Defaults to None. 输入的路径,如果不输入则默认获取脚本自身所在目录文件,如果输入则获取目录下的内容
+
+    Returns:
+        _type_: _description_
+    """
+    if path is None:
+        # 获取当前工作目录
+        current_dir = os.getcwd()
+    else:
+        current_dir = path
     # 构建要匹配的文件路径模式
     file_pattern = os.path.join(current_dir, filter)
     # 使用glob模块获取匹配的文件列表
@@ -58,17 +71,15 @@ def list_files(filter="*.xlsx", prt=True, prefix="~$"):
         # 打印文件列表
         count = 1
         print(
-            "    ",
-            "=" * 10,
+            "=" * 30,
             "文件列表",
-            "=" * 10,
+            "=" * 30,
         )
-        print()
         for file in files:
             file_name = os.path.basename(file)
-            print(f"     {count}.{file_name}")
-            print()
+            print(f" {count}. {file_name}")
             count += 1
+        print("=" * 68)
     return files
 
 
@@ -131,3 +142,8 @@ def set_az():
     sl += [char1 + char2 for char1 in sr for char2 in sr]
     # print(len(sl))
     return sl
+
+
+if __name__ == "__main__":
+    files: list = list_files(path=r"C:\Users\HPLaptop-14S\Documents\Gap文档\1", filter="*.csv")
+    print(files)
