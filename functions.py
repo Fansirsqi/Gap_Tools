@@ -144,8 +144,8 @@ def set_gap(pws: Worksheet, tws: Worksheet, title_row: int = 1):
         _p_quote = pws.cell(row=title_row, column=key + 1).coordinate  # 此处引用的是品牌sheet,表头那一行
         _t_quote = tws.cell(row=title_row, column=key + 1).coordinate
 
-        p_quote = f'={pws.title}!{_p_quote}&"-品牌"'
-        t_quote = f'={tws.title}!{_t_quote}&"-系统"'
+        p_quote = f'={pws.title}!{_p_quote}&"-{pws.title}"'
+        t_quote = f'={tws.title}!{_t_quote}&"-{tws.title}"'
 
         g_p.value = p_quote
         g_t.value = t_quote
@@ -213,5 +213,8 @@ def set_gap_title_value(pws: Worksheet, tws: Worksheet, gws: Worksheet, set_row:
         g_g.alignment = center_align
 
         g_g.number_format = "0.00%"
+        if one == 1:
+            g_p.number_format = "YYYY/M/D"
+            g_t.number_format = "YYYY/M/D"
         for rule in rules:
             gws.conditional_formatting.add(_g_g, rule)
