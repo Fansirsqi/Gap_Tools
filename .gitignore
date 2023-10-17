@@ -7,3 +7,5 @@ __pycache__/
 *.csv
 *.pyc
 ts.py
+*.logs
+*.txt
