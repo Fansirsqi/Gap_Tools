@@ -55,8 +55,6 @@ class People:
     粉丝成单占比 = "old_fans_pay_ucnt_ratio"
     累计观看人数 = "cumulativeAudience"
 
-
-
     def export_import_csv(dfs=dfs):
         """导出csv文件"""
         export_folder = "./export_人群"
@@ -65,16 +63,7 @@ class People:
         for df_key, df in dfs.items():
             df.to_csv(f"{export_folder}/{df_key}.csv")
 
-    def get_指定观看人数(
-        df=dfs["live_number_people_covered_day"],
-        sum_filed=观看人数,
-        date_type=baiku_date_type,
-        turnover=None,
-        fans=None,
-        interaction=None,
-        customers=None,
-        watch=None,
-    ):
+    def get_指定观看人数(df=dfs["live_number_people_covered_day"], sum_filed=观看人数, date_type=baiku_date_type, turnover=None, fans=None, interaction=None, customers=None, watch=None):
         """参数说明
         df: 数据框，默认为 People_df
         sum_filed: 需要汇总的列名，默认为 观看人数
@@ -139,10 +128,8 @@ class People:
         return result.astype("float64")
 
     def get_粉丝成交GMV(df1=dfs["live_detail_day"], df2=dfs["fly_live_detail_first_prchase_day"], sum_filed1=直播间成交金额, sum_filed2=粉丝成单占比):
-        ndf1 = df1[[sum_filed1, "date"]].sort_values(by="date", ascending=True).reset_index()
-        ndf2 = df2[[sum_filed2, "date"]].sort_values(by="date", ascending=True).reset_index()
-        ndf1 = ndf1[sum_filed1]
-        ndf2 = ndf2[[sum_filed2, "date"]]
+        ndf1 = df1.set_index("studioId")[[sum_filed1]]
+        ndf2 = df2.set_index("live_room_id")[[sum_filed2, "date"]]
         result = pd.concat([ndf1, ndf2], axis=1)
         result["粉丝成交GMV"] = result[sum_filed1] * result[sum_filed2]
         result = result.groupby("date")["粉丝成交GMV"].sum().apply(lambda x: format(x, ".2f"))
@@ -150,7 +137,6 @@ class People:
 
     def get_累计观看人数(df=dfs["live_list_details_grouping_day"], sum_filed=累计观看人数, date_type=baiku_date_type):
         return df.groupby([date_type])[sum_filed].sum()
-        # return df
 
     def get_新粉成交人数(df=dfs["live_detail_person_day"], sum_filed1=成交人群分析_粉丝维度_粉丝人数, sum_filed2=成交人群分析_粉丝维度_粉丝人数_新增粉丝占比, date_type=baiku_date_type):
         ndf1 = df.loc[:, [sum_filed1, date_type, sum_filed2, "id"]]
@@ -159,83 +145,6 @@ class People:
 
     def get_互动成交人数(df=dfs["live_detail_person_day"], sum_filed=成交人群分析_互动维度_有互动人数, date_type=baiku_date_type):
         return df.groupby(date_type)[sum_filed].sum()
-
-
-观看人数 = People.get_指定观看人数(turnover="不限", fans="不限", interaction="不限", customers="不限", watch="不限")
-成交人数 = People.get_成交人数()
-观看转化率 = People.get_观看转化率()
-首购粉丝 = People.get_首购粉丝数()
-
-首购人数 = People.get_首购人数()
-首购粉丝占比 = (首购粉丝 / 首购人数).apply(lambda x: format(x, ".2%"))
-
-复购粉丝 = People.get_复购粉丝数()
-
-复购人数 = People.get_复购人数()
-
-复购粉丝占比 = (复购粉丝 / 复购人数).apply(lambda x: format(x, ".2%"))
-首购占比 = (首购人数 / 成交人数).apply(lambda x: format(x, ".9%"))
-复购占比 = (复购人数 / 成交人数).apply(lambda x: format(x, ".9%"))
-粉丝成交人数 = People.get_粉丝成交人数()
-
-粉丝观看人数 = People.get_粉丝观看人数()
-粉丝成交GMV = People.get_粉丝成交GMV()
-粉丝GPM = (粉丝成交GMV * 1000 / 粉丝观看人数).apply(lambda x: format(x, ".9f"))
-观看未购粉丝 = (粉丝观看人数 - 粉丝成交人数).apply(lambda x: format(x, ".2f"))
-累计观看人数 = People.get_累计观看人数()  # maybe do not need
-观看人数粉丝占比 = (粉丝观看人数 / 累计观看人数).apply(lambda x: format(x, ".2%"))
-成交人数粉丝占比 = (粉丝成交人数 / 成交人数).apply(lambda x: format(x, ".9%"))
-粉丝观看转化率 = (粉丝成交人数 / 粉丝观看人数).apply(lambda x: format(x, ".9%"))
-新粉观看人数 = People.get_指定观看人数(turnover="不限", fans="新粉丝", interaction="不限", customers="不限", watch="不限")
-观看人数新粉占比 = (新粉观看人数 / 观看人数).apply(lambda x: format(x, ".9%"))
-新粉成交人数 = People.get_新粉成交人数()
-粉丝成交人数新粉占比 = (新粉成交人数 / 粉丝成交人数).apply(lambda x: format(x, ".2%"))
-成交人数新粉占比 = (新粉成交人数 / 成交人数).apply(lambda x: format(x, ".9%"))
-新粉观看转化率 = (新粉成交人数 / 新粉观看人数).apply(lambda x: format(x, ".9%"))
-老粉观看人数 = (粉丝观看人数 - 新粉观看人数).apply(lambda x: format(x, ".2f")).astype("float64")
-观看人数老粉占比 = (老粉观看人数 / 观看人数).apply(lambda x: format(x, ".9%"))
-老粉成交人数 = (粉丝成交人数 - 新粉成交人数).apply(lambda x: format(x, ".0f")).astype("float64")
-成交人数老粉占比 = (老粉成交人数 / 成交人数).apply(lambda x: format(x, ".9%"))
-老粉观看转化率 = (老粉成交人数 / 老粉观看人数).apply(lambda x: format(x, ".9%"))
-互动成交人数 = People.get_互动成交人数()
-互动成交人数占比 = (互动成交人数 / 成交人数).apply(lambda x: format(x, ".9%"))
-
-# print(互动成交人数占比)
-
-title = {
-    "观看人数": 观看人数,
-    "成交人数": 成交人数,
-    "观看转化率": 观看转化率,
-    "首购粉丝": 首购粉丝,
-    "首购粉丝占比": 首购粉丝占比,
-    "复购粉丝": 复购粉丝,
-    "复购粉丝占比": 复购粉丝占比,
-    "首购人数": 首购人数,
-    "首购占比": 首购占比,
-    "复购人数": 复购人数,
-    "复购占比": 复购占比,
-    "观看未购粉丝": 观看未购粉丝,
-    "粉丝成交GMV": 粉丝成交GMV,
-    "粉丝GPM": 粉丝GPM,
-    "粉丝观看人数": 粉丝观看人数,
-    "观看人数粉丝占比": 观看人数粉丝占比,
-    "粉丝成交人数": 粉丝成交人数,
-    "成交人数粉丝占比": 成交人数粉丝占比,
-    "粉丝观看转化率": 粉丝观看转化率,
-    "新粉观看人数": 新粉观看人数,
-    "观看人数新粉占比": 观看人数新粉占比,
-    "新粉成交人数": 新粉成交人数,
-    "粉丝成交人数新粉占比": 粉丝成交人数新粉占比,
-    "成交人数新粉占比": 成交人数新粉占比,
-    "新粉观看转化率": 新粉观看转化率,
-    "老粉观看人数": 老粉观看人数,
-    "观看人数老粉占比": 观看人数老粉占比,
-    "老粉成交人数": 老粉成交人数,
-    "成交人数老粉占比": 成交人数老粉占比,
-    "老粉观看转化率": 老粉观看转化率,
-    "互动成交人数": 互动成交人数,
-    "互动成交人数占比": 互动成交人数占比,
-}
 
 
 def merg_import(folder_path: str = "export_人群", excel_file: str = None):
@@ -261,8 +170,101 @@ def merg_import(folder_path: str = "export_人群", excel_file: str = None):
 
 
 def save_people():
-    pd.concat(title.values(), axis=1, keys=title.keys()).to_csv("export_人群_by_底表.csv", index_label=["时间;"])
+    观看人数 = People.get_指定观看人数(turnover="不限", fans="不限", interaction="不限", customers="不限", watch="不限")
+    成交人数 = People.get_成交人数()
+    观看转化率 = People.get_观看转化率()
+    首购粉丝 = People.get_首购粉丝数()
+
+    首购人数 = People.get_首购人数()
+    首购粉丝占比 = (首购粉丝 / 首购人数).apply(lambda x: format(x, ".2%"))
+
+    复购粉丝 = People.get_复购粉丝数()
+
+    复购人数 = People.get_复购人数()
+
+    复购粉丝占比 = (复购粉丝 / 复购人数).apply(lambda x: format(x, ".2%"))
+    首购占比 = (首购人数 / 成交人数).apply(lambda x: format(x, ".9%"))
+    复购占比 = (复购人数 / 成交人数).apply(lambda x: format(x, ".9%"))
+    粉丝成交人数 = People.get_粉丝成交人数()
+
+    粉丝观看人数 = People.get_粉丝观看人数()
+    粉丝成交GMV = People.get_粉丝成交GMV()
+    粉丝GPM = (粉丝成交GMV * 1000 / 粉丝观看人数).apply(lambda x: format(x, ".9f"))
+    观看未购粉丝 = (粉丝观看人数 - 粉丝成交人数).apply(lambda x: format(x, ".2f"))
+    累计观看人数 = People.get_累计观看人数()  # maybe do not need
+    观看人数粉丝占比 = (粉丝观看人数 / 累计观看人数).apply(lambda x: format(x, ".2%"))
+    成交人数粉丝占比 = (粉丝成交人数 / 成交人数).apply(lambda x: format(x, ".9%"))
+    粉丝观看转化率 = (粉丝成交人数 / 粉丝观看人数).apply(lambda x: format(x, ".9%"))
+    新粉观看人数 = People.get_指定观看人数(turnover="不限", fans="新粉丝", interaction="不限", customers="不限", watch="不限")
+    观看人数新粉占比 = (新粉观看人数 / 观看人数).apply(lambda x: format(x, ".9%"))
+    新粉成交人数 = People.get_新粉成交人数()
+    粉丝成交人数新粉占比 = (新粉成交人数 / 粉丝成交人数).apply(lambda x: format(x, ".2%"))
+    成交人数新粉占比 = (新粉成交人数 / 成交人数).apply(lambda x: format(x, ".9%"))
+    新粉观看转化率 = (新粉成交人数 / 新粉观看人数).apply(lambda x: format(x, ".9%"))
+    老粉观看人数 = (粉丝观看人数 - 新粉观看人数).apply(lambda x: format(x, ".2f")).astype("float64")
+    观看人数老粉占比 = (老粉观看人数 / 观看人数).apply(lambda x: format(x, ".9%"))
+    老粉成交人数 = (粉丝成交人数 - 新粉成交人数).apply(lambda x: format(x, ".0f")).astype("float64")
+    成交人数老粉占比 = (老粉成交人数 / 成交人数).apply(lambda x: format(x, ".9%"))
+    老粉观看转化率 = (老粉成交人数 / 老粉观看人数).apply(lambda x: format(x, ".9%"))
+    互动成交人数 = People.get_互动成交人数()
+    互动成交人数占比 = (互动成交人数 / 成交人数).apply(lambda x: format(x, ".9%"))
+
+    # print(互动成交人数占比)
+
+    title = {
+        "观看人数": 观看人数,
+        "成交人数": 成交人数,
+        "观看转化率": 观看转化率,
+        "首购粉丝": 首购粉丝,
+        "首购粉丝占比": 首购粉丝占比,
+        "复购粉丝": 复购粉丝,
+        "复购粉丝占比": 复购粉丝占比,
+        "首购人数": 首购人数,
+        "首购占比": 首购占比,
+        "复购人数": 复购人数,
+        "复购占比": 复购占比,
+        "观看未购粉丝": 观看未购粉丝,
+        "粉丝成交GMV": 粉丝成交GMV,
+        "粉丝GPM": 粉丝GPM,
+        "粉丝观看人数": 粉丝观看人数,
+        "观看人数粉丝占比": 观看人数粉丝占比,
+        "粉丝成交人数": 粉丝成交人数,
+        "成交人数粉丝占比": 成交人数粉丝占比,
+        "粉丝观看转化率": 粉丝观看转化率,
+        "新粉观看人数": 新粉观看人数,
+        "观看人数新粉占比": 观看人数新粉占比,
+        "新粉成交人数": 新粉成交人数,
+        "粉丝成交人数新粉占比": 粉丝成交人数新粉占比,
+        "成交人数新粉占比": 成交人数新粉占比,
+        "新粉观看转化率": 新粉观看转化率,
+        "老粉观看人数": 老粉观看人数,
+        "观看人数老粉占比": 观看人数老粉占比,
+        "老粉成交人数": 老粉成交人数,
+        "成交人数老粉占比": 成交人数老粉占比,
+        "老粉观看转化率": 老粉观看转化率,
+        "互动成交人数": 互动成交人数,
+        "互动成交人数占比": 互动成交人数占比,
+    }
+    export = (
+        pd.concat(
+            title.values(),
+            axis=1,
+            keys=title.keys(),
+        )
+        .fillna(0)
+        .replace("nan%", 0)
+        .replace("inf%", 0)
+        .sort_index()
+    )
+    try:
+        export.to_csv("export_人群_by_底表.csv", index_label=["日期"])
+        log.info("导出成功")
+    except Exception as e:
+        log.error(f"导出失败:{e}")
     People.export_import_csv()
 
 
-save_people()
+# save_people()
+观看人数 = People.get_指定观看人数(turnover="不限", fans="不限", interaction="不限", customers="不限", watch="不限")
+# GMV = People.get_粉丝成交GMV()
+print(观看人数)
