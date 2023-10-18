@@ -1,15 +1,13 @@
 import os
 import pandas as pd
-import logging as log
-
-log.basicConfig(level=log.DEBUG, filename="daily_log.txt", filemode="a", encoding="utf-8", format="%(asctime)s - %(levelname)s - %(message)s")
+from logs import logger as log
 
 
 class Daily:
     # 读取文件夹下面的csv文件
     current_time = str(pd.Timestamp.now())
 
-    log.info("-" * 30 + "| " + current_time + " |" + "-" * 30)
+    log.debug("-" * 30 + "| " + current_time + " |" + "-" * 30)
     account_name = "YSL圣罗兰美妆送礼空间"
     start_date = "2023-08-01"
     end_date = "2023-09-30"
@@ -100,21 +98,25 @@ class Daily:
         return df.groupby(date_type)[sum_filed].sum()
 
     def get_指定观看人次PV(df=dfs["live_list_details_traffic_traffic_time_day"], sum_filed=观看人次, date_type=baiku_date_type, flowChannel=None):
-        # return df
+        log.debug(f"\n{df}")
         if flowChannel is not None:
             df = df[df["flowChannel"] == flowChannel]
         return df.groupby(date_type)[sum_filed].sum()
 
     def get_成交人数(df=dfs["live_growth_conversion_funnel_day"], sum_filed=成交人数, date_type=baiku_date_type):
+        log.debug(f"\n{df}")
         return df.groupby(date_type)[sum_filed].sum()
 
     def get_观看人数(df=dfs["live_list_details_grouping_day"], sum_filed=观看人数, date_type=baiku_date_type):
+        log.debug(f"\n{df}")
         return df.groupby(date_type)[sum_filed].sum()
 
     def get_最高在线人数(df=dfs["live_list_details_indicators_day"], sum_filed=最高在线人数, date_type=baiku_date_type):
+        log.debug(f"\n{df}")
         return df.groupby(date_type)[sum_filed].max()
 
     def get_平均在线人数(df=dfs["live_analysis_live_details_all_day"], sum_filed=[直播时长_分钟, 平均在线人数]):
+        log.debug(f"\n{df}")
         ndf1 = df.loc[:, ["biz_date", sum_filed[0], sum_filed[1]]]
         ndf1.loc[:, "TS"] = ndf1[sum_filed[0]] * ndf1[sum_filed[1]]
         ndf2 = ndf1.groupby("biz_date")[sum_filed[0]].sum()
@@ -123,42 +125,55 @@ class Daily:
         return ndf3
 
     def get_直播时长_分钟(df=dfs["live_analysis_live_details_all_day"], sum_filed=[直播时长_分钟]):
+        log.debug(f"\n{df}")
         return df.groupby("biz_date")[sum_filed[0]].sum().apply(lambda x: format(x, ".0f"))
 
     def get_外层CTR(df1=dfs["live_growth_conversion_funnel_day"], df2=dfs["live_list_details_grouping_day"], sum_filed=[观看人数, 直播间曝光人数], date_type=baiku_date_type):
+        log.debug(f"\n{df1}")
+        log.debug(f"\n{df2}")
         ndf1 = df2.groupby(date_type)[sum_filed[0]].sum()  #!!!
         ndf2 = df1.groupby(date_type)[sum_filed[1]].sum()  #!!!
         ndf3 = (ndf1 / ndf2).apply(lambda x: format(x, ".9%"))
         return ndf3
 
     def get_商品点击人数(df=dfs["live_growth_conversion_funnel_day"], sum_filed=[商品点击人数], date_type=baiku_date_type):
+        log.debug(f"\n{df}")
         return df.groupby(date_type)[sum_filed[0]].sum()
 
     def get_曝光人数(df=dfs["live_growth_conversion_funnel_day"], sum_filed=[直播间曝光人数], date_type=baiku_date_type):
+        log.debug(f"\n{df}")
         return df.groupby(date_type)[sum_filed[0]].sum()
 
     def get_投放金额(df=dfs["scrm_ocean_daily"], sum_filed=[消耗]):
+        log.debug(f"\n{df}")
         return df.groupby("date")[sum_filed[0]].sum()
 
     def get_投放转化金额(df=dfs["scrm_ocean_daily"], sum_filed=[成交订单金额]):
+        log.debug(f"\n{df}")
         return df.groupby("date")[sum_filed[0]].sum()
 
     def get_新增粉丝数(df=dfs["live_detail_core_interaction_key_day"], sum_filed=[新增粉丝数], date_type=baiku_date_type):
+        log.debug(f"\n{df}")
         return df.groupby(date_type)[sum_filed[0]].sum()
 
     def get_访问粉丝数(df=dfs["live_crowd_data_day"], sum_filed=[直播间观看人数, 粉丝占比], date_type=baiku_date_type):
+        log.debug(f"\n{df}")
         ndf1 = df.loc[:, [date_type, sum_filed[0], sum_filed[1]]]
         ndf1.loc[:, "访问粉丝数"] = ndf1[sum_filed[0]] * ndf1[sum_filed[1]] * 0.01
         ndf1 = ndf1.groupby(date_type)["访问粉丝数"].sum().apply(lambda x: format(x, ".2f")).astype("float64")
         return ndf1
 
     def get_购买粉丝数(df=dfs["live_detail_person_day"], sum_filed=[成交人群分析_粉丝维度_粉丝人数], date_type=baiku_date_type):
+        log.debug(f"\n{df}")
         return df.groupby(date_type)[sum_filed[0]].sum()
 
     def get_评论次数(df=dfs["live_list_details_download_day"], sum_filed=[评论次数], date_type=baiku_date_type):
+        log.debug(f"\n{df}")
         return df.groupby(date_type)[sum_filed[0]].sum()
 
     def get_人均观看时长(df1=dfs["live_detail_core_interaction_key_day"], df2=dfs["live_list_details_grouping_day"], sum_filed=[人均观看时长_秒, 观看人数], date_type=baiku_date_type):
+        log.debug(f"\n{df1}")
+        log.debug(f"\n{df2}")
         ndf1 = df1.set_index("studioId")[[sum_filed[0]]]
         ndf2 = df2.set_index("studioId")[[sum_filed[1], date_type]]
         ndfx = Daily.get_观看人数()
@@ -168,15 +183,14 @@ class Daily:
         return ndf3
 
     def get_粉丝成交GMV(df1=dfs["live_detail_day"], df2=dfs["fly_live_detail_first_prchase_day"], sum_filed1=直播间成交金额, sum_filed2=粉丝成单占比):
+        log.debug(f"\n{df1}")
+        log.debug(f"\n{df2}")
         ndf1 = df1.set_index("studioId")[[sum_filed1]]
         ndf2 = df2.set_index("live_room_id")[[sum_filed2, "date"]]
         result = pd.concat([ndf1, ndf2], axis=1)
         result["粉丝成交GMV"] = result[sum_filed1] * result[sum_filed2]
         result = result.groupby("date")["粉丝成交GMV"].sum().apply(lambda x: format(x, ".2f"))
         return result.astype("float64")
-
-    def get_GPM(df1=dfs["live_detail_day"], df2=dfs["live_list_details_traffic_traffic_time_day"]):
-        pass
 
 
 def save_daily():
@@ -295,7 +309,7 @@ def save_daily():
     )
     try:
         export.to_csv("export_日报_by_底表.csv", index_label=["日期"])
-        log.info("导出成功")
+        log.success("导出成功")
     except Exception as e:
         log.error(f"导出失败:{e}")
     Daily.export_import_csv()
@@ -323,7 +337,6 @@ def merg_import(folder_path: str = "export_日报", excel_file: str = None):
             temp_df.to_excel(writer, sheet_name=csv_file[:31], index=False)
 
 
+观看人次PV = Daily.get_指定观看人次PV()
 # save_daily()
 # merg_import(excel_file='【抖音看板】日报_2023-08-01_2023-09-30.xlsx')
-投放金额_元_ = Daily.get_投放金额()
-print(投放金额_元_)
