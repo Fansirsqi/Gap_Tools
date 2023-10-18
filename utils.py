@@ -22,7 +22,7 @@ class DotDict(dict):
         return value
 
 
-def list_folder_(filter=[".venv", "__pycache__", ".vscode", ".git"], prt=True) -> list:
+def list_folder_(filter=[".venv", "__pycache__", ".vscode", ".git", ".idea", "export_人群", "export_日报"], prt=True) -> list:
     """列出当前项目文件夹
 
     Args:
@@ -36,10 +36,11 @@ def list_folder_(filter=[".venv", "__pycache__", ".vscode", ".git"], prt=True) -
     if len(folder_list) != 0:
         if prt is True:
             count = 1
+            print("=" * 30, "文件夹列表", "=" * 30)
             for i in folder_list:
                 print(f"     {count}.{i}")
-                print()
                 count += 1
+            print("=" * 68)
     return folder_list
 
 
@@ -70,11 +71,7 @@ def list_files(filter="*.xlsx", prt=True, prefix="~$", path=None):
     if prt is True:
         # 打印文件列表
         count = 1
-        print(
-            "=" * 30,
-            "文件列表",
-            "=" * 30,
-        )
+        print("=" * 30, "文件列表", "=" * 30)
         for file in files:
             file_name = os.path.basename(file)
             print(f" {count}. {file_name}")
