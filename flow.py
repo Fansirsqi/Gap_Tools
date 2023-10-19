@@ -1,26 +1,54 @@
+import os
 import pandas as pd
 from logs import logger as log
 
-input("欢迎使[店播流量]用取数工具")
-print("需要用到的底表如下")
-print("scrm_dy_report_app_fxg_live_list_details_traffic_time_day.csv")
-print("scrm_ocean_daily.csv")
-print("scrm_dy_report_app_fxg_live_detail_day.csv")
-input("确认文件夹下面有以上文件按任意按键开始执行")
 
-_account_name = input("请输入account_name：")
-_s_date = input("请输入开始日期：(eg:2023-08-01)")
-_e_date = input("请输入结束日期：(eg:2023-09-30)")
+try:
+    input("欢迎使[店播流量]用取数工具\n按Enter按键继续.....\n")
+    print("需要用到的底表如下-请放在csv文件夹下")
+    print("scrm_dy_report_app_fxg_live_number_people_covered_day.csv")
+    print("scrm_dy_report_app_fxg_live_growth_conversion_funnel_day.csv")
+    print("scrm_dy_report_app_fxg_live_detail_person_day.csv")
+    print("scrm_dy_report_app_fxg_live_crowd_data_day.csv")
+    print("scrm_dy_report_app_fxg_live_detail_day.csv")
+    print("scrm_dy_report_app_fxg_fly_live_detail_first_prchase_day.csv")
+    print("scrm_dy_report_app_fxg_live_list_details_grouping_day.csv")
+    input("确认文件夹下面有以上文件\n按Enter按键继续.....\n")
+    _account_name = input("请输入account_name：")
+    """账号名称"""
+    _s_date = input("请输入开始日期：(eg:2023-08-01)")
+    """开始日期"""
+    _e_date = input("请输入结束日期：(eg:2023-09-30)")
+    """结束日期"""
+except KeyboardInterrupt:
+    _account_name = None
+    """账号名称"""
+    _s_date = None
+    """开始日期"""
+    _e_date = None
+    print("\n用户终止程序")
 
 
 class Flow:
+    class_name = "店播流量"
+    current_time = str(pd.Timestamp.now())
+    log.debug("-" * 30 + "| " + current_time + " |" + "-" * 30)
     account_name = _account_name
+    if account_name is None or account_name == "":
+        log.error("账号名称为空或者错误，程序退出")
+        exit()
     start_date = _s_date
     end_date = _e_date
-    baseFload = "csv"
-    csvPerfix = "scrm_dy_report_app_fxg_"
     baiku_date_type = "bizDate"
+    """百库底表(大部分)通用日期字段: bizDate"""
     qianchuan_date_type = "date"
+    """千川底表(大部分)通用日期字段: date"""
+    baseFload = "csv"
+    """底表父文件夹"""
+    csvPerfix = "scrm_dy_report_app_fxg_"
+    """百库底表前缀"""
+    export_csv_floader = f"./export_{class_name}"
+    """导出文件夹"""
     df1 = pd.read_csv(f"{baseFload}/{csvPerfix}live_list_details_traffic_time_day.csv")
     df2 = pd.read_csv(f"{baseFload}/{csvPerfix}live_detail_day.csv")
     df3 = pd.read_csv("csv/scrm_ocean_daily.csv")
@@ -29,6 +57,7 @@ class Flow:
         "live_detail_day": df2,
         "scrm_ocean_daily": df3,
     }
+    """需要导出的完整底表"""
 
     log.debug("init data import ...")
     for df_key, df in dfs.items():
@@ -66,6 +95,17 @@ class Flow:
     消耗 = "stat_cost"
     成交订单金额 = "pay_order_amount"
     直播间成金额 = "roomTransactionAmount"
+
+    def export_import_csv(dfs=dfs, export_folder=export_csv_floader):
+        """导出csv文件:
+        Args:
+            dfs (_type_, optional): 被类处理后的dfs字典. Defaults to dfs.
+            export_folder (_type_, optional): 指定的导出文件夹. Defaults to export_csv_floader.
+        """
+        if not os.path.exists(export_folder):
+            os.makedirs(export_folder)
+        for df_key, df in dfs.items():
+            df.to_csv(f"{export_folder}/{df_key}.csv")
 
     def get_PV(df=dfs["live_list_details_traffic_time_day"], filed=PV, date_type=baiku_date_type, not_channelName=not_channelName, not_flowChannel=not_flowChannel):
         ndf = df[(df["channelName"] != not_channelName) & (df["flowChannel"] != not_flowChannel)]
@@ -131,7 +171,7 @@ class Flow:
         return df.groupby([date_type])[filed].sum()
 
 
-def save_sheet2():
+def save2():
     投放金额 = Flow.get_投放金额()
     投放转化金额 = Flow.get_投放转化金额()
     直播间成交金额 = Flow.get_直播间成交金额()
@@ -167,14 +207,14 @@ def save_sheet2():
             .replace("inf", 0)
             .sort_index()
         )
-        export.sort_index().to_csv(f"【{Flow.account_name}】_流量2.csv", index_label=["日期"])
-        log.success(f"{Flow.account_name}_流量2.csv ==> 保存成功")
+        export.sort_index().to_csv(f"{Flow.export_csv_floader}/【{Flow.account_name}】_流量底表2.csv", index_label=["日期"])
+        log.success(f"{Flow.export_csv_floader}/【{Flow.account_name}】_流量底表2.csv 保存成功")
     except Exception as e:
         print(e)
-        log.error(f"{Flow.account_name}_[流量表2].csv ==> 保存失败:\n{e}")
+        log.error(f"{Flow.export_csv_floader}/【{Flow.account_name}】_流量底表2.csv 保存失败:\n{e}")
 
 
-def save_sheet1():
+def save1():
     PV = Flow.get_PV()
     自然PV = Flow.get_自然PV()
     自然PV_率 = (自然PV / PV).apply(lambda x: format(x, ".9%")).dropna().replace(0, "0.00%")
@@ -387,16 +427,36 @@ def save_sheet1():
             .replace("inf", 0)
             .sort_index()
         )
-        export.to_csv(f"【{Flow.account_name}】_流量1.csv", index_label=["日期"])
-        log.success(f"{Flow.account_name}_流量1.csv ==> 保存成功")
-        print(f"{Flow.account_name}_流量1.csv ==> 保存成功")
+        export.sort_index().to_csv(f"{Flow.export_csv_floader}/【{Flow.account_name}】_流量底表1.csv", index_label=["日期"])
+        log.success(f"{Flow.export_csv_floader}/【{Flow.account_name}】_流量底表1.csv 保存成功")
     except Exception as e:
         print(e)
-        log.error(f"{Flow.account_name}_[流量表1].csv ==> 保存失败:\n{e}")
+        log.error(f"{Flow.export_csv_floader}/【{Flow.account_name}】_流量底表1.csv保存失败:\n{e}")
+
+
+def merg_import(folder_path: str = Flow.export_csv_floader):
+    """合并表格
+
+    Args:
+        folder_path (str, optional): _description_. Defaults to Daily.export_csv_floader.
+    """
+    log.info("开始合并表格")
+    # 读取指定文件夹下的所有csv文件
+    try:
+        csv_files = [f for f in os.listdir(folder_path) if f.endswith(".csv")]
+        # 将每个csv文件的数据作为sheet，并新增到整个文件中
+        with pd.ExcelWriter(f"{Flow.class_name}.xlsx", engine="openpyxl") as writer:
+            for csv_file in csv_files:
+                csv_path = os.path.join(folder_path, csv_file)
+                temp_df = pd.read_csv(csv_path)
+                temp_df.to_excel(writer, sheet_name=csv_file[:31], index=False)
+        log.success("合并表格完成")
+    except Exception as e:
+        log.error(f"合并表格失败/n:{e}")
 
 
 if __name__ == "__main__":
-    save_sheet1()
-    save_sheet2()
+    save1()
+    save2()
     print("需要留意日期是否完整,如果缺失需要手动补充日期填充0\n,全选表格,ctrl+g,选择空的,输入0,按ctrl+enter补充")
     input("按任意键退出")

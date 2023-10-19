@@ -3,28 +3,70 @@ import pandas as pd
 from logs import logger as log
 
 
-class Daily:
-    # 读取文件夹下面的csv文件
-    current_time = str(pd.Timestamp.now())
+try:
+    input("欢迎使[店播日报]用取数工具\n按Enter按键继续.....\n")
+    print("需要用到的底表如下-请放在csv文件夹下")
+    print("scrm_dy_report_app_fxg_live_detail_day.csv")
+    print("scrm_dy_report_app_fxg_live_list_details_traffic_time_day.csv")
+    print("scrm_dy_report_app_fxg_live_growth_conversion_funnel_day.csv")
+    print("scrm_dy_report_app_fxg_live_list_details_grouping_day.csv")
+    print("scrm_dy_report_app_fxg_live_list_details_indicators_day.csv")
+    print("scrm_dy_report_app_fxg_live_analysis_live_details_all_day.csv")
+    print("scrm_ocean_daily.csv")
+    print("scrm_dy_report_app_fxg_live_detail_core_interaction_key_day.csv")
+    print("scrm_dy_report_app_fxg_live_crowd_data_day.csv")
+    print("scrm_dy_report_app_fxg_live_detail_person_day.csv")
+    print("scrm_dy_report_app_fxg_live_list_details_download_day.csv")
+    print("scrm_dy_report_app_fxg_fly_live_detail_first_prchase_day.csv")
+    input("确认文件夹下面有以上文件\n按Enter按键继续.....\n")
+    _account_name = input("请输入account_name：")
+    """账号名称"""
+    _s_date = input("请输入开始日期：(eg:2023-08-01)")
+    """开始日期"""
+    _e_date = input("请输入结束日期：(eg:2023-09-30)")
+    """结束日期"""
+except KeyboardInterrupt:
+    _account_name = None
+    """账号名称"""
+    _s_date = None
+    """开始日期"""
+    _e_date = None
+    print("\n用户终止程序")
 
+
+class Daily:
+    class_name = "店播日报"
+    current_time = str(pd.Timestamp.now())
     log.debug("-" * 30 + "| " + current_time + " |" + "-" * 30)
-    account_name = "YSL圣罗兰美妆送礼空间"
-    start_date = "2023-08-01"
-    end_date = "2023-09-30"
+
+    account_name = _account_name
+    if account_name is None or account_name == "":
+        log.error("账号名称为空或者错误，程序退出")
+        exit()
+    start_date = _s_date
+    end_date = _e_date
     baiku_date_type = "bizDate"
+    """百库底表(大部分)通用日期字段: bizDate"""
+    qianchuan_date_type = "date"
+    """千川底表(大部分)通用日期字段: date"""
+    baseFload = "csv"
+    """底表父文件夹"""
     csvPerfix = "scrm_dy_report_app_fxg_"
-    df1 = pd.read_csv(f"csv/{csvPerfix}live_detail_day.csv")
-    df2 = pd.read_csv(f"csv/{csvPerfix}live_list_details_traffic_time_day.csv")
-    df3 = pd.read_csv(f"csv/{csvPerfix}live_growth_conversion_funnel_day.csv")
-    df4 = pd.read_csv(f"csv/{csvPerfix}live_list_details_grouping_day.csv")
-    df5 = pd.read_csv(f"csv/{csvPerfix}live_list_details_indicators_day.csv")
-    df6 = pd.read_csv(f"csv/{csvPerfix}live_analysis_live_details_all_day.csv")
-    df7 = pd.read_csv("csv/scrm_ocean_daily.csv")
-    df8 = pd.read_csv(f"csv/{csvPerfix}live_detail_core_interaction_key_day.csv")
-    df9 = pd.read_csv(f"csv/{csvPerfix}live_crowd_data_day.csv")
-    df10 = pd.read_csv(f"csv/{csvPerfix}live_detail_person_day.csv")
-    df11 = pd.read_csv(f"csv/{csvPerfix}live_list_details_download_day.csv")
-    df12 = pd.read_csv(f"csv/{csvPerfix}fly_live_detail_first_prchase_day.csv")
+    """百库底表前缀"""
+    export_csv_floader = f"./export_{class_name}"
+    """导出文件夹"""
+    df1 = pd.read_csv(f"{baseFload}/{csvPerfix}live_detail_day.csv")
+    df2 = pd.read_csv(f"{baseFload}/{csvPerfix}live_list_details_traffic_time_day.csv")
+    df3 = pd.read_csv(f"{baseFload}/{csvPerfix}live_growth_conversion_funnel_day.csv")
+    df4 = pd.read_csv(f"{baseFload}/{csvPerfix}live_list_details_grouping_day.csv")
+    df5 = pd.read_csv(f"{baseFload}/{csvPerfix}live_list_details_indicators_day.csv")
+    df6 = pd.read_csv(f"{baseFload}/{csvPerfix}live_analysis_live_details_all_day.csv")
+    df7 = pd.read_csv(f"{baseFload}/scrm_ocean_daily.csv")
+    df8 = pd.read_csv(f"{baseFload}/{csvPerfix}live_detail_core_interaction_key_day.csv")
+    df9 = pd.read_csv(f"{baseFload}/{csvPerfix}live_crowd_data_day.csv")
+    df10 = pd.read_csv(f"{baseFload}/{csvPerfix}live_detail_person_day.csv")
+    df11 = pd.read_csv(f"{baseFload}/{csvPerfix}live_list_details_download_day.csv")
+    df12 = pd.read_csv(f"{baseFload}/{csvPerfix}fly_live_detail_first_prchase_day.csv")
     dfs = {
         "live_detail_day": df1,
         "live_list_details_traffic_traffic_time_day": df2,
@@ -39,6 +81,7 @@ class Daily:
         "live_list_details_download_day": df11,
         "fly_live_detail_first_prchase_day": df12,
     }
+    """需要导出的完整底表"""
     log.debug("init data import ...")
     for df_key, df in dfs.items():
         log.debug(f"import {df_key}")
@@ -47,12 +90,14 @@ class Daily:
             dfs[df_key] = df[(df["author_nick_name"] == account_name) & (df["biz_date"].between(start_date, end_date))].sort_values(by=["biz_date"])
         elif df_key == "scrm_ocean_daily":
             log.debug("导入千川数据")
-            dfs[df_key] = df[(df["account_name"] == account_name) & (df["marketing_goal"] == "LIVE_PROM_GOODS") & (df["date"].between(start_date, end_date))].sort_values(by=["date"])
+            dfs[df_key] = df[(df["account_name"] == account_name) & (df["marketing_goal"] == "LIVE_PROM_GOODS") & (df[qianchuan_date_type].between(start_date, end_date))].sort_values(
+                by=[qianchuan_date_type]
+            )
         elif df_key == "fly_live_detail_first_prchase_day":
             if "圣罗兰" in account_name:
                 account_name = "YSL圣罗兰美妆官方旗舰店"
             elif "兰蔻" in account_name:
-                account_name = "兰蔻LANCOME官方旗舰店"
+                account_name = "兰蔻LANCOME官方旗舰店"  # 此处的date请不要使用qianchuan_date_type，以免产生歧义
             dfs[df_key] = df[(df["store_name"] == account_name) & (df["date"].between(start_date, end_date)) & (df["account_type"] == "渠道账号")].sort_values(by="date")
         elif df_key == "live_list_details_traffic_traffic_time_day":  # 此处需要过滤部分条件
             dfs[df_key] = df[
@@ -67,9 +112,12 @@ class Daily:
             dfs[df_key] = df[(df["account_name"] == account_name) & (df[baiku_date_type].between(start_date, end_date))].sort_values(by=baiku_date_type)
     log.debug("data import success !")
 
-    def export_import_csv(dfs=dfs):
-        """导出csv文件"""
-        export_folder = "./export_日报"
+    def export_import_csv(dfs=dfs, export_folder=export_csv_floader):
+        """导出csv文件:
+        Args:
+            dfs (_type_, optional): 被类处理后的dfs字典. Defaults to dfs.
+            export_folder (_type_, optional): 指定的导出文件夹. Defaults to export_csv_floader.
+        """
         if not os.path.exists(export_folder):
             os.makedirs(export_folder)
         for df_key, df in dfs.items():
@@ -95,6 +143,7 @@ class Daily:
     人均观看时长_秒 = "averageViewingTime"
 
     def get_GMV(df=dfs["live_detail_day"], sum_filed=直播间成交金额, date_type=baiku_date_type):
+        log.debug(f"\n{df}")
         return df.groupby(date_type)[sum_filed].sum()
 
     def get_指定观看人次PV(df=dfs["live_list_details_traffic_traffic_time_day"], sum_filed=观看人次, date_type=baiku_date_type, flowChannel=None):
@@ -144,13 +193,13 @@ class Daily:
         log.debug(f"\n{df}")
         return df.groupby(date_type)[sum_filed[0]].sum()
 
-    def get_投放金额(df=dfs["scrm_ocean_daily"], sum_filed=[消耗]):
+    def get_投放金额(df=dfs["scrm_ocean_daily"], sum_filed=[消耗], date_type=qianchuan_date_type):
         log.debug(f"\n{df}")
-        return df.groupby("date")[sum_filed[0]].sum()
+        return df.groupby(date_type)[sum_filed[0]].sum()
 
-    def get_投放转化金额(df=dfs["scrm_ocean_daily"], sum_filed=[成交订单金额]):
+    def get_投放转化金额(df=dfs["scrm_ocean_daily"], sum_filed=[成交订单金额], date_type=qianchuan_date_type):
         log.debug(f"\n{df}")
-        return df.groupby("date")[sum_filed[0]].sum()
+        return df.groupby(date_type)[sum_filed[0]].sum()
 
     def get_新增粉丝数(df=dfs["live_detail_core_interaction_key_day"], sum_filed=[新增粉丝数], date_type=baiku_date_type):
         log.debug(f"\n{df}")
@@ -193,7 +242,8 @@ class Daily:
         return result.astype("float64")
 
 
-def save_daily():
+def save():
+    log.info("开始导出底表")
     GMV_ACH_直播期间成交金额_ = Daily.get_GMV()
     GMV_ACH_直播间成交金额_ = GMV_ACH_直播期间成交金额_
     Campaign = pd.Series(0, index=GMV_ACH_直播期间成交金额_.index)
@@ -308,35 +358,36 @@ def save_daily():
         .sort_index()
     )
     try:
-        export.to_csv("export_日报_by_底表.csv", index_label=["日期"])
-        log.success("导出成功")
+        export.to_csv(f"{Daily.export_csv_floader}/【{Daily.account_name}】_日报底表.csv", index_label=["日期"])
+        log.success(f"{Daily.export_csv_floader}/【{Daily.account_name}】_日报底表.csv")
     except Exception as e:
-        log.error(f"导出失败:{e}")
+        log.error(f"{Daily.export_csv_floader}/【{Daily.account_name}】_日报底表.csv 导出失败/n:{e}")
     Daily.export_import_csv()
 
 
-def merg_import(folder_path: str = "export_日报", excel_file: str = None):
-    """合并导入依赖底表
+def merg_import(folder_path: str = Daily.export_csv_floader):
+    """合并表格
 
     Args:
-        folder_path (str, optional): _description_. Defaults to "export_人群".
-        excel_file (str, optional): _description_. Defaults to None.
+        folder_path (str, optional): _description_. Defaults to Daily.export_csv_floader.
     """
+    log.info("开始合并表格")
     # 读取指定文件夹下的所有csv文件
-    csv_files = [f for f in os.listdir(folder_path) if f.endswith(".csv")]
-    # 将每个csv文件的数据作为sheet，并新增到整个文件中
-    with pd.ExcelWriter("new.xlsx", engine="openpyxl") as writer:
-        with pd.ExcelFile(excel_file) as xls:
-            sheet_names = xls.sheet_names
-            for sheet_name in sheet_names:
-                temp_df = xls.parse(sheet_name)
-                temp_df.to_excel(writer, sheet_name=sheet_name, index=False)
-        for csv_file in csv_files:
-            csv_path = os.path.join(folder_path, csv_file)
-            temp_df = pd.read_csv(csv_path)
-            temp_df.to_excel(writer, sheet_name=csv_file[:31], index=False)
+    try:
+        csv_files = [f for f in os.listdir(folder_path) if f.endswith(".csv")]
+        # 将每个csv文件的数据作为sheet，并新增到整个文件中
+        with pd.ExcelWriter(f"{Daily.class_name}.xlsx", engine="openpyxl") as writer:
+            for csv_file in csv_files:
+                csv_path = os.path.join(folder_path, csv_file)
+                temp_df = pd.read_csv(csv_path)
+                temp_df.to_excel(writer, sheet_name=csv_file[:31], index=False)
+        log.success("合并表格完成")
+    except Exception as e:
+        log.error(f"合并表格失败/n:{e}")
 
 
-观看人次PV = Daily.get_指定观看人次PV()
-# save_daily()
-# merg_import(excel_file='【抖音看板】日报_2023-08-01_2023-09-30.xlsx')
+if __name__ == "__main__":
+    save()
+    merg_import()
+    print("需要留意日期是否完整,如果缺失需要手动补充日期填充0\n,全选表格,ctrl+g,选择空的,输入0,按ctrl+enter补充")
+    input("按任意键退出")
