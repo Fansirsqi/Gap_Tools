@@ -1,5 +1,15 @@
 # Gap with Excel file
 
+## 设置环境变量
+`$POSH_THEMES_PATH = 'C:\Users\HPLaptop-14S\AppData\Local\Programs\oh-my-posh\themes'`
+## 设置好了可以直接搞
+`oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/jandedobbeleer.omp.json" | Invoke-Expression`
+
+`oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/M365Princess.omp.json" | Invoke-Expression` 365公主
+
+## 没设置要手动定义，一样的道理
+`oh-my-posh init pwsh --config 'C:\Users\HPLaptop-14S\AppData\Local\Programs\oh-my-posh\themes\stelbent-compact.minimal.omp.json' | Invoke-Expression`
+
 ## 1. 如何开始
 
 ```bash

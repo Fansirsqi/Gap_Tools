@@ -1,47 +1,76 @@
 import os
 import pandas as pd
-from logs import logger as log
+from sys import stdout
+from loguru import logger
 
 
-try:
-    input("欢迎使[店播日报]用取数工具\n按Enter按键继续.....\n")
-    print("需要用到的底表如下-请放在csv文件夹下")
-    print("scrm_dy_report_app_fxg_live_detail_day.csv")
-    print("scrm_dy_report_app_fxg_live_list_details_traffic_time_day.csv")
-    print("scrm_dy_report_app_fxg_live_growth_conversion_funnel_day.csv")
-    print("scrm_dy_report_app_fxg_live_list_details_grouping_day.csv")
-    print("scrm_dy_report_app_fxg_live_list_details_indicators_day.csv")
-    print("scrm_dy_report_app_fxg_live_analysis_live_details_all_day.csv")
-    print("scrm_ocean_daily.csv")
-    print("scrm_dy_report_app_fxg_live_detail_core_interaction_key_day.csv")
-    print("scrm_dy_report_app_fxg_live_crowd_data_day.csv")
-    print("scrm_dy_report_app_fxg_live_detail_person_day.csv")
-    print("scrm_dy_report_app_fxg_live_list_details_download_day.csv")
-    print("scrm_dy_report_app_fxg_fly_live_detail_first_prchase_day.csv")
-    input("确认文件夹下面有以上文件\n按Enter按键继续.....\n")
-    _account_name = input("请输入account_name：")
+IS_DEBUG = True
+"""调试模式"""
+
+logger.remove()
+logger.add(
+    stdout,
+    level="INFO",
+    # encoding="utf-8",
+    colorize=True,
+    format="<g>{time:MM-DD HH:mm:ss}</g> <level><w>[</w>{level}<w>]</w></level> | {message}",
+)
+
+logger.add(
+    "日报.log",
+    encoding="utf-8",
+    format="<g>{time:MM-DD HH:mm:ss}</g> <level><w>[</w>{level}<w>]</w></level> | {message}",
+)
+
+
+if IS_DEBUG:
+    _account_name = "欧莱雅集团小美盒"
     """账号名称"""
-    _s_date = input("请输入开始日期：(eg:2023-08-01)")
+    _s_date = "2023-07-01"
     """开始日期"""
-    _e_date = input("请输入结束日期：(eg:2023-09-30)")
+    _e_date = "2023-09-30"
     """结束日期"""
-except KeyboardInterrupt:
-    _account_name = None
-    """账号名称"""
-    _s_date = None
-    """开始日期"""
-    _e_date = None
-    print("\n用户终止程序")
+else:
+    try:
+        input("欢迎使[店播日报]用取数工具\n按Enter按键继续.....\n")
+        print("需要用到的底表如下-请放在csv文件夹下")
+        print("scrm_dy_report_app_fxg_live_detail_day.csv")
+        print("scrm_dy_report_app_fxg_live_list_details_traffic_time_day.csv")
+        print("scrm_dy_report_app_fxg_live_growth_conversion_funnel_day.csv")
+        print("scrm_dy_report_app_fxg_live_list_details_grouping_day.csv")
+        print("scrm_dy_report_app_fxg_live_list_details_indicators_day.csv")
+        print("scrm_dy_report_app_fxg_live_analysis_live_details_all_day.csv")
+        print("scrm_ocean_daily.csv")
+        print("scrm_dy_report_app_fxg_live_detail_core_interaction_key_day.csv")
+        print("scrm_dy_report_app_fxg_live_crowd_data_day.csv")
+        print("scrm_dy_report_app_fxg_live_detail_person_day.csv")
+        print("scrm_dy_report_app_fxg_live_list_details_download_day.csv")
+        print("scrm_dy_report_app_fxg_fly_live_detail_first_prchase_day.csv")
+        input("确认文件夹下面有以上文件\n按Enter按键继续.....\n")
+        _account_name = input("请输入account_name：")
+        """账号名称"""
+        _s_date = input("请输入开始日期：(eg:2023-08-01)")
+        """开始日期"""
+        _e_date = input("请输入结束日期：(eg:2023-09-30)")
+        """结束日期"""
+    except KeyboardInterrupt:
+        _account_name = None
+        """账号名称"""
+        _s_date = None
+        """开始日期"""
+        _e_date = None
+        print("\n用户终止程序")
+        input("按任意键退出")
 
 
 class Daily:
     class_name = "店播日报"
     current_time = str(pd.Timestamp.now())
-    log.debug("-" * 30 + "| " + current_time + " |" + "-" * 30)
+    logger.debug("-" * 30 + "| " + current_time + " |" + "-" * 30)
 
     account_name = _account_name
     if account_name is None or account_name == "":
-        log.error("账号名称为空或者错误，程序退出")
+        logger.error("账号名称为空或者错误，程序退出")
         exit()
     start_date = _s_date
     end_date = _e_date
@@ -69,7 +98,7 @@ class Daily:
     df12 = pd.read_csv(f"{baseFload}/{csvPerfix}fly_live_detail_first_prchase_day.csv")
     dfs = {
         "live_detail_day": df1,
-        "live_list_details_traffic_traffic_time_day": df2,
+        "live_list_details_traffic_time_day": df2,
         "live_growth_conversion_funnel_day": df3,
         "live_list_details_grouping_day": df4,
         "live_list_details_indicators_day": df5,
@@ -82,24 +111,41 @@ class Daily:
         "fly_live_detail_first_prchase_day": df12,
     }
     """需要导出的完整底表"""
-    log.debug("init data import ...")
+    logger.debug("init data import ...")
     for df_key, df in dfs.items():
-        log.debug(f"import {df_key}")
+        logger.debug(f"导入 {df_key}")
         if df_key == "live_analysis_live_details_all_day":
-            log.debug("导入百库/ODP数据")
+            df["biz_date"] = pd.to_datetime(df["biz_date"])
             dfs[df_key] = df[(df["author_nick_name"] == account_name) & (df["biz_date"].between(start_date, end_date))].sort_values(by=["biz_date"])
         elif df_key == "scrm_ocean_daily":
-            log.debug("导入千川数据")
+            df[qianchuan_date_type] = pd.to_datetime(df[qianchuan_date_type])
             dfs[df_key] = df[(df["account_name"] == account_name) & (df["marketing_goal"] == "LIVE_PROM_GOODS") & (df[qianchuan_date_type].between(start_date, end_date))].sort_values(
                 by=[qianchuan_date_type]
             )
         elif df_key == "fly_live_detail_first_prchase_day":
+            df["date"] = pd.to_datetime(df["date"])
             if "圣罗兰" in account_name:
                 account_name = "YSL圣罗兰美妆官方旗舰店"
             elif "兰蔻" in account_name:
                 account_name = "兰蔻LANCOME官方旗舰店"  # 此处的date请不要使用qianchuan_date_type，以免产生歧义
-            dfs[df_key] = df[(df["store_name"] == account_name) & (df["date"].between(start_date, end_date)) & (df["account_type"] == "渠道账号")].sort_values(by="date")
-        elif df_key == "live_list_details_traffic_traffic_time_day":  # 此处需要过滤部分条件
+            elif "小美盒" in account_name:
+                account_name = "欧莱雅集团小美盒官方旗舰店"
+            elif "科颜氏" in account_name:
+                account_name = "科颜氏KIEHL'S官方旗舰店"
+            elif "碧欧泉" in account_name:
+                account_name = "碧欧泉BIOTHERM官方旗舰店"
+            elif "HR赫莲" in account_name:
+                account_name = "HR赫莲娜官方旗舰店"
+            elif "植村秀" in account_name:
+                account_name = "植村秀shu uemura官方旗舰店"
+
+            dfs[df_key] = df[
+                (df["store_name"] == account_name) 
+                & (df["date"].between(start_date, end_date)) 
+                # & (df["account_type"] == "渠道账号")
+                ].sort_values(by="date")
+        elif df_key == "live_list_details_traffic_time_day":  # 此处需要过滤部分条件
+            df[baiku_date_type] = pd.to_datetime(df[baiku_date_type])
             dfs[df_key] = df[
                 (df["account_name"] == account_name)
                 & (df["flowChannel"] != "整体")
@@ -108,9 +154,10 @@ class Daily:
                 & (df[baiku_date_type].between(start_date, end_date))
             ].sort_values(by=baiku_date_type)
         else:
-            log.debug("导入百库/ODP数据")
+            df[baiku_date_type] = pd.to_datetime(df[baiku_date_type])
             dfs[df_key] = df[(df["account_name"] == account_name) & (df[baiku_date_type].between(start_date, end_date))].sort_values(by=baiku_date_type)
-    log.debug("data import success !")
+
+    logger.debug("data import success !")
 
     def export_import_csv(dfs=dfs, export_folder=export_csv_floader):
         """导出csv文件:
@@ -121,7 +168,8 @@ class Daily:
         if not os.path.exists(export_folder):
             os.makedirs(export_folder)
         for df_key, df in dfs.items():
-            df.to_csv(f"{export_folder}/{df_key}.csv")
+            df.to_csv(f"{export_folder}/{df_key}.csv", index=False)
+        logger.debug("dfs[csv] all export success !")
 
     直播间成交金额 = "roomTransactionAmount"
     粉丝成单占比 = "old_fans_pay_ucnt_ratio"
@@ -143,29 +191,29 @@ class Daily:
     人均观看时长_秒 = "averageViewingTime"
 
     def get_GMV(df=dfs["live_detail_day"], sum_filed=直播间成交金额, date_type=baiku_date_type):
-        log.debug(f"\n{df}")
+        logger.debug(f"\n{df}")
         return df.groupby(date_type)[sum_filed].sum()
 
-    def get_指定观看人次PV(df=dfs["live_list_details_traffic_traffic_time_day"], sum_filed=观看人次, date_type=baiku_date_type, flowChannel=None):
-        log.debug(f"\n{df}")
+    def get_指定观看人次PV(df=dfs["live_list_details_traffic_time_day"], sum_filed=观看人次, date_type=baiku_date_type, flowChannel=None):
+        logger.debug(f"\n{df}")
         if flowChannel is not None:
             df = df[df["flowChannel"] == flowChannel]
         return df.groupby(date_type)[sum_filed].sum()
 
     def get_成交人数(df=dfs["live_growth_conversion_funnel_day"], sum_filed=成交人数, date_type=baiku_date_type):
-        log.debug(f"\n{df}")
+        logger.debug(f"\n{df}")
         return df.groupby(date_type)[sum_filed].sum()
 
     def get_观看人数(df=dfs["live_list_details_grouping_day"], sum_filed=观看人数, date_type=baiku_date_type):
-        log.debug(f"\n{df}")
+        logger.debug(f"\n{df}")
         return df.groupby(date_type)[sum_filed].sum()
 
     def get_最高在线人数(df=dfs["live_list_details_indicators_day"], sum_filed=最高在线人数, date_type=baiku_date_type):
-        log.debug(f"\n{df}")
+        logger.debug(f"\n{df}")
         return df.groupby(date_type)[sum_filed].max()
 
     def get_平均在线人数(df=dfs["live_analysis_live_details_all_day"], sum_filed=[直播时长_分钟, 平均在线人数]):
-        log.debug(f"\n{df}")
+        logger.debug(f"\n{df}")
         ndf1 = df.loc[:, ["biz_date", sum_filed[0], sum_filed[1]]]
         ndf1.loc[:, "TS"] = ndf1[sum_filed[0]] * ndf1[sum_filed[1]]
         ndf2 = ndf1.groupby("biz_date")[sum_filed[0]].sum()
@@ -174,55 +222,56 @@ class Daily:
         return ndf3
 
     def get_直播时长_分钟(df=dfs["live_analysis_live_details_all_day"], sum_filed=[直播时长_分钟]):
-        log.debug(f"\n{df}")
+        logger.debug(f"\n{df}")
         return df.groupby("biz_date")[sum_filed[0]].sum().apply(lambda x: format(x, ".0f"))
 
     def get_外层CTR(df1=dfs["live_growth_conversion_funnel_day"], df2=dfs["live_list_details_grouping_day"], sum_filed=[观看人数, 直播间曝光人数], date_type=baiku_date_type):
-        log.debug(f"\n{df1}")
-        log.debug(f"\n{df2}")
+        logger.debug(f"\n{df1}")
+        logger.debug(f"\n{df2}")
         ndf1 = df2.groupby(date_type)[sum_filed[0]].sum()  #!!!
         ndf2 = df1.groupby(date_type)[sum_filed[1]].sum()  #!!!
         ndf3 = (ndf1 / ndf2).apply(lambda x: format(x, ".9%"))
         return ndf3
 
     def get_商品点击人数(df=dfs["live_growth_conversion_funnel_day"], sum_filed=[商品点击人数], date_type=baiku_date_type):
-        log.debug(f"\n{df}")
+        logger.debug(f"\n{df}")
         return df.groupby(date_type)[sum_filed[0]].sum()
 
     def get_曝光人数(df=dfs["live_growth_conversion_funnel_day"], sum_filed=[直播间曝光人数], date_type=baiku_date_type):
-        log.debug(f"\n{df}")
+        logger.debug(f"\n{df}")
         return df.groupby(date_type)[sum_filed[0]].sum()
 
     def get_投放金额(df=dfs["scrm_ocean_daily"], sum_filed=[消耗], date_type=qianchuan_date_type):
-        log.debug(f"\n{df}")
+        logger.debug(f"\n{df}")
         return df.groupby(date_type)[sum_filed[0]].sum()
 
     def get_投放转化金额(df=dfs["scrm_ocean_daily"], sum_filed=[成交订单金额], date_type=qianchuan_date_type):
-        log.debug(f"\n{df}")
+        logger.debug(f"\n{df}")
         return df.groupby(date_type)[sum_filed[0]].sum()
 
     def get_新增粉丝数(df=dfs["live_detail_core_interaction_key_day"], sum_filed=[新增粉丝数], date_type=baiku_date_type):
-        log.debug(f"\n{df}")
+        logger.debug(f"\n{df}")
         return df.groupby(date_type)[sum_filed[0]].sum()
 
     def get_访问粉丝数(df=dfs["live_crowd_data_day"], sum_filed=[直播间观看人数, 粉丝占比], date_type=baiku_date_type):
-        log.debug(f"\n{df}")
+        logger.debug(f"访问粉丝数:\n{df}")
         ndf1 = df.loc[:, [date_type, sum_filed[0], sum_filed[1]]]
         ndf1.loc[:, "访问粉丝数"] = ndf1[sum_filed[0]] * ndf1[sum_filed[1]] * 0.01
+        logger.debug(ndf1)
         ndf1 = ndf1.groupby(date_type)["访问粉丝数"].sum().apply(lambda x: format(x, ".2f")).astype("float64")
         return ndf1
 
     def get_购买粉丝数(df=dfs["live_detail_person_day"], sum_filed=[成交人群分析_粉丝维度_粉丝人数], date_type=baiku_date_type):
-        log.debug(f"\n{df}")
+        logger.debug(f"\n{df}")
         return df.groupby(date_type)[sum_filed[0]].sum()
 
     def get_评论次数(df=dfs["live_list_details_download_day"], sum_filed=[评论次数], date_type=baiku_date_type):
-        log.debug(f"\n{df}")
+        logger.debug(f"\n{df}")
         return df.groupby(date_type)[sum_filed[0]].sum()
 
     def get_人均观看时长(df1=dfs["live_detail_core_interaction_key_day"], df2=dfs["live_list_details_grouping_day"], sum_filed=[人均观看时长_秒, 观看人数], date_type=baiku_date_type):
-        log.debug(f"\n{df1}")
-        log.debug(f"\n{df2}")
+        logger.debug(f"\n{df1}")
+        logger.debug(f"\n{df2}")
         ndf1 = df1.set_index("studioId")[[sum_filed[0]]]
         ndf2 = df2.set_index("studioId")[[sum_filed[1], date_type]]
         ndfx = Daily.get_观看人数()
@@ -232,8 +281,8 @@ class Daily:
         return ndf3
 
     def get_粉丝成交GMV(df1=dfs["live_detail_day"], df2=dfs["fly_live_detail_first_prchase_day"], sum_filed1=直播间成交金额, sum_filed2=粉丝成单占比):
-        log.debug(f"\n{df1}")
-        log.debug(f"\n{df2}")
+        logger.debug(f"\n{df1}")
+        logger.debug(f"\n{df2}")
         ndf1 = df1.set_index("studioId")[[sum_filed1]]
         ndf2 = df2.set_index("live_room_id")[[sum_filed2, "date"]]
         result = pd.concat([ndf1, ndf2], axis=1)
@@ -243,7 +292,7 @@ class Daily:
 
 
 def save():
-    log.info("开始导出底表")
+    logger.info("开始导出底表")
     GMV_ACH_直播期间成交金额_ = Daily.get_GMV()
     GMV_ACH_直播间成交金额_ = GMV_ACH_直播期间成交金额_
     Campaign = pd.Series(0, index=GMV_ACH_直播期间成交金额_.index)
@@ -355,14 +404,14 @@ def save():
         .replace("nan%", 0)
         .replace("nan", 0)
         .replace("inf%", 0)
+        .replace("inf", 0)
         .sort_index()
     )
     try:
         export.to_csv(f"{Daily.export_csv_floader}/【{Daily.account_name}】_日报底表.csv", index_label=["日期"])
-        log.success(f"{Daily.export_csv_floader}/【{Daily.account_name}】_日报底表.csv")
+        logger.success(f"{Daily.export_csv_floader}/【{Daily.account_name}】_日报底表.csv")
     except Exception as e:
-        log.error(f"{Daily.export_csv_floader}/【{Daily.account_name}】_日报底表.csv 导出失败/n:{e}")
-    Daily.export_import_csv()
+        logger.error(f"{Daily.export_csv_floader}/【{Daily.account_name}】_日报底表.csv 导出失败/n:{e}")
 
 
 def merg_import(folder_path: str = Daily.export_csv_floader):
@@ -371,23 +420,36 @@ def merg_import(folder_path: str = Daily.export_csv_floader):
     Args:
         folder_path (str, optional): _description_. Defaults to Daily.export_csv_floader.
     """
-    log.info("开始合并表格")
+    logger.info("开始合并表格")
+    output_file = f"{Daily.export_csv_floader}/{Daily.class_name}.xlsx"
+
     # 读取指定文件夹下的所有csv文件
     try:
         csv_files = [f for f in os.listdir(folder_path) if f.endswith(".csv")]
+
+        # 如果文件不存在，创建一个新文件
+        if not os.path.exists(output_file):
+            pd.DataFrame().to_excel(output_file, index=False)
+
         # 将每个csv文件的数据作为sheet，并新增到整个文件中
-        with pd.ExcelWriter(f"{Daily.class_name}.xlsx", engine="openpyxl") as writer:
+        with pd.ExcelWriter(output_file, engine="openpyxl") as writer:
             for csv_file in csv_files:
                 csv_path = os.path.join(folder_path, csv_file)
                 temp_df = pd.read_csv(csv_path)
                 temp_df.to_excel(writer, sheet_name=csv_file[:31], index=False)
-        log.success("合并表格完成")
+        logger.success("合并表格完成")
     except Exception as e:
-        log.error(f"合并表格失败/n:{e}")
+        logger.error(f"合并表格失败\n{e}")
 
 
 if __name__ == "__main__":
-    save()
-    merg_import()
-    print("需要留意日期是否完整,如果缺失需要手动补充日期填充0\n,全选表格,ctrl+g,选择空的,输入0,按ctrl+enter补充")
-    input("按任意键退出")
+    if IS_DEBUG:
+        GMV_ACH_直播期间成交金额_ = Daily.get_GMV()
+        print(GMV_ACH_直播期间成交金额_)
+        pass
+    else:
+        Daily.export_import_csv()
+        save()
+        merg_import()
+        print("需要留意日期是否完整,如果缺失需要手动补充日期填充0\n,全选表格,ctrl+g,选择空的,输入0,按ctrl+enter补充")
+        input("按任意键退出")

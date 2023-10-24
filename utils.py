@@ -1,8 +1,6 @@
 import os
 import glob
 import platform
-import os
-import random
 
 
 class DotDict(dict):
