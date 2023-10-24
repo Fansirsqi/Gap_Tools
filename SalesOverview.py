@@ -67,7 +67,7 @@ class SalesOverview:
     """百库底表(大部分)通用日期字段: bizDate"""
     qianchuan_date_type = "date"
     """千川底表(大部分)通用日期字段: date"""
-    baseFload = "csv"
+    baseFload = r"C:\Users\Administrator\OneDrive\Gap文档\csv"
     """底表父文件夹"""
     csvPerfix = "scrm_dy_report_app_fxg_"
     """百库底表前缀"""
@@ -75,7 +75,7 @@ class SalesOverview:
     """导出文件夹"""
     df1 = pd.read_csv(f"{baseFload}/{csvPerfix}live_list_details_traffic_time_day.csv")
     df2 = pd.read_csv(f"{baseFload}/{csvPerfix}live_detail_day.csv")
-    df3 = pd.read_csv("csv/scrm_ocean_daily.csv")
+    df3 = pd.read_csv(f"{baseFload}/scrm_ocean_daily.csv")
     df4 = pd.read_csv(f"{baseFload}/{csvPerfix}live_growth_conversion_funnel_day.csv")
     df5 = pd.read_csv(f"{baseFload}/{csvPerfix}live_list_details_grouping_day.csv")
     df6 = pd.read_csv(f"{baseFload}/{csvPerfix}index_business_overview_day.csv")
@@ -213,6 +213,7 @@ class SalesOverview:
 
 
 def saver_():
+    SalesOverview.export_import_csv()
     GMV_ACH_直播期间成交金额_ = SalesOverview.get_5GMV()
     GMV_ACH_直播间成交金额_ = GMV_ACH_直播期间成交金额_
     观看人次PV = SalesOverview.get_指定观看人次PV()
@@ -260,13 +261,15 @@ def saver_():
         logger.error(f"{SalesOverview.export_csv_floader}/【{SalesOverview.account_name}】_销售概览底表5.csv 导出失败/n:{e}")
 
 
-GMV1 = SalesOverview.get_sheet1(sum_filed=[[SalesOverview.整体视角_成交金额]])
-自营视角_成交金额 = SalesOverview.get_sheet1(sum_filed=[[SalesOverview.自营视角_成交金额]])
-退款金额_元_ = SalesOverview.get_sheet1(sum_filed=[[SalesOverview.整体视角_退款金额]])
-成交订单数 = SalesOverview.get_sheet1(sum_filed=[[SalesOverview.整体视角_成交订单数]])
-成交人数 = SalesOverview.get_sheet1(sum_filed=[[SalesOverview.整体视角_成交人数]])
-商品曝光次数 = SalesOverview.get_sheet1(sum_filed=[[SalesOverview.商品曝光次数]])
-商品点击次数 = SalesOverview.get_sheet1_商品点击次数()
-商品点击率_次数_ = SalesOverview.get_sheet1_商品点击率_次数_()
+# GMV1 = SalesOverview.get_sheet1(sum_filed=[[SalesOverview.整体视角_成交金额]])
+# 自营视角_成交金额 = SalesOverview.get_sheet1(sum_filed=[[SalesOverview.自营视角_成交金额]])
+# 退款金额_元_ = SalesOverview.get_sheet1(sum_filed=[[SalesOverview.整体视角_退款金额]])
+# 成交订单数 = SalesOverview.get_sheet1(sum_filed=[[SalesOverview.整体视角_成交订单数]])
+# 成交人数 = SalesOverview.get_sheet1(sum_filed=[[SalesOverview.整体视角_成交人数]])
+# 商品曝光次数 = SalesOverview.get_sheet1(sum_filed=[[SalesOverview.商品曝光次数]])
+# 商品点击次数 = SalesOverview.get_sheet1_商品点击次数()
+# 商品点击率_次数_ = SalesOverview.get_sheet1_商品点击率_次数_()
 
-print(商品点击率_次数_)
+# print(商品点击率_次数_)
+
+saver_()
