@@ -2,28 +2,23 @@ import os
 import pandas as pd
 from sys import stdout
 from loguru import logger
+from dotenv import load_dotenv
 
-IS_DEBUG = False
+
+load_dotenv(override=True, verbose=True)
+
+IS_DEBUG = os.getenv('IS_DEBUG', 'false').lower() == 'true'
+print(type(IS_DEBUG), IS_DEBUG)
 logger.remove()
-logger.add(
-    stdout,
-    level="INFO",
-    # encoding="utf-8",
-    colorize=True,
-    format="<g>{time:MM-DD HH:mm:ss}</g> <level><w>[</w>{level}<w>]</w></level> | {message}",
-)
+logger.add(stdout, level="INFO", colorize=True, format="<g>{time:MM-DD HH:mm:ss}</g> <level><w>[</w>{level}<w>]</w></level> | {message}")
 
-logger.add(
-    "流量.log",
-    encoding="utf-8",
-    format="<g>{time:MM-DD HH:mm:ss}</g> <level><w>[</w>{level}<w>]</w></level> | {message}",
-)
+logger.add("流量.log", encoding="utf-8", format="<g>{time:MM-DD HH:mm:ss}</g> <level><w>[</w>{level}<w>]</w></level> | {message}")
 if IS_DEBUG:
-    _account_name = "欧莱雅集团小美盒"
+    _account_name = os.getenv("ACCOUNT_NAME")
     """账号名称"""
-    _s_date = "2023-07-01"
+    _s_date = os.getenv("START_DATE")
     """开始日期"""
-    _e_date = "2023-09-30"
+    _e_date = os.getenv("END_DATE")
     """结束日期"""
 else:
     try:
@@ -67,7 +62,7 @@ class Flow:
     """百库底表(大部分)通用日期字段: bizDate"""
     qianchuan_date_type = "date"
     """千川底表(大部分)通用日期字段: date"""
-    baseFload = "csv"
+    baseFload = os.getenv("BASEFLOAD")
     """底表父文件夹"""
     csvPerfix = "scrm_dy_report_app_fxg_"
     """百库底表前缀"""
@@ -91,9 +86,7 @@ class Flow:
             dfs[df_key] = df[(df["author_nick_name"] == account_name) & (df["biz_date"].between(start_date, end_date))].sort_values(by=["biz_date"])
         elif df_key == "scrm_ocean_daily":
             df[qianchuan_date_type] = pd.to_datetime(df[qianchuan_date_type])
-            dfs[df_key] = df[(df["account_name"] == account_name) & (df["marketing_goal"] == "LIVE_PROM_GOODS") & (df[qianchuan_date_type].between(start_date, end_date))].sort_values(
-                by=[qianchuan_date_type]
-            )
+            dfs[df_key] = df[(df["account_name"] == account_name) & (df["marketing_goal"] == "LIVE_PROM_GOODS") & (df[qianchuan_date_type].between(start_date, end_date))].sort_values(by=[qianchuan_date_type])
         elif df_key == "fly_live_detail_first_prchase_day":
             df["date"] = pd.to_datetime(df["date"])
             if "圣罗兰" in account_name:
@@ -117,13 +110,7 @@ class Flow:
             ].sort_values(by="date")
         elif df_key == "live_list_details_traffic_time_day":  # 此处需要过滤部分条件
             df[baiku_date_type] = pd.to_datetime(df[baiku_date_type])
-            dfs[df_key] = df[
-                (df["account_name"] == account_name)
-                & (df["flowChannel"] != "整体")
-                & (df["flowChannel"] != "全域推广")
-                & (df["channelName"] != "整体")
-                & (df[baiku_date_type].between(start_date, end_date))
-            ].sort_values(by=baiku_date_type)
+            dfs[df_key] = df[(df["account_name"] == account_name) & (df["flowChannel"] != "整体") & (df["flowChannel"] != "全域推广") & (df["channelName"] != "整体") & (df[baiku_date_type].between(start_date, end_date))].sort_values(by=baiku_date_type)
         else:
             df[baiku_date_type] = pd.to_datetime(df[baiku_date_type])
             dfs[df_key] = df[(df["account_name"] == account_name) & (df[baiku_date_type].between(start_date, end_date))].sort_values(by=baiku_date_type)
@@ -510,8 +497,15 @@ def merg_import(folder_path: str = Flow.export_csv_floader):
 
 if __name__ == "__main__":
     if IS_DEBUG:
-        pass
+        print("调试模式")
+        Flow.export_import_csv()
+        save1()
+        save2()
+        merg_import()
+        print("需要留意日期是否完整,如果缺失需要手动补充日期填充0\n,全选表格,ctrl+g,选择空的,输入0,按ctrl+enter补充")
+        input("按任意键退出")
     else:
+        print("正常模式")
         Flow.export_import_csv()
         save1()
         save2()

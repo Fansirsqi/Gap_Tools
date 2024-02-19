@@ -2,29 +2,23 @@ import pandas as pd
 import os
 from loguru import logger
 from sys import stdout
+from dotenv import load_dotenv
 
-IS_DEBUG = False
+
+load_dotenv(override=True, verbose=True)
+
+IS_DEBUG = os.getenv('IS_DEBUG', 'false').lower() == 'true'
+print(type(IS_DEBUG), IS_DEBUG)
 logger.remove()
-logger.add(
-    stdout,
-    level="INFO",
-    # encoding="utf-8",
-    colorize=True,
-    format="<g>{time:MM-DD HH:mm:ss}</g> <level><w>[</w>{level}<w>]</w></level> | {message}",
-)
+logger.add(stdout, level="INFO", colorize=True, format="<g>{time:MM-DD HH:mm:ss}</g> <level><w>[</w>{level}<w>]</w></level> | {message}")
 
-logger.add(
-    "人群.log",
-    encoding="utf-8",
-    format="<g>{time:MM-DD HH:mm:ss}</g> <level><w>[</w>{level}<w>]</w></level> | {message}",
-)
-
+logger.add("人群.log", encoding="utf-8", format="<g>{time:MM-DD HH:mm:ss}</g> <level><w>[</w>{level}<w>]</w></level> | {message}")
 if IS_DEBUG:
-    _account_name = "欧莱雅集团小美盒"
+    _account_name = os.getenv("ACCOUNT_NAME")
     """账号名称"""
-    _s_date = "2023-07-01"
+    _s_date = os.getenv("START_DATE")
     """开始日期"""
-    _e_date = "2023-09-30"
+    _e_date = os.getenv("END_DATE")
     """结束日期"""
 else:
     try:
@@ -68,7 +62,7 @@ class People:
     """百库底表(大部分)通用日期字段: bizDate"""
     qianchuan_date_type = "date"
     """千川底表(大部分)通用日期字段: date"""
-    baseFload = "csv"
+    baseFload = os.getenv("BASEFLOAD")
     """底表父文件夹"""
     csvPerfix = "scrm_dy_report_app_fxg_"
     """百库底表前缀"""
@@ -237,8 +231,10 @@ class People:
         return result.astype("float64")
 
     def get_粉丝成交GMV(df1=dfs["live_detail_day"], df2=dfs["fly_live_detail_first_prchase_day"], sum_filed1=直播间成交金额, sum_filed2=粉丝成单占比):
-        ndf1 = df1.set_index("studioId")[[sum_filed1]]
-        ndf2 = df2.set_index("live_room_id")[[sum_filed2, "date"]]
+        ndf1 = df1.set_index("studioId")[[sum_filed1,"date"]]
+        ndf2 = df2.set_index("live_room_id")[[sum_filed2, ]]
+        print(ndf1)
+        print(ndf2)
         result = pd.concat([ndf1, ndf2], axis=1)
         result["粉丝成交GMV"] = result[sum_filed1] * result[sum_filed2]
         result = result.groupby("date")["粉丝成交GMV"].sum().apply(lambda x: format(x, ".2f"))
@@ -380,8 +376,11 @@ def save():
 
 
 if __name__ == "__main__":
-    People.export_import_csv()
-    save()
-    merg_import()
-    print("需要留意日期是否完整,如果缺失需要手动补充日期填充0\n,全选表格,ctrl+g,选择空的,输入0,按ctrl+enter补充")
-    input("按任意键退出")
+    # 复购人数 = People.get_复购人数()
+    粉丝成交GMV = People.get_粉丝成交GMV()
+    print(粉丝成交GMV)
+    # People.export_import_csv()
+    # save()
+    # merg_import()
+    # print("需要留意日期是否完整,如果缺失需要手动补充日期填充0\n,全选表格,ctrl+g,选择空的,输入0,按ctrl+enter补充")
+    # input("按任意键退出")
