@@ -1,0 +1,38 @@
+------------------------------店播日报-流量-----------------------------
+
+SELECT * FROM scrm_dy_report_app_fxg_live_detail_day WHERE account_name LIKE '%欧莱雅%' AND date >= "2024-01-01"
+
+SELECT * FROM `scrm_dy_report_app_fxg_live_list_details_traffic_time_day` WHERE account_name LIKE '%欧莱雅%' AND date >= "2024-01-01"
+
+SELECT * FROM `scrm_dy_report_app_fxg_live_growth_conversion_funnel_day` WHERE account_name LIKE '%欧莱雅%' AND date >= "2024-01-01"
+
+SELECT * FROM `scrm_dy_report_app_fxg_live_list_details_grouping_day` WHERE account_name LIKE '%欧莱雅%' AND date >= "2024-01-01"
+
+SELECT * FROM `scrm_dy_report_app_fxg_live_list_details_indicators_day` WHERE account_name LIKE '%欧莱雅%' AND date >= "2024-01-01"
+
+SELECT * FROM `scrm_dy_report_app_fxg_live_analysis_live_details_all_day` WHERE author_nick_name LIKE '%欧莱雅%' AND date >= "2024-01-01"
+
+SELECT * FROM `scrm_ocean_daily` WHERE account_name LIKE '%欧莱雅%' AND date >= "2024-01-01"
+
+SELECT * FROM `scrm_dy_report_app_fxg_live_detail_core_interaction_key_day` WHERE account_name LIKE '%欧莱雅%' AND date >= "2024-01-01"
+
+SELECT * FROM `scrm_dy_report_app_fxg_live_crowd_data_day` WHERE account_name LIKE '%欧莱雅%' AND date >= "2024-01-01"
+
+SELECT * FROM `scrm_dy_report_app_fxg_live_detail_person_day` WHERE account_name LIKE '%欧莱雅%' AND date >= "2024-01-01"
+
+SELECT * FROM `scrm_dy_report_app_fxg_live_list_details_download_day` WHERE account_name LIKE '%欧莱雅%' AND date >= "2024-01-01"
+
+SELECT * FROM `scrm_dy_report_app_fxg_fly_live_detail_first_prchase_day` WHERE store_name LIKE '%欧莱雅%' AND date >= "2024-01-01"
+
+
+
+
+------人群
+
+------------------------------
+number_people_covered_day
+
+SELECT * FROM `scrm_dy_report_app_fxg_live_number_people_covered_day` WHERE account_name LIKE '%欧莱雅%' AND date >= "2024-01-01"
+
+crowd_data_day
+
