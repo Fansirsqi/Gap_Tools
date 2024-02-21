@@ -1,21 +1,23 @@
-from logs import logger
-from collections import defaultdict
 import re
-from rich.progress import track
-from openpyxl.worksheet.worksheet import Worksheet
+from collections import defaultdict
+
 from openpyxl.workbook.workbook import Workbook
-from gapstyle import rules, center_align, font_config, fill_config
+from openpyxl.worksheet.worksheet import Worksheet
+from rich.progress import track
+
+from gapstyle import center_align, fill_config, font_config, rules
+from logs import logger
 
 
 def auto_save(func):
     def saver(*args, **kwargs):
         data = func(*args, **kwargs)
         try:
-            logger.info("开始数据保存,请耐心等待。。")
+            logger.info('开始数据保存,请耐心等待。。')
             args[0].wb.save(args[0].excel_path)
-            logger.success("保存成功 🟢")  # noqa: F541)
+            logger.success('保存成功 🟢')  # noqa: F541)
         except IOError as e:
-            logger.error(f"🔴保存失败🔴==>{e}")
+            logger.error(f'🔴保存失败🔴==>{e}')
         return data
 
     return saver
@@ -26,16 +28,16 @@ def get_data_by_any_row(system_sheet: Worksheet, brand_sheet: Worksheet, _is_ref
 
     _is_reference = int(_is_reference)
     if _is_reference:
-        logger.debug("开启模糊匹配！")
+        logger.debug('开启模糊匹配！')
     else:
-        logger.debug("未开启")
-    logger.info(f"🟡开始匹配表头🟡{system_sheet.title}->{brand_sheet.title}1")
+        logger.debug('未开启')
+    logger.info(f'🟡开始匹配表头🟡{system_sheet.title}->{brand_sheet.title}1')
 
     brand_max_row = brand_sheet.max_row
 
     # 创建新表
     wb = brand_sheet.parent
-    ts_sheet = wb.create_sheet(f"{brand_sheet.title}_new")
+    ts_sheet = wb.create_sheet(f'{brand_sheet.title}_new')
 
     # 获取品牌表第二行数据
     brand_title = [cell.value for cell in brand_sheet[2]]
@@ -53,12 +55,12 @@ def get_data_by_any_row(system_sheet: Worksheet, brand_sheet: Worksheet, _is_ref
             counter[title] -= 1
             title += suffix
         unique_system_title.append(title)
-    for _title in track(unique_system_title, description="匹配进度"):  # 遍历系统表头
+    for _title in track(unique_system_title, description='匹配进度'):  # 遍历系统表头
         index_system = unique_system_title.index(_title)  # Bxx,Axx的数据 eg:A1
         ts_cell = ts_sheet.cell(row=1, column=index_system + 1)
         # --》第一行引入TS表头
-        ts_cell.value = f"={system_sheet.title}!{ts_cell.coordinate}"
-        v = re.sub(r"\d", "", _title)
+        ts_cell.value = f'={system_sheet.title}!{ts_cell.coordinate}'
+        v = re.sub(r'\d', '', _title)
         ts_sheet.cell(row=2, column=index_system + 1).value = v  # 第二行,表头,文本内容
         if _title in brand_title:  # 如果系统表头在品牌第二行,这里默认只匹配第一个字段,如果有相同字段
             index_brand = brand_title.index(_title)  # 索引-品牌
@@ -66,12 +68,12 @@ def get_data_by_any_row(system_sheet: Worksheet, brand_sheet: Worksheet, _is_ref
             brand_cell = brand_sheet.cell(row=_row, column=index_brand + 1)  # 品牌第3行数据cell对象,kais
             logger.info(brand_cell.coordinate, brand_max_row)
             ts_cell_2 = ts_sheet.cell(row=_row, column=index_system + 1)
-            ts_cell_2.value = f"={brand_sheet.title}!{brand_cell.coordinate}"
-            logger.debug(f"匹配到 {_title} 在 {system_sheet.title}表头中")
+            ts_cell_2.value = f'={brand_sheet.title}!{brand_cell.coordinate}'
+            logger.debug(f'匹配到 {_title} 在 {system_sheet.title}表头中')
         else:  # 如果系统表头NOT 在品牌第二行
             ts_cell_2 = ts_sheet.cell(row=2, column=index_system + 1)
-            ts_cell_2.value = "/"
-    logger.info("✨匹配完成✨")
+            ts_cell_2.value = '/'
+    logger.info('✨匹配完成✨')
 
 
 def get_value_of_line(gws: Worksheet, line: int) -> list:
@@ -95,7 +97,7 @@ def filed_comment(wb: Workbook, row_values: list, set_row: int = 1):
     row_values:备注行数据
     set_row: 设置读取的行号,并写入目标行号
     """
-    gws = wb["GAP"]
+    gws = wb['GAP']
     for clo in range(1, len(row_values) * 3, 3):
         key = clo // 3
         one = clo
@@ -117,7 +119,7 @@ def set_gap(pws: Worksheet, tws: Worksheet, title_row: int = 1):
     """
 
     row_values = get_value_of_line(pws, title_row)  # 获取表头数据,从品牌表拿
-    gws: Worksheet = pws.parent.create_sheet("GAP")
+    gws: Worksheet = pws.parent.create_sheet('GAP')
     # gws = wb["NewSheet"]
 
     for clo in range(1, len(row_values) * 3, 3):
@@ -126,7 +128,7 @@ def set_gap(pws: Worksheet, tws: Worksheet, title_row: int = 1):
         two = clo + 1
         three = clo + 2
         f_value = row_values[key]
-        logger.debug(f"载入[传入]字段 -- {f_value}")
+        logger.debug(f'载入[传入]字段 -- {f_value}')
         g_title = gws.cell(row=title_row, column=one)
         g_title.value = f_value
         g_title.fill = fill_config.all_title_fill
@@ -134,9 +136,9 @@ def set_gap(pws: Worksheet, tws: Worksheet, title_row: int = 1):
         g_title.alignment = center_align
         try:  # 合并单元格
             gws.merge_cells(start_row=title_row, start_column=one, end_row=title_row, end_column=three)  # 这里的字段是来自row_list
-            logger.debug(f"合并单元格成功 -- {f_value}")
+            logger.debug(f'合并单元格成功 -- {f_value}')
         except Exception as e:
-            logger.error(f"合并单元格失败 -- {e}")
+            logger.error(f'合并单元格失败 -- {e}')
         g_p = gws.cell(row=title_row + 1, column=one)
         g_t = gws.cell(row=title_row + 1, column=two)
         g_g = gws.cell(row=title_row + 1, column=three)
@@ -144,12 +146,15 @@ def set_gap(pws: Worksheet, tws: Worksheet, title_row: int = 1):
         _p_quote = pws.cell(row=title_row, column=key + 1).coordinate  # 此处引用的是品牌sheet,表头那一行
         _t_quote = tws.cell(row=title_row, column=key + 1).coordinate
 
-        p_quote = f'={pws.title}!{_p_quote}&"-{pws.title}"'
-        t_quote = f'={tws.title}!{_t_quote}&"-{tws.title}"'
+        # Gap表第二行
+        # p_quote = f'={pws.title}!{_p_quote}&"-{pws.title}"'
+        # t_quote = f'={tws.title}!{_t_quote}&"-{tws.title}"'
+        p_quote = '导出'
+        t_quote = '底表'
 
         g_p.value = p_quote
         g_t.value = t_quote
-        g_g.value = "Gap"
+        g_g.value = 'Gap'
 
         g_p.fill = fill_config.brand_title_fill
         g_t.fill = fill_config.system_title_fill
@@ -194,7 +199,7 @@ def set_gap_title_value(pws: Worksheet, tws: Worksheet, gws: Worksheet, set_row:
 
         p_quote = f"='{pws.title}'!{_p_quote}"
         t_quote = f"='{tws.title}'!{_t_quote}"
-        gap_quote = f"=IF({_g_t}=0,IF({_g_p}=0,0%,-100%),IF({_g_p}=0,100%,({_g_p}-{_g_t})/{_g_t}))"
+        gap_quote = f'=IF({_g_t}=0,IF({_g_p}=0,0%,-100%),IF({_g_p}=0,100%,({_g_p}-{_g_t})/{_g_t}))'
         """
         Gap公式:
         (TS-品牌)/品牌
@@ -212,9 +217,9 @@ def set_gap_title_value(pws: Worksheet, tws: Worksheet, gws: Worksheet, set_row:
         g_t.alignment = center_align
         g_g.alignment = center_align
 
-        g_g.number_format = "0.00%"
+        g_g.number_format = '0.00%'
         if one == 1:
-            g_p.number_format = "YYYY/M/D"
-            g_t.number_format = "YYYY/M/D"
+            g_p.number_format = 'YYYY/M/D'
+            g_t.number_format = 'YYYY/M/D'
         for rule in rules:
             gws.conditional_formatting.add(_g_g, rule)
