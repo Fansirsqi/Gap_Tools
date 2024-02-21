@@ -269,6 +269,121 @@ rq_data = {
     'is_summary': '0',
 }
 
+gl_data12 = {
+    'group_id': '20',
+    'temp[0]': '378',
+    'temp[1]': '2655',
+    'temp[2]': '379',
+    'temp[3]': '380',
+    'temp[4]': '381',
+    'temp[5]': '382',
+    'temp[6]': '383',
+    'temp[7]': '384',
+    'temp[8]': '385',
+    'temp[9]': '386',
+    'temp[10]': '387',
+    'temp[11]': '388',
+    'temp[12]': '389',
+    'temp[13]': '390',
+    'temp[14]': '391',
+    'temp[15]': '392',
+    'temp[16]': '393',
+    'temp[17]': '394',
+    'temp[18]': '395',
+    'temp[19]': '396',
+    'temp[20]': '397',
+    'temp[21]': '398',
+    'start_time': '2024-01-01',
+    'end_time': '2024-01-31',
+    'is_save': '0',
+    'is_mtd': '0',
+    'is_summary': '0',
+}
+
+gl_data3 = {
+    'group_id': '25',
+    'temp[0]': '299',
+    'temp[1]': '300',
+    'temp[2]': '301',
+    'temp[3]': '302',
+    'start_time': '2024-01-01',
+    'end_time': '2024-01-31',
+    'is_save': '0',
+    'is_mtd': '0',
+    'is_summary': '0',
+}
+
+gl_data4 = {
+    'group_id': '21',
+    'temp[0]': '364',
+    'temp[1]': '365',
+    'temp[2]': '366',
+    'temp[3]': '367',
+    'temp[4]': '368',
+    'temp[5]': '369',
+    'temp[6]': '370',
+    'temp[7]': '372',
+    'temp[8]': '373',
+    'temp[9]': '374',
+    'temp[10]': '375',
+    'temp[11]': '376',
+    'temp[12]': '377',
+    'start_time': '2024-01-01',
+    'end_time': '2024-01-31',
+    'is_save': '0',
+    'is_mtd': '0',
+    'is_summary': '0',
+}
+
+gl_data5 = {
+    'group_id': '22',
+    'temp[0]': '321',
+    'temp[1]': '322',
+    'temp[2]': '323',
+    'temp[3]': '324',
+    'temp[4]': '328',
+    'temp[5]': '329',
+    'temp[6]': '330',
+    'temp[7]': '331',
+    'temp[8]': '332',
+    'temp[9]': '333',
+    'temp[10]': '334',
+    'temp[11]': '335',
+    'temp[12]': '336',
+    'temp[13]': '337',
+    'temp[14]': '325',
+    'temp[15]': '326',
+    'temp[16]': '327',
+    'temp[17]': '356',
+    'temp[18]': '357',
+    'start_time': '2024-01-01',
+    'end_time': '2024-01-31',
+    'is_save': '0',
+    'is_mtd': '0',
+    'is_summary': '0',
+}
+
+gl_data67 = {
+    'group_id': '23',
+    'temp[0]': '338',
+    'temp[1]': '339',
+    'temp[2]': '340',
+    'temp[3]': '355',
+    'temp[4]': '341',
+    'temp[5]': '342',
+    'temp[6]': '343',
+    'temp[7]': '344',
+    'temp[8]': '345',
+    'temp[9]': '346',
+    'temp[10]': '347',
+    'temp[11]': '348',
+    'start_time': '2024-01-01',
+    'end_time': '2024-01-31',
+    'is_save': '0',
+    'is_mtd': '0',
+    'is_summary': '0',
+}
+
 
 hosts = {
     'prod': 'https://dyaccountmgt-api.platform-loreal.cn',
@@ -295,6 +410,6 @@ def down(data: dict, host: str):
 
 
 if __name__ == '__main__':
-    datas = [rb_data,ll_data1,ll_data2,rq_data]
+    datas = [rb_data, ll_data1, ll_data2, rq_data, gl_data12, gl_data3, gl_data4, gl_data5, gl_data67]
     for data in datas:
         down(data=data, host=hosts['uat'])
