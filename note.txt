@@ -36,3 +36,4 @@ SELECT * FROM `scrm_dy_report_app_fxg_live_number_people_covered_day` WHERE acco
 
 crowd_data_day
 
+'["欧莱雅黄金发膜护发直播间", "欧莱雅彩妆直播间", "欧莱雅官方旗舰店男士活力精选", "欧莱雅面膜精选", "欧莱雅染发甄选"]'
