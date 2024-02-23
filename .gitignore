@@ -8,4 +8,4 @@ __pycache__/
 *.pyc
 ts.py
 *.logs
-uatcsv/UAT巴欧5个号rollout[日报,流量,人群]Gap数据-2024-02-21.zip
+uatcsv/*.zip
