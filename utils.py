@@ -99,7 +99,7 @@ def list_files(filter: str = '*.xlsx', is_prt: bool = True, prefix: str = '~$', 
         cprint('==============================文件列表==============================', text_color='green')
         for file in files:
             file_name = os.path.basename(file)
-            cprint(f'{count}. {file_name}', text_color='blue')
+            cprint(f'{count}. {file_name}', text_color='yellow')
             count += 1
         cprint('====================================================================', text_color='green')
 
