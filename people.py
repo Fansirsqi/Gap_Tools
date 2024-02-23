@@ -7,23 +7,24 @@ from loguru import logger
 from exoprt import down, rq_data, hosts
 from functions import set_gap
 from openpyxl import load_workbook
+from config import configs
 
 load_dotenv(override=True, verbose=True)
 
-IS_DEBUG = os.getenv('IS_DEBUG', 'false').lower() == 'true'
-print('debug model', IS_DEBUG)
-logger.remove()
-logger.add(stdout, level='INFO', colorize=True, format='<g>{time:MM-DD HH:mm:ss}</g> <level><w>[</w>{level}<w>]</w></level> | {message}')
+IS_DEBUG = configs.debug
 
-logger.add('流量.log', encoding='utf-8', format='<g>{time:MM-DD HH:mm:ss}</g> <level><w>[</w>{level}<w>]</w></level> | {message}')
+logger.remove()
+logger.add(stdout, level=configs.log_level, colorize=True, format='<g>{time:MM-DD HH:mm:ss}</g> <level><w>[</w>{level}<w>]</w></level> | {message}')
+
+logger.add('流量.log', level=configs.log_level, encoding='utf-8', format='<g>{time:MM-DD HH:mm:ss}</g> <level><w>[</w>{level}<w>]</w></level> | {message}')
 
 _account_name = os.getenv('ACCOUNT_NAME')
 """账号名称"""
-_s_date = os.getenv('START_DATE')
+_s_date = configs.START_DATE
 """开始日期"""
-_e_date = os.getenv('END_DATE')
+_e_date = configs.END_DATE
 """结束日期"""
-BASEFLOAD = os.getenv('BASEFLOAD')
+BASEFLOAD = configs.BASEFLOAD
 
 
 class People:
@@ -188,7 +189,7 @@ class People:
     def get_复购粉丝数(df=dfs['live_detail_person_day'], sum_filed=[成交人群分析_新老客维度_复购人数, 成交人群分析_新老客维度_复购人数_粉丝占比], date_type=sheet_date_type):
         ndf1 = df.loc[:, [sum_filed[0], date_type, sum_filed[1], 'id']]
         ndf1.loc[:, '复购粉丝'] = ndf1[sum_filed[0]] * ndf1[sum_filed[1]]
-        # result["复购粉丝"] = result[sum_filed1] * result[sum_filed2]
+
         return ndf1.groupby(date_type)['复购粉丝'].sum().apply(lambda x: format(x, '.0f')).astype('int64')
 
     def get_复购人数(df=dfs['live_detail_person_day'], sum_filed=成交人群分析_新老客维度_复购人数, date_type=sheet_date_type):
@@ -197,13 +198,11 @@ class People:
     def get_粉丝成交人数(df=dfs['live_detail_person_day'], sum_filed=成交人群分析_粉丝维度_粉丝人数, date_type=sheet_date_type):
         return df.groupby([date_type])[sum_filed].sum()
 
-    def get_粉丝观看人数(df=dfs['live_crowd_data_day'], sum_filed1=直播间观看人数, sum_filed2=粉丝占比, date_type=sheet_date_type):
-        ndf1 = df[[sum_filed1, 'id', date_type]]
-        ndf2 = df[[sum_filed2, 'id']]
-        result = pd.merge(ndf1, ndf2, on='id')
-        result['粉丝观看人数'] = result[sum_filed1] * result[sum_filed2] * 0.01
-        result = result.groupby(date_type)['粉丝观看人数'].sum().apply(lambda x: format(x, '.2f'))
-        return result.astype('float64')
+    def get_粉丝观看人数(df=dfs['live_detail_person_day'], sum_filed1=直播间观看人数, sum_filed2=粉丝占比, date_type=sheet_date_type):
+        ndf1 = df.loc[:, ['liveWatchCount', 'liveWatchCount_fansRate', date_type]]
+        ndf1.loc[:, '粉丝观看人数'] = ndf1['liveWatchCount'] * ndf1['liveWatchCount_fansRate']
+        return ndf1.groupby(date_type)['粉丝观看人数'].sum().apply(lambda x: format(x, '.2f')).astype('float64')
+        # fix
 
     def get_粉丝成交GMV(df1=dfs['live_detail_day'], df2=dfs['fly_live_detail_first_prchase_day'], sum_filed1=直播间成交金额, sum_filed2=粉丝成单占比):
         ndf1 = df1.set_index('studioId')[[sum_filed1, 'date']]
@@ -263,7 +262,7 @@ def merg_import(folder_path: str = People.export_folder):
 def save():
     观看人数 = People.get_指定观看人数(turnover='不限', fans='不限', interaction='不限', customers='不限', watch='不限')
     成交人数 = People.get_成交人数()
-    观看转化率 = People.get_观看转化率()
+    观看转化率 = (成交人数 / 观看人数).apply(lambda x: format(x, '.9f'))
     首购粉丝 = People.get_首购粉丝数().apply(lambda x: format(x, '.3f')).astype('float')
 
     首购人数 = People.get_首购人数()
@@ -274,19 +273,24 @@ def save():
     复购人数 = People.get_复购人数()
 
     复购粉丝占比 = (复购粉丝 / 复购人数).apply(lambda x: format(x, '.9f'))
-    
+
     首购占比 = (首购人数 / 成交人数).apply(lambda x: format(x, '.9f'))
     复购占比 = (复购人数 / 成交人数).apply(lambda x: format(x, '.9f'))
+
     粉丝成交人数 = People.get_粉丝成交人数()
 
     粉丝观看人数 = People.get_粉丝观看人数()
+
     粉丝成交GMV = People.get_粉丝成交GMV()
     粉丝GPM = (粉丝成交GMV * 1000 / 粉丝观看人数).apply(lambda x: format(x, '.9f'))
+
     观看未购粉丝 = (粉丝观看人数 - 粉丝成交人数).apply(lambda x: format(x, '.2f'))
+
     累计观看人数 = People.get_累计观看人数()  # maybe do not need
     观看人数粉丝占比 = (粉丝观看人数 / 累计观看人数).apply(lambda x: format(x, '.9f'))
     成交人数粉丝占比 = (粉丝成交人数 / 成交人数).apply(lambda x: format(x, '.9f'))
     粉丝观看转化率 = (粉丝成交人数 / 粉丝观看人数).apply(lambda x: format(x, '.9f'))
+
     新粉观看人数 = People.get_指定观看人数(turnover='不限', fans='新粉丝', interaction='不限', customers='不限', watch='不限')
     观看人数新粉占比 = (新粉观看人数 / 观看人数).apply(lambda x: format(x, '.9f'))
     新粉成交人数 = People.get_新粉成交人数()
@@ -345,8 +349,12 @@ def save():
 
 
 if __name__ == '__main__':
-    People.export_import_csv()
-    save()
-    merg_import()
-    print('需要留意日期是否完整,如果缺失需要手动补充日期填充0\n,全选表格,ctrl+g,选择空的,输入0,按ctrl+enter补充')
-    input('按任意键退出')
+    if IS_DEBUG:
+        field = People.get_粉丝观看人数()
+        print(field)
+    else:
+        People.export_import_csv()
+        save()
+        merg_import()
+        print('需要留意日期是否完整,如果缺失需要手动补充日期填充0\n,全选表格,ctrl+g,选择空的,输入0,按ctrl+enter补充')
+        input('按Enter键退出')

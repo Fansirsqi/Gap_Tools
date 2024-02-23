@@ -14,10 +14,10 @@ def convert_encoding(folder_path, file_encoding='ansi', tarns_encoding='utf-8'):
             file_path = os.path.join(folder_path, file_name)
             # 读取原始编码的CSV文件
             df = pd.read_csv(file_path, encoding=file_encoding)
-            
+
             save_path = file_path.replace(folder_path, f'{folder_path}{tarns_encoding}/')
             # print(save_path)
-            os.makedirs(folder_path +  tarns_encoding, exist_ok=True)
+            os.makedirs(folder_path + tarns_encoding, exist_ok=True)
             os.makedirs(folder_path + file_encoding, exist_ok=True)
             # 将数据保存为UTF-8编码的CSV文件（覆盖原文件）
             df.to_csv(save_path, index=False, encoding=tarns_encoding)
