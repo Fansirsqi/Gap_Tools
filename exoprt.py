@@ -2,13 +2,13 @@ from urllib.parse import quote, unquote
 import os
 import requests
 from dotenv import load_dotenv
-
+from config import configs
 
 load_dotenv(override=True, verbose=True)
 
-AUTHORIZATION = os.getenv('AUTHORIZATION')
-START_DATE = os.getenv('START_DATE')
-END_DATE = os.getenv('END_DATE')
+AUTHORIZATION = configs.AUTHORIZATION
+START_DATE = configs.START_DATE
+END_DATE = configs.END_DATE
 ACCOUNT_NAME = os.getenv('ACCOUNT_NAME')
 
 
@@ -410,6 +410,7 @@ def down(data: dict, host: str):
 
 
 if __name__ == '__main__':
+    print(ACCOUNT_NAME)
     datas = [rb_data, ll_data1, ll_data2, rq_data, gl_data12, gl_data3, gl_data4, gl_data5, gl_data67]
     for data in datas:
         down(data=data, host=hosts['uat'])
