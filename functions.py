@@ -128,7 +128,7 @@ def set_gap(pws: Worksheet, tws: Worksheet, title_row: int = 1):
         two = clo + 1
         three = clo + 2
         f_value = row_values[key]
-        logger.debug(f'载入[传入]字段 -- {f_value}')
+        logger.debug(f'载入[{f_value}]字段')
         g_title = gws.cell(row=title_row, column=one)
         g_title.value = f_value
         g_title.fill = fill_config.all_title_fill
