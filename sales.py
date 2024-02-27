@@ -8,7 +8,7 @@ from config import configs
 
 dotenv.load_dotenv(override=True, verbose=True)
 
-IS_DEBUG = os.getenv('IS_DEBUG')
+IS_DEBUG = configs.debug
 logger.remove()
 logger.add(stdout, level='INFO', colorize=True, format='<g>{time:MM-DD HH:mm:ss}</g> <level><w>[</w>{level}<w>]</w></level> | {message}')
 
@@ -51,7 +51,7 @@ class Sales:
         'index_business_overview_day': pd.read_csv(f'{baseFload}/{csvPerfix}index_business_overview_day.csv'),
     }
     """需要导出的完整底表"""
-    
+
     try:  # check csv file
         for csv in dfs.keys():
             if os.path.exists(csv):
@@ -64,7 +64,7 @@ class Sales:
     for df_key, df in dfs.items():
         logger.debug(f'导入 {df_key}')
         df[sheet_date_type] = pd.to_datetime(df[sheet_date_type])
-        
+
         if df_key == 'live_analysis_live_details_all_day':
             df['biz_date'] = pd.to_datetime(df['biz_date'])
             dfs[df_key] = df[(df['author_nick_name'] == account_name) & (df['biz_date'].between(start_date, end_date))].sort_values(by=['biz_date'])
@@ -206,19 +206,7 @@ def saver_():
         '点击成交转化率': 点击成交转化率,
         '观看转化率': 观看转化率,
     }
-    export = (
-        pd.concat(
-            title.values(),
-            axis=1,
-            keys=title.keys(),
-        )
-        .fillna(0)
-        .replace('nan%', 0)
-        .replace('nan', 0)
-        .replace('inf%', 0)
-        .replace('inf', 0)
-        .sort_index()
-    )
+    export = pd.concat(title.values(), axis=1, keys=title.keys()).fillna(0).replace('nan%', 0).replace('nan', 0).replace('inf%', 0).replace('inf', 0).sort_index()
     try:
         export.to_csv(f'{Sales.export_csv_floader}/【{Sales.account_name}】_销售概览底表5.csv', index_label=['日期'])
         logger.success(f'{Sales.export_csv_floader}/【{Sales.account_name}】_销售概览底表5.csv')

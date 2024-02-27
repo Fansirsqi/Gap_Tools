@@ -405,6 +405,8 @@ def down(data: dict, host: str):
                 f.write(response.content)
             print(f'下载 {file_name} OK！')
             return down_file
+        else:
+            print('没有找到文件名-不执行下载',response.headers)
     else:
         print(f'请求失败，状态码：{response.status_code}')
 

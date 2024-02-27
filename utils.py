@@ -30,8 +30,7 @@ def cprint(*args, text_color='white', bg_color='black', is_bold='0', **kwargs):
 class DotDict(dict):
     """将字典数据转换成类的形式，数据可以通过.xx的形式访问
 
-    Args:
-        dict (_type_): _description_
+    :param _type_ dict: _description_
     """
 
     def __init__(self, *args, **kwargs):
@@ -45,12 +44,11 @@ class DotDict(dict):
 
 
 def list_folder_(filter=['.venv', '__pycache__', '.vscode', '.git', '.idea', 'export_人群', 'export_日报'], is_prt=True) -> list:
-    """列出当前项目文件夹
-    Args:
-        filter (list, optional): 过滤的文件夹. Defaults to ['.venv','__pycache__','.vscode','.git'].
-        prt (bool, optional): 是否开启打印. Defaults to True.
-    Returns:
-        list: _description_
+    """list_folder_ 列出文件夹
+
+    :param list filter: 过滤文件夹, defaults to ['.venv', '__pycache__', '.vscode', '.git', '.idea', 'export_人群', 'export_日报']
+    :param bool is_prt: 是否输出, defaults to True
+    :return list: _description_
     """
     folder_list = [name for name in os.listdir('.') if os.path.isdir(name) and name not in filter]
     if len(folder_list) != 0:
@@ -71,7 +69,7 @@ def list_files(filter: str = '*.xlsx', is_prt: bool = True, prefix: str = '~$', 
     :param filter: 文件扩展名过滤器，默认为 '*.xlsx'
     :param prt: 是否打印文件列表，默认为 True
     :param prefix: 要过滤掉的文件名前缀，默认为 '~$'
-    :param include: 包含文件名的关键字列表，默认为 []
+    :param include: 包含文件名的关键字列表，默认为 [],即全选
     :param path: 指定搜索文件的路径，默认为 ''，即当前工作目录
     :return: 文件列表
     """

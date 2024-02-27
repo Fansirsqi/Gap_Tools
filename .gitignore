@@ -1,7 +1,7 @@
 .venv/
 .vscode/
 *.xlsx
-__pycache__/
+**/__pycache__/
 *.xml
 *.log
 *.csv
